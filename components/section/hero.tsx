@@ -14,7 +14,7 @@ export default function Hero() {
                 src={"https://farmui.vercel.app/bg-back.png"}
                 width={1000}
                 height={1000}
-                alt="back bg"
+                alt="Hero Background"
             />
             <section className="pt-16 lg:py-28 z-10">
                 <div className="h-fit text-gray-600 gap-x-12 grid grid-cols-1 lg:grid-cols-2 items-start justify-between p-8 pb-0 sm:pb-20 gap-16 px-8 md:px-20 2xl:px-52">
