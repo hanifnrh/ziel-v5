@@ -35,9 +35,9 @@ const Page = async () => {
                     >
                         <BlurIn className="flex h-full w-full flex-col justify-center items-start">
                             <div className="md:pad-x relative flex h-auto flex-col">
-                                <div className="relative pl-12 pr-8 sm:px-0 h-full w-full grow grid grid-cols-1 items-center justify-center gap-6 py-4 md:gap-8 md:py-6 lg:py-12">
+                                <div className="relative sm:pl-12 sm:pr-8 sm:px-0 h-full w-full grow grid grid-cols-1 items-center justify-center gap-6 sm:py-4 md:gap-8 md:py-6 lg:py-12">
                                     {/* Login */}
-                                    <div className="relative z-10 flex h-fit w-fit flex-col">
+                                    <div className="relative z-10 flex h-fit flex-col">
                                         <div className="flex gap-2 items-center">
                                             <div className="flex items-center justify-center p-4 rounded-xl bg-purple-600/20 text-purple-600">
                                                 <BookOpenText size={30} />
@@ -75,7 +75,7 @@ const Page = async () => {
                                                 </form>
                                             </>
                                         ) : (
-                                            <div className="flex gap-4">
+                                            <div className="flex flex-col sm:flex-row gap-4">
                                                 <form onSubmit={githubSignIn} className="group py-2">
                                                     <Button className="px-0 py-2">
                                                         <div style={{ transform: "none" }}>

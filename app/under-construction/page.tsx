@@ -21,7 +21,7 @@ export default function UnderConstruction() {
                         <h1 className="text-4xl sm:text-3xl lg:text-5xl">
                             🚧
                         </h1>
-                        <h2 className="body text-4xl sm:text-3xl font-normal tracking-tighter lg:text-5xl text-transparent bg-clip-text bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+                        <h2 className="body text-center text-4xl sm:text-3xl font-normal tracking-tighter lg:text-5xl text-transparent bg-clip-text bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                             Page Under Construction
                         </h2>
                         <p className="body-light text-zinc-500 text-md lg:text-lg">
