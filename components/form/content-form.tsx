@@ -55,13 +55,14 @@ const ContentForm = ({ user }: { user: User }) => {
             <p className="mb-2 text-balance body-light text-sm text-zinc-500">
                 Signed in as <span className="text-zinc-200">{user.email}</span>
             </p>
-            <div className="flex items-center gap-x-2">
+            <div className="w-fit flex items-center gap-x-2">
                 <Input placeholder="" name="content" id="content" type="text" />
                 <Button
                     disabled={loading}
                     type="submit"
                     className={`anim aspect-square border px-2 py-2 text-purple-600 bg-purple-600/20`}
                 >
+                    Send
                     {loading ? (
                         <SymbolIcon className="h-4 w-4 animate-spin" />
                     ) : (
