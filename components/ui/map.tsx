@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 function Marker({
     src,
@@ -33,9 +34,11 @@ function Marker({
                     className="fill-purple-900"
                 />
             </svg>
-            <img
+            <Image
                 alt=""
                 src={src}
+                width={1000}
+                height={1000}
                 className="absolute left-[7px] top-[4px] size-6 rounded-full"
             />
         </motion.div>

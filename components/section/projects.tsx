@@ -144,7 +144,7 @@ export default function Projects() {
                             Jiwakita: Fulfill Your Mental Needs
                         </h3>
                         <p className="body-light text-sm text-zinc-500">
-                            Jiwakita is a mental health app equipped with all-encompassing features tailored to meet users' mental wellness needs. With its versatile functionalities and holistic approach, Jiwakita offers accessible solutions for everyone to enhance their mental well-being.
+                            Jiwakita is a mental health app equipped with all-encompassing features tailored to meet users&apos; mental wellness needs. With its versatile functionalities and holistic approach, Jiwakita offers accessible solutions for everyone to enhance their mental well-being.
                         </p>
 
                         <div className="flex justify-between w-full text-purple-600 mt-2 sm:mt-4 ">
