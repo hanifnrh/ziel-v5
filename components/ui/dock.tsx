@@ -24,21 +24,21 @@ const navItems = [
   },
   {
     id: 3,
-    label: "CV",
-    href: "/https://drive.google.com/file/d/1YVITGrnvwSLOR7WKBRs4cAaRevdYVNvf/view?usp=sharing",
-    icon: <FileUser className="h-full w-full" />,
-  },
-  {
-    id: 4,
     label: "Guestbook",
-    href: "/Guestbook",
+    href: "/guestbook",
     icon: <BookOpenText className="h-full w-full" />,
   },
   {
-    id: 6,
+    id: 4,
     label: "Blog",
     href: "/blog",
     icon: <PencilLine className="h-full w-full" />,
+  },
+  {
+    id: 6,
+    label: "CV",
+    href: "https://drive.google.com/file/d/1YVITGrnvwSLOR7WKBRs4cAaRevdYVNvf/view?usp=sharing",
+    icon: <FileUser className="h-full w-full" />,
   },
 ];
 
@@ -101,8 +101,8 @@ const Dock = () => {
               scroll={true}
               onClick={() => setActiveTab(item.id)}
               className={`${activeTab === item.id
-                ? "text-purple-600"
-                : "text-zinc-500"
+                ? "text-purple-500"
+                : "text-zinc-200"
                 } group/dock relative h-10 w-10 p-3 text-sm transition-all duration-300 ease-in-out focus-visible:outline-none`}
               style={{
                 WebkitTapHighlightColor: "transparent",
