@@ -1,7 +1,7 @@
 "use client";
 
 import { easeInOut, motion } from "framer-motion";
-import { Atom, Bolt, BookOpenText, FileUser, PencilLine } from "lucide-react";
+import { Atom, Bolt, BookOpenText, PencilLine } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -33,12 +33,6 @@ const navItems = [
     label: "Blog",
     href: "/blog",
     icon: <PencilLine className="h-full w-full" />,
-  },
-  {
-    id: 6,
-    label: "CV",
-    href: "https://drive.google.com/file/d/1YVITGrnvwSLOR7WKBRs4cAaRevdYVNvf/view?usp=sharing",
-    icon: <FileUser className="h-full w-full" />,
   },
 ];
 
