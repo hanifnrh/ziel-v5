@@ -225,22 +225,22 @@ export default function Bento() {
                                 </div>
                             </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4  mt-5 items-start sm:items-center">
+                            <div className="flex flex-row gap-4 mt-5 items-center">
                                 <Image
                                     src={track.albumImageUrl}
                                     width={1000}
                                     height={1000}
                                     alt="Spotify Last Played"
-                                    className="h-32 w-auto rounded-xl"
+                                    className="sm:h-32 h-24 w-auto rounded-xl"
                                 />
                                 <div className="flex flex-col">
-                                    <h3 className="body text-2xl">{track.name}</h3>
-                                    <p className="body-light text-lg">{track.artist}</p>
+                                    <h3 className="body text-xl line-clamp-1">{track.name}</h3>
+                                    <p className="body-light text-base line-clamp-1">{track.artist}</p>
                                     <Link
                                         href={track.spotifyUrl}
                                         rel="canonical"
                                         target="_blank"
-                                        className="body-light text-lg w-fit text-green-600 border-b border-green-600"
+                                        className="body-light text-base w-fit text-green-600 border-b border-green-600"
                                     >
                                         Play on Spotify
                                         <MoveRight className="ml-2" />

@@ -17,7 +17,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 // Others
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import Dock from "@/components/ui/dock";
-import { StackedCircularFooter } from "@/components/ui/stacked-circular-footer";
+import FadeInUnblur from "@/components/ui/fadeinunblur";
+import Footer from "@/components/ui/footer";
 import "./globals.css";
 import { baseUrl } from "./sitemap";
 
@@ -81,7 +82,7 @@ export default function RootLayout({
     <html lang="en" className="bg-neutral-950">
       <body>
         <MenuProvider>
-          <div className="max-w-screen-2xl mx-auto" >
+          <FadeInUnblur className="max-w-screen-2xl mx-auto" >
             <NextTopLoader
               color="#9810fa"
               initialPosition={0.08}
@@ -98,8 +99,8 @@ export default function RootLayout({
             {children}
             <SpeedInsights />
             <Analytics />
-            <StackedCircularFooter />
-          </div>
+            <Footer />
+          </FadeInUnblur>
           <Menu></Menu>
         </MenuProvider>
         <Toaster></Toaster>

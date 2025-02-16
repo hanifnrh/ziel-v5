@@ -47,7 +47,7 @@ export default function AboutSection() {
                                 </div>
                             </Link>
                             <Link
-                                href="https://github.com/hanifnrh"
+                                href="https://www.instagram.com/ziel.dev/"
                                 rel="canonical"
                                 target="_blank"
                                 className="scale-100 sm:scale-75 lg:scale-100"
@@ -57,7 +57,7 @@ export default function AboutSection() {
                                 </div>
                             </Link>
                             <Link
-                                href="https://github.com/hanifnrh"
+                                href="https://dribbble.com/dailyziel"
                                 rel="canonical"
                                 target="_blank"
                                 className="scale-100 sm:scale-75 lg:scale-100"
@@ -67,7 +67,7 @@ export default function AboutSection() {
                                 </div>
                             </Link>
                             <Link
-                                href="https://github.com/hanifnrh"
+                                href="https://www.linkedin.com/in/nurrahmat-hanif-635055218 "
                                 rel="canonical"
                                 target="_blank"
                                 className="scale-100 sm:scale-75 lg:scale-100"

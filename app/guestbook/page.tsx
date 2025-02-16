@@ -1,7 +1,6 @@
 // Components
 import ContentForm from "@/components/form/content-form";
 import Guestbook from "@/components/macro/guestbook";
-import BlurIn from "@/components/ui/blur-in";
 import { Button } from "@/components/ui/button";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import Image from "next/image";
@@ -19,7 +18,7 @@ const Page = async () => {
     const { data: user, error } = await supabase.auth.getUser();
 
     return (
-        <div className="bg-neutral-950">
+        <main className="bg-neutral-950">
             <Image
                 className="absolute top-0 z-0 -translate-y-1/2"
                 src={"https://farmui.vercel.app/bg-back.png"}
@@ -33,7 +32,7 @@ const Page = async () => {
                         id="guestbook"
                         className="flex w-full grow flex-col gap-y-4"
                     >
-                        <BlurIn className="flex h-full w-full flex-col justify-center items-start">
+                        <div className="flex h-full w-full flex-col justify-center items-start">
                             <div className="md:pad-x relative flex h-auto flex-col">
                                 <div className="relative sm:pl-12 sm:pr-8 sm:px-0 h-full w-full grow grid grid-cols-1 items-center justify-center gap-6 sm:py-4 md:gap-8 md:py-6 lg:py-12">
                                     {/* Login */}
@@ -121,11 +120,11 @@ const Page = async () => {
 
                                 </div>
                             </div>
-                        </BlurIn>
+                        </div>
                     </div>
                 </TracingBeam>
             </section>
-        </div>
+        </main>
     );
 };
 export default Page;

@@ -12,5 +12,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             url: `${baseUrl}/about`,
             lastModified: new Date().toISOString(),
         },
+        {
+            url: `${baseUrl}/guestbook`,
+            lastModified: new Date().toISOString(),
+        },
+        {
+            url: `${baseUrl}/blog`,
+            lastModified: new Date().toISOString(),
+        },
     ];
 }

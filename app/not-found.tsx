@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function NotFound() {
     return (
-        <div>
+        <main>
             <Image
                 className="absolute top-0 z-0 -translate-y-1/2"
                 src={"https://farmui.vercel.app/bg-back.png"}
@@ -38,6 +38,6 @@ export default function NotFound() {
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
     )
 }
