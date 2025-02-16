@@ -50,11 +50,10 @@ const Page = async () => {
                                         </p>
                                         {user && user.user ? (
                                             <>
-                                                <ContentForm user={user.user} />
                                                 <form onSubmit={signOut} className="mt-1 py-2">
 
                                                     {/* Submit button */}
-                                                    <Button className="px-0 py-2">
+                                                    <Button className="px-0 py-2 justify-start">
                                                         <div style={{ transform: "none" }}>
                                                             <div className="group relative inline-block cursor-pointer rounded-xl bg-zinc-900 p-px leading-6 text-white no-underline shadow-2xl shadow-zinc-900">
                                                                 <span className="absolute inset-0 overflow-hidden rounded-xl">
@@ -72,6 +71,7 @@ const Page = async () => {
                                                     </Button>
 
                                                 </form>
+                                                <ContentForm user={user.user} />
                                             </>
                                         ) : (
                                             <div className="flex flex-col sm:flex-row gap-4">
