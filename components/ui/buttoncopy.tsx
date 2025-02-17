@@ -3,7 +3,7 @@
 import { useCopyToClipboard } from "@/components/hooks/use-copy-to-clipboard";
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
-import { useToast } from "./use-toast";
+import { useToast } from "../hooks/use-toast";
 
 interface CopyButtonProps {
     textToCopy: string;

@@ -1,8 +1,8 @@
 "use client";
 
+import { useToast } from "@/components/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/components/ui/use-toast";
 import { addContent } from "@/utils/action/add";
 import { SymbolIcon } from "@radix-ui/react-icons";
 import { User } from "@supabase/supabase-js";

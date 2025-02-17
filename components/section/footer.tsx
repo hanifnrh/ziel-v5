@@ -6,7 +6,7 @@ import { RetroGrid } from "../magicui/retro-grid";
 const Footer = () => {
   return (
     <footer className="body-light relative mt-auto w-full">
-      <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+      <div className="relative flex sw-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
         <div className="flex justify-center bg-zinc-950 pt-20 p-8 pb-20 px-8 md:px-20 2xl:px-52 w-full">
           <div className="flex items-stretch py-10 justify-between text-sm tracking-wide w-full min-[1200px]:w-[1200px] gap-16 max-[960px]:flex-col-reverse">
 

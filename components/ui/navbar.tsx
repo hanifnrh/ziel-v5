@@ -1,12 +1,9 @@
 "use client";
 import EncodedText from "@/components/ui/encoded";
-import {
-    Button,
-    Link
-} from "@nextui-org/react";
 import { GeistMono } from "geist/font/mono";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -24,9 +21,12 @@ export default function ResponsiveNavbar() {
             {/* Navbar for large screens */}
             <nav className="flex-wrap items-center justify-between py-8 sm:py-4 flex px-8 md:px-20 2xl:px-52">
                 <div className="left-nav hidden md:flex items-center space-x-4">
-                    <Button className="body-light hidden md:block">
+                    <Link
+                        href="/"
+                        rel="canonical"
+                        className="body-light hidden md:block">
                         <Clock locale="en-CA" />
-                    </Button>
+                    </Link>
                 </div>
                 <Link
                     href="/"

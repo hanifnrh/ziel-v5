@@ -89,12 +89,12 @@ export default function AboutSection() {
                             height={800}
                             width={800}
                         />
-                        <div className="relative group">
+                        <div className="relative group rounded-xl">
                             <Image
                                 src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/about.jpg"
                                 height={1000}
                                 width={1000}
-                                className="z-20 w-full aspect-square object-cover rounded-xl brightness-50 grayscale"
+                                className="z-20 w-full aspect-square object-cover brightness-50 grayscale"
                                 alt="thumbnail"
                             />
                             {/* Fuzzy Noise & Purple Overlay */}
