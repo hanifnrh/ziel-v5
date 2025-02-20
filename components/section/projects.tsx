@@ -36,7 +36,7 @@ export default function Projects() {
                     </p>
                 </div>
                 <Link
-                    href="/under-construction"
+                    href="/projects"
                     rel="canonical"
                     className="sm:w-1/3 xl:w-1/2 text-zinc-200 flex justify-start items-start sm:justify-end">
                     <SpotlightButton />

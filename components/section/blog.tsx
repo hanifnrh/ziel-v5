@@ -71,7 +71,7 @@ export default function Blog() {
                                         className='ml-1 inline-block transition-all duration-300 group-hover:ml-2'
                                     />
                                 </p>
-                                <div className="flex font-mono text-zinc-500 gap-2">
+                                <div className="flex body-light text-zinc-500 gap-2">
                                     <p className="bg-zinc-200/10 px-3 py-2 text-xs rounded-sm">
                                         tag
                                     </p>

@@ -1,7 +1,7 @@
 "use client";
 
 import { easeInOut, motion } from "framer-motion";
-import { Atom, Bolt, BookOpenText, PencilLine } from "lucide-react";
+import { Atom, Bolt, BookOpenText, PanelsTopLeft, PencilLine } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -33,6 +33,12 @@ const navItems = [
     label: "Blog",
     href: "/blog",
     icon: <PencilLine className="h-full w-full" />,
+  },
+  {
+    id: 4,
+    label: "Projects",
+    href: "/projects",
+    icon: <PanelsTopLeft className="h-full w-full" />,
   },
 ];
 

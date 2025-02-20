@@ -15,7 +15,7 @@ interface Post {
     };
 }
 
-const HYGRAPH_ENDPOINT = process.env.NEXT_PUBLIC_HYGRAPH_URL!; // Ganti dengan endpoint Hygraph-mu
+const HYGRAPH_ENDPOINT = process.env.NEXT_PUBLIC_HYGRAPH_URL!;
 
 export default function Blog() {
     const [posts, setPosts] = useState<Post[]>([]);
@@ -138,7 +138,7 @@ export default function Blog() {
                                                 Read more
                                                 <ArrowRight className="ml-1 inline-block transition-all duration-300 group-hover:ml-2" />
                                             </p>
-                                            <div className="flex font-mono text-zinc-500 gap-2">
+                                            <div className="flex body-light text-zinc-500 gap-2">
                                                 {(Array.isArray(post.tag) ? post.tag : post.tag.split(",")).map((tag: string, index: number) => (
                                                     <p key={index} className="bg-zinc-200/10 px-3 py-2 text-xs rounded-sm">
                                                         {tag.trim()}

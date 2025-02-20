@@ -114,7 +114,7 @@ const data = [
 export default function Story() {
     return (
         <section className="relative pb-20 gap-16 px-8 md:px-20 2xl:px-52">
-      
+
             <div className="py-5">
                 <h2 className="flex bg-purple-600/20 text-purple-600 px-4 py-2 rounded-full w-fit">
                     <Atom className="mr-2" />

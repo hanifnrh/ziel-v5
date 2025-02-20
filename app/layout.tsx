@@ -24,7 +24,7 @@ import { baseUrl } from "./sitemap";
 
 export const metadata: Metadata = {
   metadataBase: baseUrl ? new URL(baseUrl) : undefined,
-  applicationName: "Msafdev",
+  applicationName: "Ziel",
   title: {
     default: "Creative Developer and Designer - Ziel",
     template: "%s - Ziel"

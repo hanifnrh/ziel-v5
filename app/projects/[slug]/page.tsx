@@ -20,7 +20,7 @@ interface Post {
 
 const HYGRAPH_ENDPOINT = process.env.NEXT_PUBLIC_HYGRAPH_URL!;
 
-export default function BlogDetail() {
+export default function ProjectDetail() {
     const { slug } = useParams();
     const [post, setPost] = useState<Post | null>(null);
     const [loading, setLoading] = useState(true);
@@ -55,8 +55,8 @@ export default function BlogDetail() {
                 },
                 body: JSON.stringify({
                     query: `
-                        query GetBlogBySlug($slug: String!) {
-                            blog(where: { slug: $slug }) {
+                        query GetProjectBySlug($slug: String!) {
+                            project(where: { slug: $slug }) {
                                 title
                                 description
                                 content { json }
@@ -71,7 +71,7 @@ export default function BlogDetail() {
             });
 
             const json = await response.json();
-            setPost(json?.data?.blog || null);
+            setPost(json?.data?.project || null);
             setLoading(false);
         }
 
@@ -94,12 +94,12 @@ export default function BlogDetail() {
                     alt="back bg"
                 />
                 <Link
-                    href="/blog"
+                    href="/projects"
                     rel='canonical'
                     className='flex gap-2 text-zinc-300 body-light text-base link-hover-animation group-hover:link-hovered-animation transition-all w-fit'
                 >
                     <MoveLeft className="ml-1 inline-block transition-all duration-300 group-hover:ml-2" />
-                    Back to all blogs
+                    Back to all projects
                 </Link>
                 <div className="">
                     <Image
@@ -136,7 +136,7 @@ export default function BlogDetail() {
                                 h3: ({ children }) => <h3 className="text-lg sm:text-2xl body-bold-italic text-zinc-200 mt-6">{children}</h3>,
                                 h4: ({ children }) => <h4 className="text-base sm:text-xl body-light text-zinc-400 mt-6 !important">- {children}</h4>,
                                 ul: ({ children }) => <ul className="text-zinc-400 flex flex-col p-4 border-1 border-zinc-500/30 rounded-xl">{children}</ul>,
-                                li: ({ children }) => <li className="flex text-sm sm:text-base text-zinc-400 "><Dot />{children}</li>,
+                                li: ({ children }) => <li className="flex text-sm sm:text-base text-zinc-400"><Dot className='shrink-0' />{children}</li>,
                                 p: ({ children }) => <p className="text-sm sm:text-base text-zinc-400">{children}</p>,
                                 img: ({ src, title }) => (
                                     <div className='w-full flex items-center justify-center'>
