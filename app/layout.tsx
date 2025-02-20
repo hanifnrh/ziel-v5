@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import * as React from "react";
 
 // UI Libs
+import ResponsiveNavbar from "@/components/section/navbar";
 import Menu from "@/components/ui/menu";
-import ResponsiveNavbar from "@/components/ui/navbar";
 import { Toaster } from "@/components/ui/toaster";
 import NextTopLoader from "nextjs-toploader";
 // Provider
@@ -60,8 +60,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${baseUrl}/og`,
+        url: `https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png`,
         alt: "Ziel",
+        width: 1200,
+        height: 1100,
         type: "image/png",
       },
     ],
@@ -69,7 +71,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ziel - Designer & Developer",
-    images: [`${baseUrl}/og`],
+    images: [`https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png`],
   },
 };
 

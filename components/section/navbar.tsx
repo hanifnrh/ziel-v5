@@ -19,7 +19,7 @@ export default function ResponsiveNavbar() {
             className={`${GeistMono.className} fixed top-0 z-50 w-full bg-transparent backdrop-blur-lg max-w-screen-2xl`}
         >
             {/* Navbar for large screens */}
-            <nav className="flex-wrap items-center justify-between py-8 sm:py-4 flex px-8 md:px-20 2xl:px-52">
+            <nav className="flex-wrap items-center justify-between py-8 sm:py-6 flex px-8 md:px-20 2xl:px-52">
                 <div className="left-nav hidden md:flex items-center space-x-4">
                     <Link
                         href="/"
@@ -42,6 +42,7 @@ export default function ResponsiveNavbar() {
                         alt="Ziel Logo"
                         width={500}
                         height={500}
+                        priority
                     />
                 </Link>
                 <div className={`w-full hidden md:block md:w-auto`} id="navbar-default">

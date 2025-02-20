@@ -23,6 +23,7 @@ const Footer = () => {
                   height={1000}
                   alt="Ziel Logo"
                   className="w-24 h-auto"
+                  priority
                 />
                 <p className="text-[13px] max-w-sm text-zinc-500">
                   Creative design engineer with experience in UI/UX design and frontend web development
