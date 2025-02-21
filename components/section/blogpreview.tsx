@@ -1,9 +1,9 @@
 "use client";
 import { ArrowRight, BookOpenText } from "lucide-react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SpotlightButton } from "../ui/spotlight-button";
 
 interface Post {
     title: string;
@@ -52,7 +52,7 @@ export default function Blog() {
                 body: JSON.stringify({
                     query: `
                         query GetBlogs {
-                            blogs(orderBy: publishDate_DESC) {
+                            blogs(where: { featured: true }, orderBy: publishDate_DESC) {
                                 title
                                 description
                                 slug
@@ -79,25 +79,7 @@ export default function Blog() {
     }, []);
 
     return (
-        <>
-            <Head>
-                <title>Ziel Blog</title>
-                <meta name="description" content="Read my latest blog post." />
-                <meta name="robots" content="index, follow" />
-
-                {/* Open Graph / Facebook */}
-                <meta property="og:type" content="article" />
-                <meta property="og:title" content="Ziel Blog" />
-                <meta property="og:description" content="Read my latest blog post." />
-                <meta property="og:image" content="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png" />
-                <meta property="og:url" content="https://dailyziel.com/blog" />
-
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Ziel Blog" />
-                <meta name="twitter:description" content="Read my latest blog post." />
-                <meta name="twitter:image" content="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png" />
-            </Head>
+        <div>
             <Image
                 className="absolute top-0 z-0 -translate-y-1/2"
                 src={"https://farmui.vercel.app/bg-back.png"}
@@ -105,7 +87,7 @@ export default function Blog() {
                 height={1000}
                 alt="Hero Background"
             />
-            <section className="pt-16 lg:py-28 z-10">
+            <section className="z-10">
                 <div className="px-8 md:px-20 2xl:px-52 py-5">
                     <h2 className="flex bg-purple-600/20 text-purple-600 px-4 py-2 rounded-full w-fit">
                         <BookOpenText className="mr-2" />
@@ -114,7 +96,7 @@ export default function Blog() {
                 </div>
 
                 <div className="px-8 md:px-20 2xl:px-52 pb-10 flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between">
-                    <div className="w-full flex flex-col gap-4">
+                    <div className="sm:w-2/3 xl:w-1/2 flex flex-col gap-4">
                         <h3 className="flex text-4xl sm:text-3xl lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                             Thoughts, Ideas & Explorations
                         </h3>
@@ -122,6 +104,12 @@ export default function Blog() {
                             A space to share insights, experiences, and reflections—on design, development, and everything in between.
                         </p>
                     </div>
+                    <Link
+                        href="/blog"
+                        rel="canonical"
+                        className="sm:w-1/3 xl:w-1/2 text-zinc-200 flex justify-start items-start sm:justify-end">
+                        <SpotlightButton />
+                    </Link>
                 </div>
 
                 <div className="w-full relative flex flex-col items-start px-8 md:px-20 2xl:px-52 pb-20 bg-background" id="projects">
@@ -176,6 +164,6 @@ export default function Blog() {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     );
 }

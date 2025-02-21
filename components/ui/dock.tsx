@@ -35,7 +35,7 @@ const navItems = [
     icon: <PencilLine className="h-full w-full" />,
   },
   {
-    id: 4,
+    id: 5,
     label: "Projects",
     href: "/projects",
     icon: <PanelsTopLeft className="h-full w-full" />,

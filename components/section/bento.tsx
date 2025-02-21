@@ -143,8 +143,8 @@ export default function Bento() {
                                 <MapPin className="inline w-4 h-4 mr-2  duration-300" />
                                 Location
                             </h2>
-                            <div className=" mt-5">
-                                <div className="relative">
+                            <div className="rounded-xl mt-5">
+                                <div className="relative rounded-xl">
                                     <Image
                                         src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/location.png"
                                         width={1000}
@@ -152,7 +152,7 @@ export default function Bento() {
                                         alt="Location in Bekasi, West Java"
                                         className="w-full z-20 rounded-xl object-cover aspect-video grayscale invert"
                                     />
-                                    <div className="absolute inset-0 bg-purple-800 opacity-70 mix-blend-soft-light"></div>
+                                    <div className="absolute inset-0 bg-purple-800 opacity-70 mix-blend-soft-light rounded-xl"></div>
                                 </div>
                             </div>
                         </BentoCard>

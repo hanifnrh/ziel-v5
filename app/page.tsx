@@ -1,9 +1,9 @@
 "use client"
 import Bento from "@/components/section/bento";
-import Blog from "@/components/section/blog";
+import BlogPreview from "@/components/section/blogpreview";
 import Hero from "@/components/section/hero";
 import MyApproach from "@/components/section/my-approach";
-import Projects from "@/components/section/projects";
+import ProjectsPreview from "@/components/section/projects-preview";
 import ContactForm from "@/components/ui/contact-form";
 import { useMenu } from "@/components/ui/menuprovider";
 
@@ -20,9 +20,9 @@ export default function Home() {
 
         <MyApproach />
 
-        <Projects />
+        <ProjectsPreview/>
 
-        <Blog/>
+        <BlogPreview/>
 
         <ContactForm/>
 

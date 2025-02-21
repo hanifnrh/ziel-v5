@@ -1,9 +1,9 @@
 "use client";
 import { ArrowRight, Pickaxe } from "lucide-react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SpotlightButton } from "../ui/spotlight-button";
 
 interface Project {
     title: string;
@@ -32,7 +32,7 @@ export default function ProjectsAll() {
                 body: JSON.stringify({
                     query: `
                         query GetProjects {
-                            projects(orderBy: publishDate_DESC) {
+                            projects(where: { featured: true }, orderBy: publishDate_DESC) {
                                 title
                                 description
                                 slug
@@ -55,33 +55,8 @@ export default function ProjectsAll() {
     }, []);
 
     return (
-        <>
-            <Head>
-                <title>Ziel Projects</title>
-                <meta name="description" content="View my latest projects." />
-                <meta name="robots" content="index, follow" />
-
-                {/* Open Graph / Facebook */}
-                <meta property="og:type" content="article" />
-                <meta property="og:title" content="Ziel Projects" />
-                <meta property="og:description" content="View my latest projects." />
-                <meta property="og:image" content="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png" />
-                <meta property="og:url" content="https://dailyziel.com/projects" />
-
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Ziel Projects" />
-                <meta name="twitter:description" content="View my latest projects." />
-                <meta name="twitter:image" content="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png" />
-            </Head>
-            <Image
-                className="absolute top-0 z-0 -translate-y-1/2"
-                src={"https://farmui.vercel.app/bg-back.png"}
-                width={1000}
-                height={1000}
-                alt="Hero Background"
-            />
-            <div className="pt-16 lg:py-28 z-10">
+        <div>
+            <div className="z-10">
                 <div className="px-8 md:px-20 2xl:px-52 py-5">
                     <h2 className="flex bg-purple-600/20 text-purple-600 px-4 py-2 rounded-full w-fit">
                         <Pickaxe className="mr-2" />
@@ -90,7 +65,7 @@ export default function ProjectsAll() {
                 </div>
 
                 <div className="relative px-8 md:px-20 2xl:px-52 pb-10 flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between">
-                    <div className="w-full flex flex-col gap-4">
+                    <div className="sm:w-2/3 xl:w-1/2 flex flex-col gap-4">
                         <h3 className="flex text-4xl sm:text-3xl lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                             Design-Driven Development
                         </h3>
@@ -98,6 +73,12 @@ export default function ProjectsAll() {
                             These projects highlight my journey of merging aesthetics with functionality. Started as a visual enthusiast, I went through many challenges to build functional yet visually pleasing projects.
                         </p>
                     </div>
+                    <Link
+                        href="/projects"
+                        rel="canonical"
+                        className="sm:w-1/3 xl:w-1/2 text-zinc-200 flex justify-start items-start sm:justify-end">
+                        <SpotlightButton />
+                    </Link>
                 </div>
 
                 {/* Project Cards */}
@@ -148,6 +129,6 @@ export default function ProjectsAll() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
