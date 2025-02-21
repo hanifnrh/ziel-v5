@@ -36,6 +36,7 @@ export const metadata: Metadata = {
     "front end web developer",
     "front end developer",
     "dailyziel",
+    "ziel works",
     "ziel",
     "ziel developer",
     "web designer",

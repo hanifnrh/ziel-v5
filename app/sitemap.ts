@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-export const baseUrl = "https://www.dailyziel.com";
+export const baseUrl = "https://www.ziel.works";
 
 async function fetchBlogSlugs() {
     const response = await fetch(process.env.NEXT_PUBLIC_HYGRAPH_URL!, {
