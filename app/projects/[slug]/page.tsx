@@ -97,7 +97,7 @@ export default function ProjectDetail() {
                 <meta property="og:title" content={post?.title || "Projects"} />
                 <meta property="og:description" content={post?.description || "View my latest projects."} />
                 <meta property="og:image" content={post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png"} />
-                <meta property="og:url" content={`https://dailyziel.com/blog/${slug}`} />
+                <meta property="og:url" content={`https://ziel.works/blog/${slug}`} />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />

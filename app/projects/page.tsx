@@ -66,7 +66,7 @@ export default function ProjectsAll() {
                 <meta property="og:title" content="Ziel Projects" />
                 <meta property="og:description" content="View my latest projects." />
                 <meta property="og:image" content="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png" />
-                <meta property="og:url" content="https://dailyziel.com/projects" />
+                <meta property="og:url" content="https://ziel.works/projects" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
