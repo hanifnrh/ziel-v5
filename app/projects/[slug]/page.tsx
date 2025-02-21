@@ -105,15 +105,15 @@ export default function ProjectDetail() {
                 <meta name="twitter:description" content={post?.description || "Read our latest blog post."} />
                 <meta name="twitter:image" content={post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png"} />
             </Head>
+            <Image
+                className="absolute top-0 z-0 -translate-y-1/2"
+                src={"https://farmui.vercel.app/bg-back.png"}
+                width={1000}
+                height={1000}
+                alt="back bg"
+            />
             <section className="mt-12 lg:mt-0 pt-12 lg:py-28 z-10">
                 <div className="flex flex-col px-8 md:px-20 2xl:px-52 pb-10 gap-4 lg:gap-8">
-                    <Image
-                        className="absolute top-0 z-0 -translate-y-1/2"
-                        src={"https://farmui.vercel.app/bg-back.png"}
-                        width={1000}
-                        height={1000}
-                        alt="back bg"
-                    />
                     <Link
                         href="/projects"
                         rel='canonical'

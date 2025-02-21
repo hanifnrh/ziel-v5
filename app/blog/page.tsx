@@ -152,20 +152,18 @@ export default function Blog() {
                                                 {post.description}
                                             </p>
                                         </div>
-                                        <div className="flex justify-between w-full">
-                                            <p className="link-hover-animation text-purple-500 group-hover:link-hovered-animation w-fit text-sm">
+                                        <div className="flex flex-col sm:flex-row justify-between w-full">
+                                            <p className="mt-6 sm:mt-0 order-2 sm:order-1 link-hover-animation text-purple-500 group-hover:link-hovered-animation w-fit text-sm">
                                                 Read more
                                                 <ArrowRight className="ml-1 inline-block transition-all duration-300 group-hover:ml-2" />
                                             </p>
-                                            <div className="flex body-light text-zinc-400 gap-2">
+                                            <div className="order-1 sm:order-2 flex body-light text-zinc-400 gap-2">
                                                 {(Array.isArray(post.tag) ? post.tag : post.tag.split(",")).map((tag: string, index: number) => (
                                                     <p key={index} className="bg-zinc-200/10 px-3 py-2 text-xs rounded-sm">
                                                         {tag.trim()}
                                                     </p>
                                                 ))}
                                             </div>
-
-
                                         </div>
                                     </div>
                                 </Link>
