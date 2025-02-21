@@ -24,7 +24,6 @@
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-toast": "^1.2.2",
     "@radix-ui/react-tooltip": "^1.1.4",
-    "@react-three/fiber": "^8.17.14",
     "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@supabase/postgrest-js": "^1.18.1",
     "@supabase/ssr": "^0.5.2",
