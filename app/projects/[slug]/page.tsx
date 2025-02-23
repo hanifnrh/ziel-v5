@@ -153,7 +153,7 @@ export default function ProjectDetail() {
                     </div>
 
                     <div className="mt-6 flex body-light text-zinc-500 gap-2">
-                        {post.tag.split(",").map((tag, index) => (
+                        {(Array.isArray(post.tag) ? post.tag : post.tag.split(",")).map((tag, index) => (
                             <span key={index} className="bg-zinc-200/10 px-3 py-2 text-xs rounded-sm">
                                 {tag.trim()}
                             </span>
