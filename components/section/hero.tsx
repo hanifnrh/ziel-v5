@@ -5,8 +5,11 @@ import {
 } from "@nextui-org/react";
 import { Github, Lightbulb, Sparkles } from "lucide-react";
 import Image from "next/image";
+import { Button } from "../ui/button";
+import { useMenu } from "../ui/menuprovider";
 
 export default function Hero() {
+    const { openMenu } = useMenu();
     return (
         <div>
             <Image
@@ -30,12 +33,11 @@ export default function Hero() {
                             Through putting creativity into code and logic into design, I work to deliver the best experiences to users.
                         </p>
                         <div className="flex gap-2">
-                            <Link
-                                href="/#contact"
-                                rel="canonical"
+                            <Button
+                                onClick={openMenu}
                             >
                                 <GradientButton> <Sparkles className="mr-2" />Get in Touch</GradientButton>
-                            </Link>
+                            </Button>
                             <Link
                                 href="https://github.com/hanifnrh"
                                 rel="canonical"
