@@ -5,7 +5,6 @@ import {
 } from "@nextui-org/react";
 import { Github, Lightbulb, Sparkles } from "lucide-react";
 import Image from "next/image";
-import { Button } from "../ui/button";
 import { useMenu } from "../ui/menuprovider";
 
 export default function Hero() {
@@ -33,11 +32,9 @@ export default function Hero() {
                             Through putting creativity into code and logic into design, I work to deliver the best experiences to users.
                         </p>
                         <div className="flex gap-2">
-                            <Button
-                                onClick={openMenu}
-                            >
-                                <GradientButton> <Sparkles className="mr-2" />Get in Touch</GradientButton>
-                            </Button>
+
+                            <GradientButton onClick={openMenu}> <Sparkles className="mr-2" />Get in Touch</GradientButton>
+
                             <Link
                                 href="https://github.com/hanifnrh"
                                 rel="canonical"
