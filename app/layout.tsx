@@ -98,8 +98,8 @@ export default function RootLayout({
             />
             <ResponsiveNavbar />
             <Dock />
+            <ScrollProgress className="top-0" />
             <FadeInUnblur>
-              <ScrollProgress className="top-0" />
               {children}
               <Footer />
             </FadeInUnblur>
