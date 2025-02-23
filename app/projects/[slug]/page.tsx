@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 interface Post {
     title: string;
     description: string;
-    content: { json: RichTextContent };
+    content: any;
     publishDate: string;
     featuredImage: { url: string };
     tag: string;
@@ -76,6 +76,7 @@ export default function ProjectDetail() {
                 });
 
                 const json = await response.json();
+                console.log(json);
                 if (json.errors) {
                     throw new Error("Failed to fetch post");
                 }
@@ -137,7 +138,7 @@ export default function ProjectDetail() {
 
                     <div className="">
                         <Image
-                            src={post.featuredImage.url}
+                            src={post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png"}
                             width={1000}
                             height={600}
                             className="w-full aspect-[5/2] sm:aspect-[5/1] object-cover rounded-sm"
@@ -160,19 +161,32 @@ export default function ProjectDetail() {
                         ))}
                     </div>
 
-                    <div className="flex flex-col gap-2 pt-4 border-t-1 border-zinc-500/20">
+                    <div className='flex flex-col gap-2 pt-10 border-t-1 border-zinc-500/20'>
                         {/* Render Rich Text */}
-                        <RichText
-                            content={post.content.json}
-                            renderers={{
-                                h2: ({ children }) => <h2 className="text-2xl sm:text-4xl body text-zinc-200 mt-10 border-b-1 border-zinc-200/20 py-2">{children}</h2>,
-                                h3: ({ children }) => <h3 className="text-lg sm:text-2xl body text-zinc-200 mt-6">{children}</h3>,
-                                ul: ({ children }) => <ul className="flex flex-col p-4 gap-3 bg-purple-600/20 border-l-4 border-purple-600">{children}</ul>,
-                                li: ({ children }) => <li className="flex text-base sm:text-lg text-purple-600"><Dot className="shrink-0" />{children}</li>,
-                                code: ({ children }) => <code className="block bg-zinc-600/20 p-4 rounded-lg overflow-x-auto text-sm sm:text-base font-mono text-zinc-200">{children}</code>,
-                                p: ({ children }) => <p className="text-sm sm:text-base text-zinc-400">{children}</p>,
-                            }}
-                        />
+                        {post.content?.map((item: { json: RichTextContent }, index: number) => (
+                            <RichText
+                                key={index}
+                                content={item.json}
+                                renderers={{
+                                    h2: ({ children }) => <h2 className="text-2xl sm:text-4xl body text-zinc-200 mt-6">{children}</h2>,
+                                    h3: ({ children }) => <h3 className="text-lg sm:text-2xl body-bold-italic text-zinc-200 mt-6">{children}</h3>,
+                                    h4: ({ children }) => <h4 className="text-base sm:text-xl body-light text-zinc-400 mt-6 !important">- {children}</h4>,
+                                    ul: ({ children }) => <ul className="flex flex-col p-4 gap-3 bg-purple-600/20 border-l-4 border-purple-600">{children}</ul>,
+                                    li: ({ children }) => <li className="flex text-base sm:text-lg text-purple-600"><Dot className='shrink-0' />{children}</li>,
+                                    p: ({ children }) => <p className="text-sm sm:text-base text-zinc-400">{children}</p>,
+                                    code: ({ children }) => (
+                                        <code className="whitespace-pre-wrap block bg-zinc-600/20 p-4 rounded-lg overflow-x-auto text-sm sm:text-base font-mono text-zinc-200">
+                                            {children}
+                                        </code>
+                                    ),
+                                    img: ({ src, title }) => (
+                                        <div className='w-full flex items-center justify-center'>
+                                            <Image src={src || "Source"} alt={title || "Image"} width={1000} height={1000} className="w-2/3 sm:w-1/2 object-cover rounded-xl my-6" priority />
+                                        </div>
+                                    )
+                                }}
+                            />
+                        ))}
                     </div>
                 </div>
             </section>
