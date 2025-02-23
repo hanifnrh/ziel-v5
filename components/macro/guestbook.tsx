@@ -55,7 +55,7 @@ const GuestbookCard = async ({
                             src={user_avatar}
                             alt={full_name}
                             fill
-                            className="object-cover rounded-full border border-purple-600/80"
+                            className="object-cover rounded-full border-1 border-zinc-200"
                         />
                     </div>
                     <div className="flex flex-col">

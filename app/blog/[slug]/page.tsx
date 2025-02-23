@@ -1,5 +1,6 @@
 "use client"
 
+import { Loader } from '@/components/ui/loader';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { RichTextContent } from '@graphcms/rich-text-types';
 import { Dot, MoveLeft } from 'lucide-react';
@@ -81,7 +82,7 @@ export default function BlogDetail() {
         }
     }, [slug]);
 
-    if (loading) return <p className="text-center text-zinc-500">Loading...</p>;
+    if (loading) return <Loader/>;
     if (!post) return <p className="text-center text-zinc-500">Post not found.</p>;
 
     return (
@@ -96,7 +97,7 @@ export default function BlogDetail() {
                 <meta property="og:title" content={post?.title || "Blog"} />
                 <meta property="og:description" content={post?.description || "Read our latest blog post."} />
                 <meta property="og:image" content={post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png"} />
-                <meta property="og:url" content={`https://yourwebsite.com/blog/${slug}`} />
+                <meta property="og:url" content={`https://ziel.works/blog/${slug}`} />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
@@ -130,6 +131,7 @@ export default function BlogDetail() {
                             height={600}
                             className="w-full aspect-[5/2] sm:aspect-[5/1] object-cover rounded-sm"
                             alt={post.title}
+                            priority
                         />
                     </div>
 
@@ -167,7 +169,7 @@ export default function BlogDetail() {
                                     ),
                                     img: ({ src, title }) => (
                                         <div className='w-full flex items-center justify-center'>
-                                            <Image src={src || "Source"} alt={title || "Image"} width={1000} height={1000} className="w-2/3 sm:w-1/2 object-cover rounded-xl my-6" />
+                                            <Image src={src || "Source"} alt={title || "Image"} width={1000} height={1000} className="w-2/3 sm:w-1/2 object-cover rounded-xl my-6" priority/>
                                         </div>
                                     )
                                 }}

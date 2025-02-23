@@ -27,9 +27,6 @@ const Menu: React.FC = () => {
     return (
         <Dialog open={isDialogOpen} onOpenChange={closeMenu}>
             <DialogContent className="body bg-neutral-950/80 backdrop-blur-xs sm:max-w-md flex flex-col items-center justify-center">
-                <div
-                    className={`absolute inset-0 -z-10 rounded-xl p-px bg-gradient-to-br from-transparent  to-transparent via-purple-700/10 opacity-40 transition-opacity duration-300`}
-                />
                 <DialogHeader>
                     <DialogTitle className="text-center text-zinc-200">Menu</DialogTitle>
                     <DialogDescription className="text-center body-light text-zinc-200">Get in touch with me</DialogDescription>
