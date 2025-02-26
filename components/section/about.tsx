@@ -27,17 +27,18 @@ export default function AboutSection() {
                         </p>
                         <div className="flex gap-2 lg:gap-4 p-2 lg:p-4 border-2 justify-around sm:justify-center border-dashed border-zinc-200/20 rounded-xl w-full sm:w-fit">
                             <Link
-                                href=""
+                                href="https://drive.google.com/file/d/1YVITGrnvwSLOR7WKBRs4cAaRevdYVNvf/view?usp=sharing"
                                 rel="canonical"
                                 target="_blank"
                                 className="scale-100 sm:scale-75 lg:scale-100"
+                                aria-label="Resume"
                             >
                                 <div className="bg-zinc-200/20 hover:bg-zinc-200/10 transition-all text-zinc-200 hover:text-zinc-200/80 p-3 rounded-lg flex items-center justify-center">
                                     <FileUser />
                                 </div>
                             </Link>
                             <Link
-                                href=""
+                                href="https://github.com/hanifnrh"
                                 rel="canonical"
                                 target="_blank"
                                 className="scale-100 sm:scale-75 lg:scale-100"
@@ -51,6 +52,7 @@ export default function AboutSection() {
                                 rel="canonical"
                                 target="_blank"
                                 className="scale-100 sm:scale-75 lg:scale-100"
+                                aria-label="Instagram"
                             >
                                 <div className=" bg-zinc-200/20 hover:bg-zinc-200/10 transition-all text-zinc-200 hover:text-zinc-200/80 p-3 rounded-lg flex items-center justify-center">
                                     <Instagram />
@@ -61,6 +63,7 @@ export default function AboutSection() {
                                 rel="canonical"
                                 target="_blank"
                                 className="scale-100 sm:scale-75 lg:scale-100"
+                                aria-label="Dribbble"
                             >
                                 <div className=" bg-zinc-200/20 hover:bg-zinc-200/10 transition-all text-zinc-200 hover:text-zinc-200/80 p-3 rounded-lg flex items-center justify-center">
                                     <Dribbble />
@@ -71,6 +74,7 @@ export default function AboutSection() {
                                 rel="canonical"
                                 target="_blank"
                                 className="scale-100 sm:scale-75 lg:scale-100"
+                                aria-label="LinkedIn"
                             >
                                 <div className=" bg-zinc-200/20 hover:bg-zinc-200/10 transition-all text-zinc-200 hover:text-zinc-200/80 p-3 rounded-lg flex items-center justify-center">
                                     <Linkedin />

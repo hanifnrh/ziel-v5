@@ -86,6 +86,7 @@ export default function ProjectsAll() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 sm:gap-8 items-start">
                         {projects.map((project) => (
                             <Link
+                                rel="canonical"
                                 key={project.slug}
                                 href={`/projects/${project.slug}`}
                                 className="group body w-full flex flex-col gap-4 justify-center items-start text-zinc-200"

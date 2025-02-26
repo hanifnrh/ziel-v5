@@ -105,7 +105,7 @@ const Footer = () => {
                       <a href="https://drive.google.com/file/d/1YVITGrnvwSLOR7WKBRs4cAaRevdYVNvf/view?usp=sharing" target="_blank" className="flex items-center gap-1 font-normal hover:text-zinc-200">
 
                         <div className="size-3">
-                          CV
+                          Resume
                         </div>
                       </a>
                     </li>

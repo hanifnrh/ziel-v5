@@ -140,6 +140,7 @@ export default function Blog() {
                             {posts.length > 0 ? (
                                 posts.map((post, index) => (
                                     <Link
+                                        rel="canonical"
                                         key={index}
                                         href={`/blog/${post.slug}`}
                                         className="w-full group border-zinc-500/20 border-t-1 py-10 body grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-4 lg:gap-6 xl:gap-8 justify-center items-start text-zinc-200"
