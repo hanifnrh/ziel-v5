@@ -89,13 +89,14 @@ export default function Blog() {
                 <title>Ziel Blog</title>
                 <meta name="description" content="Read my latest blog post." />
                 <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://www.ziel.works/blog" />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content="Ziel Blog" />
                 <meta property="og:description" content="Read my latest blog post." />
                 <meta property="og:image" content="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png" />
-                <meta property="og:url" content="https://ziel.works/blog" />
+                <meta property="og:url" content="https://www.ziel.works/blog" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
