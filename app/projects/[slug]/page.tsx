@@ -4,7 +4,7 @@ import { Loader } from '@/components/ui/loader';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { RichTextContent } from '@graphcms/rich-text-types';
 import { Dot, MoveLeft, Paperclip } from 'lucide-react';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Image from "next/image";
 import Link from 'next/link';
 import { useParams } from "next/navigation";
@@ -98,24 +98,27 @@ export default function ProjectDetail() {
 
     return (
         <>
-            <Head>
-                <title>{post?.title || "Projects"} | Ziel</title>
-                <meta name="description" content={post?.description || "View my latest projects."} />
-                <meta name="robots" content="index, follow" />
-
-                {/* Open Graph / Facebook */}
-                <meta property="og:type" content="article" />
-                <meta property="og:title" content={post?.title || "Projects"} />
-                <meta property="og:description" content={post?.description || "View my latest projects."} />
-                <meta property="og:image" content={post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png"} />
-                <meta property="og:url" content={`https://ziel.works/blog/${slug}`} />
-
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={post?.title || "Blog"} />
-                <meta name="twitter:description" content={post?.description || "Read our latest blog post."} />
-                <meta name="twitter:image" content={post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png"} />
-            </Head>
+            <NextSeo
+                title={post?.title || "Projects"}
+                description={post?.description || "View my latest projects."}
+                openGraph={{
+                    type: "article",
+                    url: `https://ziel.works/projects/${slug}`,
+                    title: post?.title || "Projects",
+                    description: post?.description || "View my latest projects.",
+                    images: [
+                        {
+                            url: post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png",
+                            width: 1200,
+                            height: 630,
+                            alt: post?.title,
+                        },
+                    ],
+                }}
+                twitter={{
+                    cardType: "summary_large_image",
+                }}
+            />
 
             <Image
                 className="absolute top-0 z-0 -translate-y-1/2"

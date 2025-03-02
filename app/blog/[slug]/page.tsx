@@ -4,11 +4,12 @@ import { Loader } from '@/components/ui/loader';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { RichTextContent } from '@graphcms/rich-text-types';
 import { Dot, MoveLeft, Paperclip } from 'lucide-react';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import Image from "next/image";
 import Link from 'next/link';
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+
 interface Post {
     title: string;
     description: string;
@@ -82,29 +83,32 @@ export default function BlogDetail() {
         }
     }, [slug]);
 
-    if (loading) return <Loader/>;
+    if (loading) return <Loader />;
     if (!post) return <p className="text-center text-zinc-500">Post not found.</p>;
 
     return (
         <>
-            <Head>
-                <title>{post?.title || "Blog"} | Ziel</title>
-                <meta name="description" content={post?.description || "Read my latest blog post."} />
-                <meta name="robots" content="index, follow" />
-
-                {/* Open Graph / Facebook */}
-                <meta property="og:type" content="article" />
-                <meta property="og:title" content={post?.title || "Blog"} />
-                <meta property="og:description" content={post?.description || "Read our latest blog post."} />
-                <meta property="og:image" content={post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png"} />
-                <meta property="og:url" content={`https://ziel.works/blog/${slug}`} />
-
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={post?.title || "Blog"} />
-                <meta name="twitter:description" content={post?.description || "Read our latest blog post."} />
-                <meta name="twitter:image" content={post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png"} />
-            </Head>
+            <NextSeo
+                title={post?.title || "Blog"}
+                description={post?.description || "Read my latest blog post."}
+                openGraph={{
+                    type: "article",
+                    url: `https://ziel.works/blog/${slug}`,
+                    title: post?.title || "Blog",
+                    description: post?.description || "Read my latest blog post.",
+                    images: [
+                        {
+                            url: post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png",
+                            width: 1200,
+                            height: 630,
+                            alt: post?.title,
+                        },
+                    ],
+                }}
+                twitter={{
+                    cardType: "summary_large_image",
+                }}
+            />
 
             <Image
                 className="absolute top-0 z-0 -translate-y-1/2"
@@ -169,7 +173,7 @@ export default function BlogDetail() {
                                     ),
                                     img: ({ src, title }) => (
                                         <div className='w-full flex items-center justify-center'>
-                                            <Image src={src || "Source"} alt={title || "Image"} width={1000} height={1000} className="w-2/3 sm:w-1/2 object-cover rounded-xl my-6" priority/>
+                                            <Image src={src || "Source"} alt={title || "Image"} width={1000} height={1000} className="w-2/3 sm:w-1/2 object-cover rounded-xl my-6" priority />
                                         </div>
                                     )
                                 }}
