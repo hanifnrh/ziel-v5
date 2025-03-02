@@ -1,3 +1,5 @@
+"use client";
+
 import { Loader } from '@/components/ui/loader';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { RichTextContent } from '@graphcms/rich-text-types';
