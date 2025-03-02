@@ -1,10 +1,7 @@
-"use client";
-
 import { Loader } from '@/components/ui/loader';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { RichTextContent } from '@graphcms/rich-text-types';
 import { Dot, MoveLeft, Paperclip } from 'lucide-react';
-import { NextSeo } from 'next-seo';
 import Image from "next/image";
 import Link from 'next/link';
 import { useParams } from "next/navigation";
@@ -20,6 +17,61 @@ interface Post {
 }
 
 const HYGRAPH_ENDPOINT = process.env.NEXT_PUBLIC_HYGRAPH_URL!;
+
+async function getPost(slug: string): Promise<Post | null> {
+    const response = await fetch(HYGRAPH_ENDPOINT, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${process.env.NEXT_PUBLIC_HYGRAPH_TOKEN}`
+        },
+        body: JSON.stringify({
+            query: `
+                query GetProjectBySlug($slug: String!) {
+                    project(where: { slug: $slug }) {
+                        title
+                        description
+                        content { json }
+                        publishDate
+                        featuredImage { url }
+                        tag
+                    }
+                }
+            `,
+            variables: { slug },
+        }),
+        cache: "no-store", // Menghindari cache untuk mendapatkan data terbaru
+    });
+
+    const json = await response.json();
+    return json?.data?.project || null;
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+    const post = await getPost(params.slug);
+
+    return {
+        title: post?.title || "Projects",
+        description: post?.description || "View my latest projects.",
+        openGraph: {
+            type: "article",
+            url: `https://ziel.works/projects/${params.slug}`,
+            title: post?.title || "Projects",
+            description: post?.description || "View my latest projects.",
+            images: [
+                {
+                    url: post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png",
+                    width: 1200,
+                    height: 630,
+                    alt: post?.title,
+                },
+            ],
+        },
+        twitter: {
+            cardType: "summary_large_image",
+        },
+    };
+}
 
 export default function ProjectDetail() {
     const params = useParams();
@@ -98,28 +150,6 @@ export default function ProjectDetail() {
 
     return (
         <>
-            <NextSeo
-                title={post?.title || "Projects"}
-                description={post?.description || "View my latest projects."}
-                openGraph={{
-                    type: "article",
-                    url: `https://ziel.works/projects/${slug}`,
-                    title: post?.title || "Projects",
-                    description: post?.description || "View my latest projects.",
-                    images: [
-                        {
-                            url: post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png",
-                            width: 1200,
-                            height: 630,
-                            alt: post?.title,
-                        },
-                    ],
-                }}
-                twitter={{
-                    cardType: "summary_large_image",
-                }}
-            />
-
             <Image
                 className="absolute top-0 z-0 -translate-y-1/2"
                 src="/bg-back.png"
