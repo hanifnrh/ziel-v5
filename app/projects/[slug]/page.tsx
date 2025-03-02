@@ -170,7 +170,7 @@ export default function ProjectDetail() {
                                 renderers={{
                                     h2: ({ children }) => <h2 className="inline-flex items-center text-2xl sm:text-4xl body-bold text-zinc-200 mt-6"><Paperclip className='mr-2' />{children}</h2>,
                                     h3: ({ children }) => <h3 className="text-lg sm:text-2xl body text-zinc-200 mt-6">{children}</h3>,
-                                    h4: ({ children }) => <h4 className="text-base sm:text-xl body text-zinc-400 mt-6 !important">{children}</h4>,
+                                    h4: ({ children }) => <h4 className="text-base sm:text-xl body text-zinc-200 mt-6 !important">{children}</h4>,
                                     ul: ({ children }) => <ul className="flex flex-col p-4 gap-3 bg-purple-600/20 border-l-4 border-purple-600">{children}</ul>,
                                     li: ({ children }) => <li className="flex text-base sm:text-lg text-purple-600"><Dot className='shrink-0' />{children}</li>,
                                     p: ({ children }) => <p className="text-sm sm:text-base text-zinc-400">{children}</p>,
