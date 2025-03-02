@@ -151,7 +151,7 @@ export default function Blog() {
                                                 src={post.featuredImage.url}
                                                 width={1000}
                                                 height={1000}
-                                                className="w-full h-auto object-cover group-hover:scale-105 transition-all"
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-all"
                                                 alt={post.title}
                                                 priority
                                             />

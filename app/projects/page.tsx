@@ -129,7 +129,7 @@ export default function ProjectsAll() {
                                             src={project.featuredImage.url}
                                             width={1000}
                                             height={1000}
-                                            className="w-full h-auto object-cover aspect-video group-hover:scale-105 transition-all"
+                                            className="w-full h-full object-cover aspect-video group-hover:scale-105 transition-all"
                                             alt={project.title}
                                             priority
                                         />
