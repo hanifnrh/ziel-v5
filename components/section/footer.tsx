@@ -18,7 +18,7 @@ const Footer = () => {
                 className="space-y-4"
               >
                 <Image
-                  src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/ziel-logo-white.png"
+                  src="/ziel-logo-white.png"
                   width={1000}
                   height={1000}
                   alt="Ziel Logo"
@@ -53,7 +53,7 @@ const Footer = () => {
                     </div>
                   </Link>
                   <Link
-                    href="https://www.instagram.com/ziel.dev/"
+                    href="https://www.instagram.com/ziel.works/"
                     rel="canonical"
                     target="_blank"
                     className="scale-75"

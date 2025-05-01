@@ -95,7 +95,7 @@ export default function AboutSection() {
                         />
                         <div className="relative group">
                             <Image
-                                src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/about.jpg"
+                                src="/images/about.jpg"
                                 height={1000}
                                 width={1000}
                                 className="z-20 w-full aspect-square object-cover rounded-lg brightness-50 grayscale"

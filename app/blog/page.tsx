@@ -95,14 +95,14 @@ export default function Blog() {
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content="Ziel Blog" />
                 <meta property="og:description" content="Read my latest blog post." />
-                <meta property="og:image" content="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png" />
+                <meta property="og:image" content="/thumbnail.png" />
                 <meta property="og:url" content="https://www.ziel.works/blog" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Ziel Blog" />
                 <meta name="twitter:description" content="Read my latest blog post." />
-                <meta name="twitter:image" content="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png" />
+                <meta name="twitter:image" content="/thumbnail.png" />
             </Head>
             <Image
                 className="absolute top-0 z-0 -translate-y-1/2"

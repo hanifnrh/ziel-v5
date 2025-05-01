@@ -127,7 +127,7 @@ export function LogoCluster() {
             <div className="absolute left-1/2 h-full w-[26rem] -translate-x-1/2">
                 <MainLogo />
                 <Logo
-                    src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/svg/laravel.svg"
+                    src="/svg/laravel.svg"
                     left={360}
                     top={144}
                     hover={{ x: 6, y: 1, rotate: 5, delay: 0.38 }}
@@ -151,7 +151,7 @@ export function LogoCluster() {
                     hover={{ x: -2, y: -5, rotate: -6, delay: 0.15 }}
                 />
                 <Logo
-                    src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/svg/nextjs.svg"
+                    src="/svg/nextjs.svg"
                     left={36}
                     top={56}
                     hover={{ x: -4, y: -5, rotate: -6, delay: 0.35 }}

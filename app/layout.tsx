@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png`,
+        url: `/thumbnail.png`,
         alt: "Ziel",
         width: 1200,
         height: 1100,
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ziel - Designer & Developer",
-    images: [`https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png`],
+    images: [`/thumbnail.png`],
   },
 };
 

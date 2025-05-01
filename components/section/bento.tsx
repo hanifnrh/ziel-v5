@@ -146,7 +146,7 @@ export default function Bento() {
                             <div className="rounded-xl mt-5">
                                 <div className="relative rounded-xl">
                                     <Image
-                                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/location.png"
+                                        src="/location.png"
                                         width={1000}
                                         height={1000}
                                         alt="Location in Bekasi, West Java"
@@ -202,7 +202,7 @@ export default function Bento() {
                             <div className=" mt-5">
                                 <div className="relative">
                                     <Image
-                                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/location.png"
+                                        src="/location.png"
                                         width={1000}
                                         height={1000}
                                         alt="Location in Bekasi, West Java"

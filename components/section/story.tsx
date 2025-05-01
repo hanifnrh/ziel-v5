@@ -12,28 +12,28 @@ const data = [
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                     <Image
-                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/satosugu.png"
+                        src="/images/satosugu.png"
                         alt="Satosugu"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/breeze.png"
+                        src="/images/breeze.png"
                         alt="Breeze"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/howl.png"
+                        src="/images/howl.png"
                         alt="Howl"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/neilperry.png"
+                        src="/images/neilperry.png"
                         alt="Neil Perry"
                         width={500}
                         height={500}
@@ -52,28 +52,28 @@ const data = [
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                     <Image
-                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/academiku.png"
+                        src="/images/academiku.png"
                         alt="Academiku"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/jiwakita.png"
+                        src="/images/jiwakita.png"
                         alt="Jiwakita"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/clothing.png"
+                        src="/images/clothing.png"
                         alt="Ziel Clothing"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/dailyziel1.png"
+                        src="/images/dailyziel.png"
                         alt="Dailyziel 1.0"
                         width={500}
                         height={500}
@@ -92,14 +92,14 @@ const data = [
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                     <Image
-                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/kerjokidul.png"
-                        alt="Kerjo Kidul"
+                        src="/images/clipvision.png"
+                        alt="Clipvision"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/sigmadasbor.png"
+                        src="/images/sigmadasbor.png"
                         alt="Sigma Dashboard"
                         width={500}
                         height={500}
