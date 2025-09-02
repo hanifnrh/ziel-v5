@@ -47,7 +47,7 @@ export const MainMenusGradientCard = ({
                         "linear-gradient(135deg, #9216AE, #7A69F9, #9A63F2, #8B3FF5)",
                 }}
             />
-            <div className="absolute inset-px rounded-[19px] bg-neutral-950/80" />
+            <div className="absolute inset-px rounded-[19px] bg-neutral-100/90 dark:bg-neutral-950/80 border border-neutral-300" />
             {children && (
                 <div
                     className={cn(
@@ -59,10 +59,10 @@ export const MainMenusGradientCard = ({
                 </div>
             )}
             <div className="relative pb-2 pt-4">
-                <h3 className="text-lg body text-neutral-300">
+                <h3 className="text-lg body text-neutral-800 dark:text-neutral-300">
                     {title}
                 </h3>
-                <p className="body-light mt-2 text-neutral-400">
+                <p className="body-light mt-2 text-neutral-700 dark:text-neutral-400">
                     {description}
                 </p>
             </div>

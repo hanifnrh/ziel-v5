@@ -1,9 +1,9 @@
 "use client"
-import AboutSection from "@/components/section/about";
-import Description from "@/components/section/description";
+import AboutSection from "@/components/pages/about/about";
+import Description from "@/components/pages/about/description";
+import Story from "@/components/pages/about/story";
+import MyApproach from "@/components/pages/home/my-approach";
 import Experience from "@/components/section/experience";
-import MyApproach from "@/components/section/my-approach";
-import Story from "@/components/section/story";
 import Head from "next/head";
 
 export default function About() {

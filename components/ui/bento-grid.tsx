@@ -31,11 +31,11 @@ export function BentoCard({
                 {graphic}
                 {fade.includes("top") && (
 
-                    <div className="absolute inset-0 bg-gradient-to-b from-white to-50% group-data-[dark]:from-gray-950 group-data-[dark]:from-[-25%]" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-white to-50% group-data-[dark]:from-neutral-950 group-data-[dark]:from-[-25%]" />
                 )}
                 {fade.includes("bottom") && (
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-white to-50% group-data-[dark]:from-gray-950 group-data-[dark]:from-[-25%]" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white to-50% group-data-[dark]:from-neutral-950 group-data-[dark]:from-[-25%]" />
                 )}
             </div>
         </motion.div>

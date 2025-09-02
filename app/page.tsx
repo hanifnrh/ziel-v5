@@ -1,10 +1,10 @@
 "use client"
-import Bento from "@/components/section/bento";
-import BlogPreview from "@/components/section/blogpreview";
-import Hero from "@/components/section/hero";
-import MyApproach from "@/components/section/my-approach";
-import ProjectsPreview from "@/components/section/projects-preview";
-import ContactForm from "@/components/ui/contact-form";
+import Bento from "@/components/pages/home/bento/bento";
+import BlogPreview from "@/components/pages/home/blogpreview";
+import ContactForm from "@/components/pages/home/contact-form";
+import Hero from "@/components/pages/home/hero";
+import MyApproach from "@/components/pages/home/my-approach";
+import ProjectsPreview from "@/components/pages/home/projects-preview";
 import { useMenu } from "@/components/ui/menuprovider";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="bg-neutral-950">
+      <main className="">
         <Hero />
 
         <Bento />

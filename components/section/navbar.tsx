@@ -1,44 +1,42 @@
 "use client";
-import EncodedText from "@/components/ui/encoded";
-import { GeistMono } from "geist/font/mono";
-import dynamic from "next/dynamic";
+import NavLink from "@/components/ui/navlink";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
-
-// Dynamically import the Clock component with ssr: false
-const Clock = dynamic(() => import("@/components/ui/clock"), { ssr: false });
+import { useEffect, useState } from "react";
 
 export default function ResponsiveNavbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const currentPath = usePathname();
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div
-            className={`${GeistMono.className} fixed top-0 z-50 w-full bg-transparent backdrop-blur-lg max-w-screen-2xl`}
+            className="fixed top-2 z-50 w-full items transition-all duration-300 max-w-screen-2xl px-8 md:px-20 2xl:px-52"
         >
             {/* Navbar for large screens */}
-            <nav className="flex-wrap items-center justify-between py-8 sm:py-6 flex px-8 md:px-20 2xl:px-52">
-                <div className="left-nav hidden md:flex items-center space-x-4">
-                    <Link
-                        href="/"
-                        rel="canonical"
-                        className="body-light hidden md:block">
-                        <Clock locale="en-CA" />
-                    </Link>
-                </div>
+            <nav className={`w-fit md:w-full flex-wrap items-center justify-center md:justify-between py-2 md:py-4 px-2 md:px-6 rounded-lg md:rounded-2xl flex mx-auto ${isScrolled
+                ? 'bg-neutral-100/50 backdrop-blur-xl border border-neutral-200'
+                : 'bg-transparent backdrop-blur-none'
+                }`}>
                 <Link
                     href="/"
                     rel="canonical"
-                    className={`absolute py-4 left-1/2 transform -translate-x-1/2 ${currentPath === "/"
-                        ? "flex items-center space-x-3 rtl:space-x-reverse p-0 sm:py-2 sm:px-3 md:bg-transparent md:p-0"
-                        : "block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0 "
-                        }`}
+                    className="flex items-center space-x-3 rtl:space-x-reverse p-0 md:py-2 md:px-3 md:bg-transparent md:p-0"
                 >
                     <Image
-                        src="/ziel-logo-z-black.png"
-                        className="h-14 w-auto navbar-logo"
+                        src="/logo/zielviolet.png"
+                        className="h-7 md:h-10 w-auto navbar-logo"
                         alt="Ziel Logo"
                         width={500}
                         height={500}
@@ -46,8 +44,8 @@ export default function ResponsiveNavbar() {
                     />
                 </Link>
                 <div className={`w-full hidden md:block md:w-auto`} id="navbar-default">
-                    <div className="items-center flex font-bold flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-                        <EncodedText />
+                    <div className="items-center flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                        <NavLink />
                     </div>
                 </div>
             </nav>

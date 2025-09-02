@@ -57,7 +57,8 @@ function Circle({
             style={{ "--opacity": opacity } as React.CSSProperties}
             className={clsx(
                 "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full",
-                "bg-[radial-gradient(circle,transparent_25%,color-mix(in_srgb,_theme(colors.purple.500)_var(--opacity),transparent)_100%)]",
+                "bg-[radial-gradient(circle,transparent_40%,color-mix(in_srgb,_theme(colors.purple.500)_var(--opacity),transparent)_100%)]",
+                "dark:bg-[radial-gradient(circle,transparent_25%,color-mix(in_srgb,_theme(colors.purple.500)_var(--opacity),transparent)_100%)]",
                 "ring-1 ring-inset ring-purple-500/[8%]",
             )}
         />
@@ -71,14 +72,14 @@ function Circles() {
             <Circle size={400} opacity="5%" delay={0.3} />
             <Circle size={272} opacity="5%" delay={0.15} />
             <Circle size={144} opacity="10%" delay={0} />
-            <div className="absolute inset-0 bg-gradient-to-t  to-35%  from-[#0f0f0f] hover:bg-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t to-35% from-neutral-100 dark:from-[#0f0f0f] hover:bg-transparent" />
         </div>
     );
 }
 
 function MainLogo() {
     return (
-        <div className="absolute left-44 top-32 flex size-16 items-center justify-center rounded-full  shadow ring-1  bg-neutral-950/80 ring-white/10">
+        <div className="absolute left-44 top-32 flex size-16 items-center justify-center rounded-full dark:shadow ring-1 bg-white shadow-md dark:bg-neutral-950/80 ring-white/10">
             <Mark className="h-9 fill-[#e879f9]" />
         </div>
     );
@@ -115,7 +116,7 @@ function Logo({
             alt=""
             src={src}
             style={{ left, top } as React.CSSProperties}
-            className="absolute size-16 rounded-full  shadow ring-1  bg-neutral-950/80  ring-white/10"
+            className="absolute size-16 rounded-full ring-1 bg-white dark:bg-neutral-950/80 shadow-md dark:shadow ring-white/10"
         />
     );
 }

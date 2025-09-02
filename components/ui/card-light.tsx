@@ -80,7 +80,7 @@ function CardLight({ items = itemsSample }: BentoGridProps) {
                             <span
                                 className={cn(
                                     "text-xs font-medium px-2 py-1 rounded-lg backdrop-blur-sm",
-                                    "bg-white/10 text-gray-300",
+                                    "bg-white/10 text-neutral-300",
                                     "transition-colors duration-300 group-hover:bg-white/20"
                                 )}
                             >
@@ -89,19 +89,19 @@ function CardLight({ items = itemsSample }: BentoGridProps) {
                         </div>
 
                         <div className="space-y-2">
-                            <h3 className="font-medium text-gray-100 tracking-tight text-[15px]">
+                            <h3 className="font-medium text-neutral-100 tracking-tight text-[15px]">
                                 {item.title}
-                                <span className="ml-2 text-xs text-gray-400 font-normal">
+                                <span className="ml-2 text-xs text-neutral-400 font-normal">
                                     {item.meta}
                                 </span>
                             </h3>
-                            <p className="text-sm text-gray-300 leading-snug font-[425]">
+                            <p className="text-sm text-neutral-300 leading-snug font-[425]">
                                 {item.description}
                             </p>
                         </div>
 
                         <div className="flex items-center justify-between mt-2">
-                            <div className="flex items-center space-x-2 text-xstext-gray-400">
+                            <div className="flex items-center space-x-2 text-xstext-neutral-400">
                                 {item.tags?.map((tag, i) => (
                                     <span
                                         key={i}
@@ -111,7 +111,7 @@ function CardLight({ items = itemsSample }: BentoGridProps) {
                                     </span>
                                 ))}
                             </div>
-                            <span className="text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <span className="text-xs text-neutral-400 opacity-0 group-hover:opacity-100 transition-opacity">
                                 {item.cta || "Explore →"}
                             </span>
                         </div>

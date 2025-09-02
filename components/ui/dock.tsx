@@ -82,7 +82,7 @@ const Dock = () => {
       variants={dockVariants}
       initial="closed"
       animate="open"
-      className="md:hidden dock-shadow fixed inset-x-0 bottom-8 z-50 mx-auto rounded-2xl bg-zinc-950/60 border border-zinc-800 backdrop-blur-sm p-1"
+      className="md:hidden dock-shadow fixed inset-x-0 bottom-8 z-50 mx-auto rounded-2xl bg-neutral-950/60 border border-neutral-800 backdrop-blur-sm p-1"
     >
       <div className="relative flex items-center">
         {activeTab !== null && (
@@ -102,7 +102,7 @@ const Dock = () => {
               onClick={() => setActiveTab(item.id)}
               className={`${activeTab === item.id
                 ? "text-purple-500"
-                : "text-zinc-200"
+                : "text-neutral-200"
                 } group/dock relative h-10 w-10 p-3 text-sm transition-all duration-300 ease-in-out focus-visible:outline-none`}
               style={{
                 WebkitTapHighlightColor: "transparent",
@@ -120,7 +120,7 @@ const Dock = () => {
               onClick={() => {
                 // ModeToggle will handle the theme change
               }}
-              className={`group/dock relative h-10 w-10 text-sm text-zinc-500 transition-all duration-300 ease-in-out focus-visible:outline-none items-center justify-center flex`}
+              className={`group/dock relative h-10 w-10 text-sm text-neutral-500 transition-all duration-300 ease-in-out focus-visible:outline-none items-center justify-center flex`}
               aria-label="Change theme button"
             >
               {item.icon}

@@ -52,8 +52,8 @@ const ContentForm = ({ user }: { user: User }) => {
             onSubmit={handleSubmit}
             id="content-form"
         >
-            <p className="mb-2 text-balance body-light text-sm text-zinc-500">
-                Signed in as <span className="text-zinc-200">{user.email}</span>
+            <p className="mb-2 text-balance body-light text-sm text-neutral-500">
+                Signed in as <span className="text-neutral-200">{user.email}</span>
             </p>
             <div className="flex items-center gap-x-2">
                 <Input placeholder="" name="content" id="content" type="text" />

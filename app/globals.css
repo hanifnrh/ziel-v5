@@ -41,7 +41,7 @@ html, body {
 
   @property --color-1 {
     syntax: '<color>';
-    initial-value: #000;
+    initial-value: #360057;
     inherits: false;
   }
 
@@ -154,11 +154,11 @@ html, body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --color-1: 0 100% 63%;
+    --color-1: #46056e;
     --color-2: 201 98% 162%;
     --color-3: 210 100% 162%;
     --color-4: 195 100% 63%;
-    --color-5: 90 100% 63%;
+    --color-5: #360057;
   }
 }
 
@@ -199,6 +199,7 @@ html, body {
       --stop-3 0.5s,
       --stop-4 0.5s,
       --stop-5 0.5s;
+    --border-angle: 190deg;
   }
 
   .gradient-button:hover {
@@ -210,8 +211,9 @@ html, body {
     --color-2: #5914a7;
     --color-3: #a108c7;
     --color-4: #59007a;
-    --color-5: #000;
-    --border-angle: 190deg;
+    --color-5: #360057;
+
+    --border-angle: 0deg;
     --border-color-1: hsla(340, 78%, 90%, 0.1);
     --border-color-2: hsla(262, 94%, 33%, 0.6);
     --stop-1: 0%;
@@ -222,7 +224,7 @@ html, body {
   }
 
   .gradient-button-variant {
-    --color-1: #000022;
+    --color-1: #07076d;
     --color-2: #2a1149;
     --color-3: #1533ad;
     --color-4: #29158b;
@@ -240,7 +242,8 @@ html, body {
     --color-2: #3229b3;
     --color-3: #3d63c4;
     --color-4: #1f3f6d;
-    --color-5: #000;
+    --color-5: #001c57;
+
     --stop-1: 0%;
     --stop-2: 10%;
     --stop-3: 35.44%;
@@ -420,7 +423,7 @@ html, body {
 }
 
 @layer utilities {
-  .link-hover-animation {
+  .link-hover-animation-dark {
     position: relative;
 
     &::before {
@@ -433,6 +436,30 @@ html, body {
       background-image: repeating-linear-gradient(to right,
           var(--dot-color, rgba(255, 255, 255, 0.75)),
           var(--dot-color, rgba(255, 255, 255, 0.75)) 2px,
+          transparent 2px,
+          transparent 3px);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .link-hovered-animation-dark::before {
+    width: calc(100% - var(--offsetEnd, var(--offsetStart, 0px)));
+
+  }
+
+  .link-hover-animation {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: var(--offsetStart, 0px);
+      bottom: -5px;
+      height: 1.25px;
+      width: 0;
+      background-image: repeating-linear-gradient(to right,
+          var(--dot-color, rgba(139, 92, 246, 0.75)),
+          var(--dot-color, rgba(139, 92, 246, 0.75)) 2px,
           transparent 2px,
           transparent 3px);
       transition: all 0.3s ease-in-out;

@@ -55,15 +55,15 @@ const GuestbookCard = async ({
                             src={user_avatar}
                             alt={full_name}
                             fill
-                            className="object-cover rounded-full border-1 border-zinc-200"
+                            className="object-cover rounded-full border-1 border-neutral-200"
                         />
                     </div>
                     <div className="flex flex-col">
-                        <p className="text-xs text-zinc-200 body md:text-sm">{full_name}</p>
-                        <p className="text-xs text-zinc-500 body-light">{formatTimestamp(createdAt)}</p>
+                        <p className="text-xs text-neutral-200 body md:text-sm">{full_name}</p>
+                        <p className="text-xs text-neutral-500 body-light">{formatTimestamp(createdAt)}</p>
                     </div>
                 </div>
-                <code className="h-auto text-zinc-200 body-light px-4 py-2">{content}</code>
+                <code className="h-auto text-neutral-200 body-light px-4 py-2">{content}</code>
             </MessageCard>
         </div>
     );

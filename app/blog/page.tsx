@@ -104,13 +104,7 @@ export default function Blog() {
                 <meta name="twitter:description" content="Read my latest blog post." />
                 <meta name="twitter:image" content="/thumbnail.png" />
             </Head>
-            <Image
-                className="absolute top-0 z-0 -translate-y-1/2"
-                src={"https://farmui.vercel.app/bg-back.png"}
-                width={1000}
-                height={1000}
-                alt="Hero Background"
-            />
+
             <section className="pt-16 lg:py-28 z-10">
                 <div className="px-8 md:px-20 2xl:px-52 py-5">
                     <h2 className="flex bg-purple-600/20 text-purple-600 px-4 py-2 rounded-full w-fit">
@@ -121,10 +115,10 @@ export default function Blog() {
 
                 <div className="px-8 md:px-20 2xl:px-52 pb-10 flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between">
                     <div className="w-full flex flex-col gap-4">
-                        <h3 className="flex text-4xl sm:text-3xl lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+                        <h3 className="flex text-4xl sm:text-3xl lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-200 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                             Thoughts, Ideas & Explorations
                         </h3>
-                        <p className="text-zinc-500 body-light text-md lg:text-lg">
+                        <p className="text-neutral-500 body-light text-md lg:text-lg">
                             A space to share insights, experiences, and reflections—on design, development, and everything in between.
                         </p>
                     </div>
@@ -144,7 +138,7 @@ export default function Blog() {
                                         rel="canonical"
                                         key={index}
                                         href={`/blog/${post.slug}`}
-                                        className="w-full group border-zinc-500/20 border-t-1 py-10 body grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-4 lg:gap-6 xl:gap-8 justify-center items-start text-zinc-200"
+                                        className="w-full group border-neutral-500/20 border-t-1 py-10 body grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-4 lg:gap-6 xl:gap-8 justify-center items-start text-neutral-200"
                                     >
                                         <div className="aspect-[5/3] overflow-hidden rounded-xl w-full">
                                             <Image
@@ -158,11 +152,11 @@ export default function Blog() {
                                         </div>
                                         <div className="w-full h-full flex flex-col gap-4 justify-between">
                                             <div className="flex flex-col gap-2">
-                                                <div className="body-light text-xs sm:text-sm text-zinc-200">
+                                                <div className="body-light text-xs sm:text-sm text-neutral-200">
                                                     {formatDate(post.publishDate)}
                                                 </div>
                                                 <h3 className="text-xl lg:text-3xl">{post.title}</h3>
-                                                <p className="body-light text-sm sm:text-md text-zinc-500 line-clamp-3">
+                                                <p className="body-light text-sm sm:text-md text-neutral-500 line-clamp-3">
                                                     {post.description}
                                                 </p>
                                             </div>
@@ -171,9 +165,9 @@ export default function Blog() {
                                                     Read more
                                                     <ArrowRight className="ml-1 inline-block transition-all duration-300 group-hover:ml-2" />
                                                 </p>
-                                                <div className="order-1 sm:order-2 flex body-light text-zinc-400 gap-2">
+                                                <div className="order-1 sm:order-2 flex body-light text-neutral-400 gap-2">
                                                     {(Array.isArray(post.tag) ? post.tag : post.tag.split(",")).map((tag: string, index: number) => (
-                                                        <p key={index} className="bg-zinc-200/10 px-3 py-2 text-xs rounded-sm">
+                                                        <p key={index} className="bg-neutral-200/10 px-3 py-2 text-xs rounded-sm">
                                                             {tag.trim()}
                                                         </p>
                                                     ))}
@@ -183,7 +177,7 @@ export default function Blog() {
                                     </Link>
                                 ))
                             ) : (
-                                <p className="text-center text-zinc-500">No posts available.</p>
+                                <p className="text-center text-neutral-500">No posts available.</p>
                             )}
                         </div>
                     )}

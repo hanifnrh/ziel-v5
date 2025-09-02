@@ -28,8 +28,8 @@ const Menu: React.FC = () => {
         <Dialog open={isDialogOpen} onOpenChange={closeMenu}>
             <DialogContent className="body bg-neutral-950/80 backdrop-blur-xs sm:max-w-md flex flex-col items-center justify-center">
                 <DialogHeader>
-                    <DialogTitle className="text-center text-zinc-200">Menu</DialogTitle>
-                    <DialogDescription className="text-center body-light text-zinc-200">Get in touch with me</DialogDescription>
+                    <DialogTitle className="text-center text-neutral-200">Menu</DialogTitle>
+                    <DialogDescription className="text-center body-light text-neutral-200">Get in touch with me</DialogDescription>
                 </DialogHeader>
                 <div className="w-full flex flex-col items-center justify-center gap-y-2">
                     <div className="flex justify-center w-52">
@@ -44,17 +44,17 @@ const Menu: React.FC = () => {
                         <Link href="/#contact" className="w-full" rel="canonical" >
                             <DialogClose asChild>
                                 <div style={{ transform: "none" }}>
-                                    <div className="w-full group relative inline-block cursor-pointer rounded-xl bg-zinc-900/10 p-px leading-6 text-white no-underline shadow-2xl shadow-zinc-900">
+                                    <div className="w-full group relative inline-block cursor-pointer rounded-xl bg-neutral-900/10 p-px leading-6 text-white no-underline shadow-2xl shadow-neutral-900">
                                         <span className="absolute inset-0 overflow-hidden rounded-xl">
                                             <span className="absolute inset-0 rounded-xl bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(129,140,248,0.6)_0%,rgba(129,140,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                                                 {" "}
                                             </span>{" "}
                                         </span>
-                                        <div className="body-light relative z-10 flex items-center space-x-2 rounded-xl bg-gray-950/50 px-6 py-3 ring-1 ring-white/10">
+                                        <div className="body-light relative z-10 flex items-center space-x-2 rounded-xl bg-neutral-950/50 px-6 py-3 ring-1 ring-white/10">
                                             <span>Book my service</span>
                                             <Package className="w-4 h-4" />
                                         </div>
-                                        <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-indigo-400/0 via-gray-400/90 to-fuchsia-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
+                                        <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-indigo-400/0 via-neutral-400/90 to-fuchsia-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
                                     </div>
                                 </div>
                             </DialogClose>
@@ -65,16 +65,16 @@ const Menu: React.FC = () => {
                 <DialogFooter className="flex flex-col justify-center items-center w-52">
                     <DialogClose asChild>
                         <div style={{ transform: "none" }} className="w-full">
-                            <div className="w-full group relative inline-block cursor-pointer rounded-xl bg-red-900/10 p-px leading-6 text-white no-underline shadow-2xl shadow-zinc-900">
+                            <div className="w-full group relative inline-block cursor-pointer rounded-xl bg-red-900/10 p-px leading-6 text-white no-underline shadow-2xl shadow-neutral-900">
                                 <span className="absolute inset-0 overflow-hidden rounded-xl">
                                     <span className="absolute inset-0 rounded-xl bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(248,113,113,0.6)_0%,rgba(248,113,113,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                                         {" "}
                                     </span>{" "}
                                 </span>
-                                <div className="justify-center body-light text-red-900 relative z-10 flex items-center space-x-2 rounded-xl bg-gray-950/50 px-6 py-3 ring-1 ring-white/10">
+                                <div className="justify-center body-light text-red-900 relative z-10 flex items-center space-x-2 rounded-xl bg-neutral-950/50 px-6 py-3 ring-1 ring-white/10">
                                     <span>Close</span>
                                 </div>
-                                <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-red-400/0 via-gray-400/90 to-fuchsia-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
+                                <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-red-400/0 via-neutral-400/90 to-fuchsia-400/0 transition-opacity duration-500 group-hover:opacity-40"></span>
                             </div>
                         </div>
                     </DialogClose>

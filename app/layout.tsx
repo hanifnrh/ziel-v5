@@ -15,10 +15,10 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Others
-import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import Footer from "@/components/section/footer";
 import Dock from "@/components/ui/dock";
 import FadeInUnblur from "@/components/ui/fadeinunblur";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
 import Script from "next/script";
 import "./globals.css";
 import { baseUrl } from "./sitemap";
@@ -83,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-neutral-950">
+    <html lang="en" className="bg-neutral-100 dark:bg-neutral-950">
       <body>
         <Script
           src="https://cloud.umami.is/script.js"

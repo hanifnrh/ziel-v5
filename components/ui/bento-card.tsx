@@ -43,7 +43,7 @@ export const BentoCard = ({
                         "linear-gradient(135deg, #9216AE, #7A69F9, #9A63F2, #8B3FF5)",
                 }}
             />
-            <div className="absolute inset-px rounded-[19px] bg-neutral-950/80" />
+            <div className="absolute inset-px rounded-[19px] bg-neutral-100/90 dark:bg-neutral-950/80 border border-neutral-300" />
             {children && (
                 <div
                     className={cn(

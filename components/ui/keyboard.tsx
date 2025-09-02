@@ -57,8 +57,8 @@ function Key({
             className={clsx(
                 className,
                 "flex flex-col items-center justify-center gap-0.5 px-1 py-px",
-                "rounded  bg-zinc-950 bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1  ring-white/15",
-                "[:where(&_svg)]:h-3.5 [:where(&_svg)]:fill-zinc-600",
+                "rounded  bg-neutral-100 dark:bg-neutral-950 bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-violet-400 dark:ring-white/15",
+                "[:where(&_svg)]:h-3.5 [:where(&_svg)]:fill-neutral-600",
             )}
         >
             {children}
@@ -70,7 +70,7 @@ function KeyGroup(props: { children: React.ReactNode }) {
     return (
         <div
             {...props}
-            className="grid gap-px rounded ring-1  bg-white/15 ring-white/15 [&>*]:ring-0"
+            className="grid gap-px rounded ring-1 bg-white/15 ring-white/15 [&>*]:ring-0"
         />
     );
 }
@@ -582,7 +582,7 @@ function BackSlashKey() {
 function CapsLockKey() {
     return (
         <Key name="CapsLock" width={72}>
-            <svg viewBox="0 0 3 3" className="mr-auto mt-1 h-[3px] fill-zinc-500">
+            <svg viewBox="0 0 3 3" className="mr-auto mt-1 h-[3px] fill-neutral-500">
                 <path d="M3 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
             </svg>
             <svg viewBox="0 0 35 14" className="mr-auto mt-auto">
