@@ -19,6 +19,7 @@ import { ScrollProgress } from "@/components/magicui/scroll-progress";
 import Footer from "@/components/section/footer";
 import Dock from "@/components/ui/dock";
 import FadeInUnblur from "@/components/ui/fadeinunblur";
+import Script from "next/script";
 import "./globals.css";
 import { baseUrl } from "./sitemap";
 
@@ -84,6 +85,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-neutral-950">
       <body>
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="b440f280-3189-40df-b827-f98ffb664eac"
+          strategy="afterInteractive" // loads after page is interactive
+        />
         <MenuProvider>
           <div className="max-w-screen-2xl mx-auto" >
             <NextTopLoader
