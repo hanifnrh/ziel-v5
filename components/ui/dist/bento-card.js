@@ -21,5 +21,5 @@ exports.BentoCard = function (_a) {
                 background: "linear-gradient(135deg, #9216AE, #7A69F9, #9A63F2, #8B3FF5)"
             } }),
         React.createElement("div", { className: "absolute inset-px rounded-[19px] bg-neutral-200 dark:bg-neutral-950/80" }),
-        children && (React.createElement("div", { className: utils_1.cn("grid relative overflow-hidden rounded-[15px] border-neutral-950", className) }, children))));
+        children && (React.createElement("div", { className: utils_1.cn("grid relative  border-neutral-950", className) }, children))));
 };

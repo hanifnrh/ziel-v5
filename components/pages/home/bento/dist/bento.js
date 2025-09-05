@@ -7,7 +7,7 @@ var spotify_1 = require("./components/spotify");
 var tech_stack_1 = require("./components/tech-stack");
 var typing_speed_1 = require("./components/typing-speed");
 function Bento() {
-    return (React.createElement("div", { className: "w-full grid grid-cols-1 xl:grid-cols-[3fr_1fr] gap-2 pb-20 px-8 md:px-20 2xl:px-52 text-neutral-200" },
+    return (React.createElement("div", { className: "w-full grid grid-cols-1 xl:grid-cols-[3fr_1fr] gap-2 pb-20 px-8 md:px-20 xl:px-28 text-neutral-200" },
         React.createElement("div", { className: "w-full gap-2 grid grid-cols-1" },
             React.createElement("div", { className: "grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-2" },
                 React.createElement(tech_stack_1["default"], null),

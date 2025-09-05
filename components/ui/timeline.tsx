@@ -44,7 +44,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         )}
       />
       <div className="w-full mx-auto">
-        <h2 className="text-4xl sm:text-3xl lg:text-5xl mb-2 lg:mb-4 body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-200 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+        <h2 className="text-4xl sm:text-3xl lg:text-5xl mb-2 lg:mb-4 body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-400 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
           Where others see numbers, I paint stories.
         </h2>
         <p className="text-neutral-500 body-light text-sm lg:text-lg max-w-4xl">

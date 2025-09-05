@@ -1,9 +1,9 @@
 "use client";
 
-import { useCopyToClipboard } from "@/components/hooks/use-copy-to-clipboard";
+import { useCopyToClipboard } from "@/components/hooks/useCopyToClipboard";
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
-import { useToast } from "../hooks/use-toast";
+import { useToast } from "../hooks/useToast";
 
 interface CopyButtonProps {
     textToCopy: string;

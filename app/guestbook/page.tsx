@@ -19,7 +19,7 @@ const Page = async () => {
     return (
         <main className="bg-neutral-950">
 
-            <section className="py-28 z-10 p-8 pb-20 gap-16 px-8 md:px-20 2xl:px-52">
+            <section className="py-28 z-10 p-8 pb-20 gap-16 px-8 md:px-20 xl:px-28">
                 <TracingBeam>
                     <div
                         id="guestbook"
@@ -34,7 +34,7 @@ const Page = async () => {
                                             <div className="flex items-center justify-center p-4 rounded-xl bg-purple-600/20 text-purple-600">
                                                 <BookOpenText size={30} />
                                             </div>
-                                            <h3 className="flex text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-200 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+                                            <h3 className="flex text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-400 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                                                 Guestbook
                                             </h3>
                                         </div>

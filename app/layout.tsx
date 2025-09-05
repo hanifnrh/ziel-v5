@@ -3,21 +3,17 @@ import type { Metadata } from "next";
 import * as React from "react";
 
 // UI Libs
-import ResponsiveNavbar from "@/components/section/navbar";
-import Menu from "@/components/ui/menu";
 import { Toaster } from "@/components/ui/toaster";
 import NextTopLoader from "nextjs-toploader";
 // Provider
-import { MenuProvider } from "@/components/ui/menuprovider";
 
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Others
+import BottomNav from "@/components/section/bottom-nav";
 import Footer from "@/components/section/footer";
-import Dock from "@/components/ui/dock";
-import FadeInUnblur from "@/components/ui/fadeinunblur";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import Script from "next/script";
 import "./globals.css";
@@ -86,11 +82,10 @@ export default function RootLayout({
     <html lang="en" className="bg-neutral-100 dark:bg-neutral-950">
       <body>
         <Script
-          src="https://cloud.umami.is/script.js"
+          src="https://www.ziel.works/script.js"
           data-website-id="b440f280-3189-40df-b827-f98ffb664eac"
           strategy="afterInteractive" // loads after page is interactive
         />
-        <MenuProvider>
           <div className="max-w-screen-2xl mx-auto" >
             <NextTopLoader
               color="#9810fa"
@@ -102,19 +97,14 @@ export default function RootLayout({
               shadow="0 0 20px #9810fa, 0 0 10px #9810fa"
               zIndex={100}
             />
-            <ResponsiveNavbar />
-            <Dock />
             <ScrollProgress className="top-0" />
-            <FadeInUnblur>
-              {children}
-              <Footer />
-            </FadeInUnblur>
+            {children}
+            <BottomNav />
+            <Footer />
             <SpeedInsights />
             <Analytics />
           </div>
-          <Menu></Menu>
-        </MenuProvider>
-        <Toaster></Toaster>
+          <Toaster></Toaster>
       </body>
     </html>
   );

@@ -6,7 +6,7 @@ var link_1 = require("next/link");
 var Footer = function () {
     return (React.createElement("footer", { className: "body-light relative mt-auto w-full" },
         React.createElement("div", { className: "relative flex sw-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background" },
-            React.createElement("div", { className: "flex justify-center bg-neutral-950 pt-20 p-8 pb-20 px-8 md:px-20 2xl:px-52 w-full" },
+            React.createElement("div", { className: "flex justify-center bg-neutral-950 pt-20 p-8 pb-20 px-8 md:px-20 xl:px-28 w-full" },
                 React.createElement("div", { className: "flex items-stretch py-10 justify-between text-sm tracking-wide w-full min-[1200px]:w-[1200px] gap-16 max-[960px]:flex-col-reverse" },
                     React.createElement("div", { className: "space-y-16" },
                         React.createElement(link_1["default"], { href: "/", rel: "canonical", className: "space-y-4" },

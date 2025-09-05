@@ -306,7 +306,7 @@ var ContactForm = function ContactForm() {
   return React.createElement("div", {
     id: "contact"
   }, React.createElement(form_1.Form, __assign({}, form), React.createElement("div", {
-    className: "p-8 pb-20 px-8 md:px-20 2xl:px-52 w-full"
+    className: "p-8 pb-20 px-8 md:px-20 xl:px-28 w-full"
   }, React.createElement("div", {
     className: "grid grid-cols-1 gap-3 max-w-7xl mx-auto"
   }, React.createElement("div", {

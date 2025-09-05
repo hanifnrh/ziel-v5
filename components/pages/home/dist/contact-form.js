@@ -157,7 +157,7 @@ var ContactForm = function () {
     }
     return (React.createElement("div", { id: "contact" },
         React.createElement(form_1.Form, __assign({}, form),
-            React.createElement("div", { className: "p-8 pb-20 px-8 md:px-20 2xl:px-52 w-full" },
+            React.createElement("div", { className: "p-8 pb-20 px-8 md:px-20 xl:px-28 w-full" },
                 React.createElement("div", { className: "grid grid-cols-1 gap-3 max-w-7xl mx-auto" },
                     React.createElement("div", { className: utils_1.cn("group relative p-8 rounded-xl overflow-hidden transition-all duration-300", "border border-white/10 bg-black/10", "hover:-translate-y-0.5 will-change-transform", "col-span-1", "md:col-span-2") },
                         React.createElement(dot_pattern_1.DotPattern, { className: utils_1.cn("[mask-image:radial-gradient(300px_circle_at_center,white,transparent)] opacity-60") }),

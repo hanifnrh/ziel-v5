@@ -113,7 +113,7 @@ export default function BlogDetail() {
 
 
             <section className="mt-12 lg:mt-0 pt-12 lg:py-28 z-10">
-                <div className="flex flex-col px-8 md:px-20 2xl:px-52 pb-10 gap-4 lg:gap-8">
+                <div className="flex flex-col px-8 md:px-20 xl:px-28 pb-10 gap-4 lg:gap-8">
                     <Link
                         href="/blog"
                         rel='canonical'

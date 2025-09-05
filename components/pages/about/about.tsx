@@ -11,9 +11,9 @@ export default function AboutSection() {
         <div>
 
             <section className="pt-28 z-10">
-                <div className="h-fit text-neutral-600 gap-x-12 flex w-full flex-col sm:flex-row items-center justify-between pb-20 gap-16 px-8 md:px-20 2xl:px-52">
+                <div className="h-fit text-neutral-600 gap-x-12 flex w-full flex-col sm:flex-row items-center justify-between pb-20 gap-16 px-8 md:px-20 xl:px-28">
                     <div className="flex-none space-y-5 w-full sm:w-7/12 md:px-0">
-                        <h2 className="body text-4xl sm:text-3xl lg:text-5xl font-normal tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-200 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+                        <h2 className="body text-4xl sm:text-3xl lg:text-5xl font-normal tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-400 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                             I&apos;m Ziel. UI Designer & Full Stack Developer.
                         </h2>
                         <p className="body-light text-neutral-500 text-sm lg:text-lg">

@@ -58,7 +58,7 @@ var Page = function () { return __awaiter(void 0, void 0, void 0, function () {
             case 2:
                 _a = _b.sent(), user = _a.data, error = _a.error;
                 return [2 /*return*/, (React.createElement("main", { className: "bg-neutral-950" },
-                        React.createElement("section", { className: "py-28 z-10 p-8 pb-20 gap-16 px-8 md:px-20 2xl:px-52" },
+                        React.createElement("section", { className: "py-28 z-10 p-8 pb-20 gap-16 px-8 md:px-20 xl:px-28" },
                             React.createElement(tracing_beam_1.TracingBeam, null,
                                 React.createElement("div", { id: "guestbook", className: "flex w-full grow flex-col gap-y-4" },
                                     React.createElement("div", { className: "flex h-full w-full flex-col justify-center items-start" },
@@ -68,7 +68,7 @@ var Page = function () { return __awaiter(void 0, void 0, void 0, function () {
                                                     React.createElement("div", { className: "flex gap-2 items-center" },
                                                         React.createElement("div", { className: "flex items-center justify-center p-4 rounded-xl bg-purple-600/20 text-purple-600" },
                                                             React.createElement(lucide_react_1.BookOpenText, { size: 30 })),
-                                                        React.createElement("h3", { className: "flex text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-200 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]" }, "Guestbook")),
+                                                        React.createElement("h3", { className: "flex text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-400 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]" }, "Guestbook")),
                                                     React.createElement("p", { className: "w-full mb-4 mt-2 body-light tracking-tighter text-md sm:text-lg text-neutral-500" }, "Leave a message of your impression of this website, or you can say anything!"),
                                                     user && user.user ? (React.createElement(React.Fragment, null,
                                                         React.createElement("form", { onSubmit: fn_1.signOut, className: "mt-1 py-2" },

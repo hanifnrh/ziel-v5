@@ -53,7 +53,7 @@ function Bento() {
             url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vercel_logo_black.svg/640px-Vercel_logo_black.svg.png"
         },
     ];
-    return (React.createElement("div", { className: "w-full grid grid-cols-1 xl:grid-cols-[3fr_1fr] gap-2 pb-20 px-8 md:px-20 2xl:px-52 text-neutral-200" },
+    return (React.createElement("div", { className: "w-full grid grid-cols-1 xl:grid-cols-[3fr_1fr] gap-2 pb-20 px-8 md:px-20 xl:px-28 text-neutral-200" },
         React.createElement("div", { className: "w-full gap-2 grid grid-cols-1" },
             React.createElement("div", { className: "grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-2" },
                 React.createElement(animated_card_1.MainMenusGradientCard, { description: "Design tools and code tools I mainly use. Focused on React or Javascript ecosystem, recently have been using Next.js", title: "Tech stack I mainly use" },

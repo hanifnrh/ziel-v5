@@ -22,7 +22,7 @@ export default function ResponsiveNavbar() {
 
     return (
         <div
-            className="fixed top-2 z-50 w-full items transition-all duration-300 max-w-screen-2xl px-8 md:px-20 2xl:px-52"
+            className="fixed top-2 z-50 w-full items transition-all duration-300 max-w-screen-2xl px-8 md:px-20 xl:px-28"
         >
             {/* Navbar for large screens */}
             <nav className={`w-fit md:w-full flex-wrap items-center justify-center md:justify-between py-2 md:py-4 px-2 md:px-6 rounded-lg md:rounded-2xl flex mx-auto ${isScrolled

@@ -33,7 +33,7 @@ const images = [
 export default function Experience() {
 
     return (
-        <div className="relative flex flex-col px-8 md:px-20 2xl:px-52 pb-10 bg-background">
+        <div className="relative flex flex-col px-8 md:px-20 xl:px-28 pb-10 bg-background">
             <AnimatedGridPattern
                 numSquares={30}
                 maxOpacity={0.1}
@@ -51,7 +51,7 @@ export default function Experience() {
                 </h2>
             </div>
             <div className="relative overflow-hidden flex flex-col gap-8 items-start">
-                <h3 className="flex text-4xl sm:text-3xl font-normal lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-200 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+                <h3 className="flex text-4xl sm:text-3xl font-normal lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-400 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                     Organization & Experience
                 </h3>
                 <div className="w-full grid grid-cols-1 gap-14 py-10">

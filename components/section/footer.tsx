@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="body-light relative mt-auto w-full">
+    <footer className="flex w-full flex-col gap-8 body-light relative mt-auto">
       <div className="relative flex sw-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
-        <div className="flex justify-center bg-transparent dark:bg-neutral-950 pt-20 p-8 pb-20 px-8 md:px-20 2xl:px-52 w-full">
+        <div className="flex justify-center bg-transparent dark:bg-neutral-950 pt-20 p-8 pb-20 px-8 md:px-20 xl:px-28 w-full">
           <div className="flex items-stretch py-10 justify-between text-sm tracking-wide w-full min-[1200px]:w-[1200px] gap-16 max-[960px]:flex-col-reverse">
 
             {/* Left Section */}
@@ -29,61 +29,6 @@ const Footer = () => {
                   with focus on building visually compelling and user-centric digital products.
                 </p>
               </Link>
-              <div className="space-y-6">
-                <div className="flex gap-2 p-2 border-2 justify-around sm:justify-center border-dashed border-neutral-400 dark:border-neutral-200/20 rounded-xl w-full sm:w-fit">
-                  <Link
-                    href=""
-                    rel="canonical"
-                    target="_blank"
-                    className="scale-75"
-                  >
-                    <div className="bg-neutral-200 hover:bg-neutral-200/10 transition-all text-neutral-700 hover:text-neutral-800 dark-hover:text-neutral-200/80 p-3 rounded-lg flex items-center justify-center">
-                      <FileUser />
-                    </div>
-                  </Link>
-                  <Link
-                    href=""
-                    rel="canonical"
-                    target="_blank"
-                    className="scale-75"
-                  >
-                    <div className=" bg-neutral-200 hover:bg-neutral-200/10 transition-all text-neutral-700 hover:text-neutral-800 dark-hover:text-neutral-200/80 p-3 rounded-lg flex items-center justify-center">
-                      <Github />
-                    </div>
-                  </Link>
-                  <Link
-                    href="https://www.instagram.com/ziel.works/"
-                    rel="canonical"
-                    target="_blank"
-                    className="scale-75"
-                  >
-                    <div className=" bg-neutral-200 hover:bg-neutral-200/10 transition-all text-neutral-700 hover:text-neutral-800 dark-hover:text-neutral-200/80 p-3 rounded-lg flex items-center justify-center">
-                      <Instagram />
-                    </div>
-                  </Link>
-                  <Link
-                    href="https://dribbble.com/dailyziel"
-                    rel="canonical"
-                    target="_blank"
-                    className="scale-75"
-                  >
-                    <div className=" bg-neutral-200 hover:bg-neutral-200/10 transition-all text-neutral-700 hover:text-neutral-800 dark-hover:text-neutral-200/80 p-3 rounded-lg flex items-center justify-center">
-                      <Dribbble />
-                    </div>
-                  </Link>
-                  <Link
-                    href="https://www.linkedin.com/in/nurrahmat-hanif-635055218 "
-                    rel="canonical"
-                    target="_blank"
-                    className="scale-75"
-                  >
-                    <div className=" bg-neutral-200 hover:bg-neutral-200/10 transition-all text-neutral-700 hover:text-neutral-800 dark-hover:text-neutral-200/80 p-3 rounded-lg flex items-center justify-center">
-                      <Linkedin />
-                    </div>
-                  </Link>
-                </div>
-                <p className="text-xs text-neutral-700 dark:text-neutral-500">&copy; {new Date().getFullYear()} Ziel. All rights reserved.</p>
-              </div>
             </div>
 
             {/* Right Section */}
@@ -150,6 +95,61 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="space-y-6">
+        <div className="flex gap-2 p-2 border-2 justify-around sm:justify-center border-dashed border-neutral-400 dark:border-neutral-200/20 rounded-xl w-full sm:w-fit">
+          <Link
+            href=""
+            rel="canonical"
+            target="_blank"
+            className="scale-75"
+          >
+            <div className="bg-neutral-200 hover:bg-neutral-200/10 transition-all text-neutral-700 hover:text-neutral-800 dark-hover:text-neutral-200/80 p-3 rounded-lg flex items-center justify-center">
+              <FileUser />
+            </div>
+          </Link>
+          <Link
+            href=""
+            rel="canonical"
+            target="_blank"
+            className="scale-75"
+          >
+            <div className=" bg-neutral-200 hover:bg-neutral-200/10 transition-all text-neutral-700 hover:text-neutral-800 dark-hover:text-neutral-200/80 p-3 rounded-lg flex items-center justify-center">
+              <Github />
+            </div>
+          </Link>
+          <Link
+            href="https://www.instagram.com/ziel.works/"
+            rel="canonical"
+            target="_blank"
+            className="scale-75"
+          >
+            <div className=" bg-neutral-200 hover:bg-neutral-200/10 transition-all text-neutral-700 hover:text-neutral-800 dark-hover:text-neutral-200/80 p-3 rounded-lg flex items-center justify-center">
+              <Instagram />
+            </div>
+          </Link>
+          <Link
+            href="https://dribbble.com/dailyziel"
+            rel="canonical"
+            target="_blank"
+            className="scale-75"
+          >
+            <div className=" bg-neutral-200 hover:bg-neutral-200/10 transition-all text-neutral-700 hover:text-neutral-800 dark-hover:text-neutral-200/80 p-3 rounded-lg flex items-center justify-center">
+              <Dribbble />
+            </div>
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/nurrahmat-hanif-635055218 "
+            rel="canonical"
+            target="_blank"
+            className="scale-75"
+          >
+            <div className=" bg-neutral-200 hover:bg-neutral-200/10 transition-all text-neutral-700 hover:text-neutral-800 dark-hover:text-neutral-200/80 p-3 rounded-lg flex items-center justify-center">
+              <Linkedin />
+            </div>
+          </Link>
+        </div>
+        <p className="text-xs text-neutral-700 dark:text-neutral-500">&copy; {new Date().getFullYear()} Ziel. All rights reserved.</p>
       </div>
       <div className="-z-10 h-48 w-3/5 opacity-25 blur-[160px] absolute left-1/2 top-0 -translate-x-1/2 xs:top-24"></div>
 

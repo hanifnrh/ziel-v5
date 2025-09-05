@@ -1,5 +1,5 @@
 "use client";
-import { useMouse } from "@/components/hooks/usemouse";
+import { useMouse } from "@/components/hooks/useMouse";
 import { cn } from "@/lib/utils";
 import { ArrowUpRightIcon } from "lucide-react";
 import type { ReactNode } from "react";
@@ -51,7 +51,7 @@ export const MainMenusGradientCard = ({
             {children && (
                 <div
                     className={cn(
-                        "grid relative overflow-hidden rounded-[15px] border-neutral-950",
+                        "grid relative  border-neutral-950",
                         className,
                     )}
                 >

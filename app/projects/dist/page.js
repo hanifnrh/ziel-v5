@@ -102,15 +102,15 @@ function ProjectsAll() {
             React.createElement("meta", { name: "twitter:description", content: "View my latest projects." }),
             React.createElement("meta", { name: "twitter:image", content: "/thumbnail.png" })),
         React.createElement("div", { className: "pt-16 lg:py-28 z-10" },
-            React.createElement("div", { className: "px-8 md:px-20 2xl:px-52 py-5" },
+            React.createElement("div", { className: "px-8 md:px-20 xl:px-28 py-5" },
                 React.createElement("h2", { className: "flex bg-purple-600/20 text-purple-600 px-4 py-2 rounded-full w-fit" },
                     React.createElement(lucide_react_1.Pickaxe, { className: "mr-2" }),
                     "Projects")),
-            React.createElement("div", { className: "relative px-8 md:px-20 2xl:px-52 pb-10 flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between" },
+            React.createElement("div", { className: "relative px-8 md:px-20 xl:px-28 pb-10 flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between" },
                 React.createElement("div", { className: "w-full flex flex-col gap-4" },
-                    React.createElement("h3", { className: "flex text-4xl sm:text-3xl lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-200 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]" }, "Design-Driven Development"),
+                    React.createElement("h3", { className: "flex text-4xl sm:text-3xl lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-400 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]" }, "Design-Driven Development"),
                     React.createElement("p", { className: "text-neutral-500 body-light text-md lg:text-lg" }, "These projects highlight my journey of merging aesthetics with functionality. Started as a visual enthusiast, I went through many challenges to build functional yet visually pleasing projects."))),
-            React.createElement("div", { className: "relative flex flex-col items-center px-8 md:px-20 2xl:px-52 pb-20 bg-background", id: "projects" }, isLoading ? (
+            React.createElement("div", { className: "relative flex flex-col items-center px-8 md:px-20 xl:px-28 pb-20 bg-background", id: "projects" }, isLoading ? (
             // ✅ Loader saat fetching data
             React.createElement("div", { className: "w-full flex justify-center py-20" },
                 React.createElement(loader_1.Loader, null))) : (React.createElement("div", { className: "grid grid-cols-1 lg:grid-cols-3 gap-10 sm:gap-8 items-start" }, projects.map(function (project) { return (React.createElement(link_1["default"], { rel: "canonical", key: project.slug, href: "/projects/" + project.slug, className: "group body w-full flex flex-col gap-4 justify-center items-start text-neutral-200" },

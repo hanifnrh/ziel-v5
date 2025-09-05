@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import { ArrowRight, BookOpenText } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -80,33 +81,48 @@ export default function Blog() {
 
     return (
         <div>
-
-            <section className="z-10">
-                <div className="px-8 md:px-20 2xl:px-52 py-5">
-                    <h2 className="flex bg-purple-600/20 text-purple-600 px-4 py-2 rounded-full w-fit">
+            <section className="z-10 py-10">
+                <motion.div className="px-8 md:px-20 xl:px-28 py-5"
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <h2 className="flex bg-green-600/20 text-green-600 px-4 py-2 rounded-full w-fit">
                         <BookOpenText className="mr-2" />
                         Blog
                     </h2>
-                </div>
+                </motion.div>
 
-                <div className="px-8 md:px-20 2xl:px-52 pb-10 flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between">
-                    <div className="sm:w-2/3 xl:w-1/2 flex flex-col gap-4">
-                        <h3 className="flex text-4xl sm:text-3xl lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-200 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+                <div className="px-8 md:px-20 xl:px-28 pb-10 flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between">
+                    <motion.div
+                        className="sm:w-2/3 flex flex-col gap-4"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <h3 className="flex text-5xl sm:text-4xl lg:text-6xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-green-700 via-green-600 to-green-300 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                             Thoughts, Ideas & Explorations
                         </h3>
-                        <p className="text-neutral-500 body-light text-md lg:text-lg">
-                            A space to share insights, experiences, and reflections—on design, development, and everything in between.
+                        <p className="text-green-700 dark:text-green-500 body-light text-lg lg:text-xl">
+                            A space to share my insights, experiences, thoughts, basically anything that sparks my interest.
                         </p>
-                    </div>
-                    <Link
-                        href="/blog"
-                        rel="canonical"
-                        className="sm:w-1/3 xl:w-1/2 text-neutral-200 flex justify-start items-start sm:justify-end">
-                        <SpotlightButton />
-                    </Link>
+                    </motion.div>
+                    <motion.div
+                        className="sm:w-1/3 text-neutral-200 flex justify-start items-start sm:justify-end"
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                    >
+                        <Link
+                            href="/projects"
+                            rel="canonical"
+                        >
+                            <SpotlightButton color="bg-green-600" />
+                        </Link>
+                    </motion.div>
                 </div>
 
-                <div className="w-full relative flex flex-col items-start px-8 md:px-20 2xl:px-52 pb-20 bg-background" id="projects">
+                <div className="w-full relative flex flex-col items-start px-8 md:px-20 xl:px-28 pb-20 bg-background" id="projects">
                     <div className="w-full grid grid-cols-1 items-start mt-5">
                         {posts.length > 0 ? (
                             posts.map((post, index) => (
@@ -121,7 +137,7 @@ export default function Blog() {
                                             src={post.featuredImage.url}
                                             width={1000}
                                             height={1000}
-                                            className="w-full h-auto object-cover group-hover:scale-105 transition-all"
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-all"
                                             alt={post.title}
                                         />
                                     </div>
@@ -136,13 +152,13 @@ export default function Blog() {
                                             </p>
                                         </div>
                                         <div className="flex flex-col sm:flex-row justify-between w-full">
-                                            <p className="mt-6 sm:mt-0 order-2 sm:order-1 link-hover-animation text-purple-500 group-hover:link-hovered-animation w-fit text-sm">
+                                            <p className="mt-6 sm:mt-0 order-2 sm:order-1 link-hover-animation text-green-500 group-hover:link-hovered-animation w-fit text-sm">
                                                 Read more
                                                 <ArrowRight className="ml-1 inline-block transition-all duration-300 group-hover:ml-2" />
                                             </p>
-                                            <div className="order-1 sm:order-2 flex body-light text-neutral-700 dark:text-neutral-400 gap-2">
+                                            <div className="order-1 sm:order-2 flex body-light text-green-700 dark:text-green-400 gap-2">
                                                 {(Array.isArray(post.tag) ? post.tag : post.tag.split(",")).map((tag: string, index: number) => (
-                                                    <p key={index} className="bg-neutral-200 dark:bg-neutral-200/10 px-3 py-2 text-xs rounded-sm">
+                                                    <p key={index} className="bg-green-200 dark:bg-green-200/10 px-3 py-2 text-xs rounded-sm">
                                                         {tag.trim()}
                                                     </p>
                                                 ))}

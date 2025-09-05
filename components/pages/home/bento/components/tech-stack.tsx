@@ -1,6 +1,5 @@
-import { MainMenusGradientCard } from '@/components/ui/animated-card';
 import { Marquee } from '@/components/ui/marquee';
-import { Atom } from 'lucide-react';
+import { Layers } from 'lucide-react';
 import Image from 'next/image';
 
 
@@ -38,17 +37,13 @@ function TechStack() {
     ];
 
     return (
-        <MainMenusGradientCard
-            description="Design tools and code tools I mainly use. Focused on React or Javascript ecosystem, recently have been using Next.js"
-            title="Tech stack I mainly use"
-        >
-            <h2 className="text-sm text-violet-600 dark:text-neutral-400 group mr-auto px-5 py-2 bg-gradient-to-tr from-violet-300/5 via-violet-400/5 to-transparent  border-[2px] border-violet-600/5 rounded-3xl w-fit flex items-center">
-                <Atom className="inline w-4 h-4 mr-2  duration-300" />
-                Tech Stack
-            </h2>
+        <div className='space-y-4 w-full h-full p-6 bg-gradient-to-b from-rose-50 to-white dark:from-rose-900 dark:to-black border border-rose-200 dark:border-rose-800 rounded-2xl shadow-xs dark:shadow-lg'>
+            <div className="flex items-center bg-rose-200 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400 px-3 py-3 rounded-full w-fit gap-2 animate-pulse">
+                <Layers />
+            </div>
 
             <section id="logos">
-                <div className="container mx-auto ">
+                <div className="mx-auto ">
                     <div className="relative mt-6">
                         <Marquee className="max-w-full [--duration:40s]">
                             {companies.map((company, idx) => (
@@ -57,7 +52,7 @@ function TechStack() {
                                     width={112}
                                     height={40}
                                     src={company.url}
-                                    className="h-10 w-28 object-contain opacity-30 neutralscale brightness-0 dark:invert"
+                                    className="h-10 w-28 object-contain dark:opacity-30 neutralscale brightness-0 dark:invert"
                                     alt={company.name}
                                 />
                             ))}
@@ -68,7 +63,12 @@ function TechStack() {
                 </div>
             </section>
 
-        </MainMenusGradientCard>
+            <h3 className='text-rose-600 text-xl body'>
+                Tech stack I mainly use
+            </h3>
+
+
+        </div>
     )
 }
 

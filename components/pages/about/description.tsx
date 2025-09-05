@@ -34,7 +34,7 @@ const images = [
 export default function Description() {
 
     return (
-        <div className="relative flex flex-col px-8 md:px-20 2xl:px-52 pb-10">
+        <div className="relative flex flex-col px-8 md:px-20 xl:px-28 pb-10">
             <DotPattern
                 className={cn(
                     "[mask-image:radial-gradient(200px_circle_at_center,white,transparent)] opacity-10",
@@ -52,7 +52,7 @@ export default function Description() {
                 </div>
 
                 <div className="order-1 sm:order-2 w-full flex flex-col gap-4">
-                    <h3 className="flex text-4xl sm:text-3xl font-normal lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-200 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+                    <h3 className="flex text-4xl sm:text-3xl font-normal lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-400 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                         Functionality & Aesthetics
                     </h3>
                     <p className="text-neutral-500 body-light text-sm lg:text-lg">

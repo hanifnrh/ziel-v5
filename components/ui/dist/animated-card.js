@@ -21,7 +21,7 @@ exports.MainMenusGradientCard = function (_a) {
                 background: "linear-gradient(135deg, #9216AE, #7A69F9, #9A63F2, #8B3FF5)"
             } }),
         React.createElement("div", { className: "absolute inset-px rounded-[19px] bg-neutral-200 dark:bg-neutral-950/80" }),
-        children && (React.createElement("div", { className: utils_1.cn("grid relative overflow-hidden rounded-[15px] border-neutral-950", className) }, children)),
+        children && (React.createElement("div", { className: utils_1.cn("grid relative  border-neutral-950", className) }, children)),
         React.createElement("div", { className: "relative pb-2 pt-4" },
             React.createElement("h3", { className: "text-lg body text-neutral-800 dark:text-neutral-300" }, title),
             React.createElement("p", { className: "body-light mt-2 text-neutral-700 dark:text-neutral-400" }, description))));

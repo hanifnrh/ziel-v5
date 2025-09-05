@@ -11,7 +11,7 @@ function Hero() {
     var videoRef = react_2.useRef(null);
     return (React.createElement("div", null,
         React.createElement("section", { className: "py-20 lg:py-28 z-10 md:mt-8" },
-            React.createElement("div", { className: "h-fit text-neutral-600 gap-x-6 grid grid-cols-1 sm:grid-cols-6 items-center justify-between gap-4 sm:gap-16 px-4 md:px-20 2xl:px-52" },
+            React.createElement("div", { className: "h-fit text-neutral-600 gap-x-6 grid grid-cols-1 sm:grid-cols-6 items-center justify-between gap-4 sm:gap-16 px-4 md:px-20 xl:px-28" },
                 React.createElement("div", { className: "w-full flex flex-col items-center sm:items-start justify-center gap-4 md:px-0 sm:col-span-4 order-2 sm:order-1" },
                     React.createElement("h1", { className: "hidden sm:flex text-sm text-violet-500 dark:text-neutral-400 group sm:mr-auto px-5 py-2 bg-violet-100 dark:bg-gradient-to-tr from-neutral-300/5 via-neutral-400/5 to-transparent dark:border-[2px] dark:border-white/5 rounded-3xl w-fit items-center" },
                         "Creative Designer & Developer",

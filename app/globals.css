@@ -469,6 +469,29 @@ html, body {
   .link-hovered-animation::before {
     width: calc(100% - var(--offsetEnd, var(--offsetStart, 0px)));
   }
+
+  .link-hover-animation-blue {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: var(--offsetStart, 0px);
+      bottom: -5px;
+      height: 1.25px;
+      width: 0;
+      background-image: repeating-linear-gradient(to right,
+          var(--dot-color, rgba(37, 99, 235, 0.75)),
+          var(--dot-color, rgba(37, 99, 235, 0.75)) 2px,
+          transparent 2px,
+          transparent 3px);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .link-hovered-animation-blue::before {
+    width: calc(100% - var(--offsetEnd, var(--offsetStart, 0px)));
+  }
 }
 
 /* width */
@@ -509,4 +532,28 @@ textarea:-webkit-autofill {
   /* Menyamarkan autofill */
   transition: background-color 5000s ease-in-out 0s;
   border: solid 1px #52525b;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+    box-shadow: 0px 0px 50px rgba(255, 165, 0, 0.5);
+  }
+
+  50% {
+    transform: translate(0px, -5px) scale(1);
+    opacity: 1;
+    box-shadow: 0px 8px 20px rgba(255, 165, 0, 0.5);
+  }
+
+  100% {
+    transform: translate(0px, 5px) scale(0.1);
+    opacity: 0;
+    box-shadow: 0px 10px 20px rgba(255, 165, 0, 0);
+  }
+}
+
+.octagon {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
