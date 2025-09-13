@@ -31,7 +31,7 @@ var images = [
     "/svg/vercel.svg",
 ];
 function Experience() {
-    return (React.createElement("div", { className: "relative flex flex-col px-8 md:px-20 xl:px-28 pb-10 bg-background" },
+    return (React.createElement("div", { className: "relative flex flex-col px-4 md:px-10 xl:px-14 pb-10 bg-background" },
         React.createElement(animated_grid_pattern_1.AnimatedGridPattern, { numSquares: 30, maxOpacity: 0.1, duration: 3, repeatDelay: 1, className: utils_1.cn("[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]", "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12") }),
         React.createElement("div", { className: "py-5" },
             React.createElement("h2", { className: "flex bg-purple-600/20 text-purple-600 px-4 py-2 rounded-full w-fit" },

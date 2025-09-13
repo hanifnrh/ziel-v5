@@ -14,6 +14,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 // Others
 import BottomNav from "@/components/section/bottom-nav";
 import Footer from "@/components/section/footer";
+import Navbar from "@/components/section/navbar";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import Script from "next/script";
 import "./globals.css";
@@ -86,25 +87,26 @@ export default function RootLayout({
           data-website-id="b440f280-3189-40df-b827-f98ffb664eac"
           strategy="afterInteractive" // loads after page is interactive
         />
-          <div className="max-w-screen-2xl mx-auto" >
-            <NextTopLoader
-              color="#9810fa"
-              initialPosition={0.08}
-              easing="ease"
-              speed={300}
-              showSpinner={false}
-              height={2}
-              shadow="0 0 20px #9810fa, 0 0 10px #9810fa"
-              zIndex={100}
-            />
-            <ScrollProgress className="top-0" />
-            {children}
-            <BottomNav />
-            <Footer />
-            <SpeedInsights />
-            <Analytics />
-          </div>
-          <Toaster></Toaster>
+        <div className="" >
+          <NextTopLoader
+            color="#9810fa"
+            initialPosition={0.08}
+            easing="ease"
+            speed={300}
+            showSpinner={false}
+            height={2}
+            shadow="0 0 20px #9810fa, 0 0 10px #9810fa"
+            zIndex={100}
+          />
+          <ScrollProgress className="top-0" />
+          <Navbar />
+          {children}
+          <BottomNav />
+          <Footer />
+          <SpeedInsights />
+          <Analytics />
+        </div>
+        <Toaster></Toaster>
       </body>
     </html>
   );

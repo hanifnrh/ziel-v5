@@ -106,14 +106,14 @@ export default function Blog() {
             </Head>
 
             <section className="pt-16 lg:py-28 z-10">
-                <div className="px-8 md:px-20 xl:px-28 py-5">
+                <div className="px-4 md:px-10 xl:px-14 py-5">
                     <h2 className="flex bg-purple-600/20 text-purple-600 px-4 py-2 rounded-full w-fit">
                         <BookOpenText className="mr-2" />
                         Blog
                     </h2>
                 </div>
 
-                <div className="px-8 md:px-20 xl:px-28 pb-10 flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between">
+                <div className="px-4 md:px-10 xl:px-14 pb-10 flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between">
                     <div className="w-full flex flex-col gap-4">
                         <h3 className="flex text-4xl sm:text-3xl lg:text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-400 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
                             Thoughts, Ideas & Explorations
@@ -124,7 +124,7 @@ export default function Blog() {
                     </div>
                 </div>
 
-                <div className="w-full relative flex flex-col items-start px-8 md:px-20 xl:px-28 pb-20 bg-background" id="projects">
+                <div className="w-full relative flex flex-col items-start px-4 md:px-10 xl:px-14 pb-20 bg-background" id="projects">
                     {isLoading ? (
                         // ✅ Loader saat fetching data
                         <div className="w-full flex justify-center py-20">

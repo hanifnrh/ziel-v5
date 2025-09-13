@@ -16,14 +16,12 @@ import { useState } from "react";
 
 export interface ScopeOfWorkProps {
     title?: string;
-    subtitle?: string;
     description?: string;
     features?: string[];
 }
 
 export default function ScopeOfWork({
     title = "Scope of Work",
-    subtitle = "",
     features = ["UI/UX Design", "Web Design", "Full Stack Web Development", "Prototyping"],
 }: ScopeOfWorkProps) {
     const [isFlipped, setIsFlipped] = useState(false);
@@ -50,7 +48,7 @@ export default function ScopeOfWork({
                         "[backface-visibility:hidden] [transform:rotateY(0deg)]",
                         "overflow-hidden rounded-2xl",
                         "bg-orange-100 dark:bg-orange-900",
-                        "border border-orange-200 dark:border-orange-800/50",
+                        "border-2 border-orange-200 dark:border-orange-800/50",
                         "shadow-xs dark:shadow-lg",
                         "transition-all duration-700",
                         "group-hover:shadow-lg dark:group-hover:shadow-xl",
@@ -58,13 +56,13 @@ export default function ScopeOfWork({
                     )}
                 >
                     <div className="relative w-full flex h-full overflow-hidden bg-gradient-to-b from-orange-50 to-white dark:from-neutral-900 dark:to-black">
-                        <div className="absolute inset-0 flex items-start justify-center pt-8">
+                        <div className="absolute inset-0 flex items-start justify-center pt-8 xl:pt-14">
                             <div className="relative w-[200px] h-[100px] flex items-center justify-center">
                                 {[...Array(10)].map((_, i) => (
                                     <div
                                         key={i}
                                         className={cn(
-                                            "absolute w-[50px] h-[50px] top-1/2 -translate-y-1/2",
+                                            "absolute w-[50px] h-[50px] xl:w-[80px] xl:h-[80px] top-1/2 -translate-y-1/2",
                                             "rounded-[140px]",
                                             "animate-[scale_3s_linear_infinite]",
                                             "opacity-0",
@@ -83,12 +81,9 @@ export default function ScopeOfWork({
                     <div className="absolute bottom-0 left-0 right-0 p-5">
                         <div className="flex items-center justify-between gap-3">
                             <div className="space-y-1.5">
-                                <h3 className="text-xl text-orange-400 dark:text-white leading-snug tracking-tighter transition-all duration-500 ease-out-expo group-hover:translate-y-[-4px]">
+                                <h3 className="text-xl xl:text-3xl text-orange-400 dark:text-white leading-snug tracking-tighter transition-all duration-500 ease-out-expo group-hover:translate-y-[-4px]">
                                     {title}
                                 </h3>
-                                <p className="text-sm text-neutral-600 dark:text-neutral-200 line-clamp-2 tracking-tight transition-all duration-500 ease-out-expo group-hover:translate-y-[-4px] delay-[50ms]">
-                                    {subtitle}
-                                </p>
                             </div>
                             <div className="relative group/icon">
                                 <div
@@ -97,7 +92,7 @@ export default function ScopeOfWork({
                                         "bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent"
                                     )}
                                 />
-                                <Repeat2 className="relative z-10 w-4 h-4 text-orange-500 transition-transform duration-300 group-hover/icon:scale-110 group-hover/icon:-rotate-12" />
+                                <Repeat2 className="relative z-10 w-4 h-4 xl:w-8 xl:h-8 text-orange-500 transition-transform duration-300 group-hover/icon:scale-110 group-hover/icon:-rotate-12" />
                             </div>
                         </div>
                     </div>
@@ -116,24 +111,24 @@ export default function ScopeOfWork({
                         "[backface-visibility:hidden] [transform:rotateY(180deg)]",
                         "p-6 rounded-2xl",
                         "bg-gradient-to-b from-orange-50 to-white dark:from-neutral-900 dark:to-black",
-                        "border border-orange-200 dark:border-orange-800",
+                        "border-2 border-orange-200 dark:border-orange-800",
                         "shadow-xs dark:shadow-lg",
-                        "flex flex-col",
+                        "flex flex-col justify-center",
                         "transition-all duration-700",
                         "group-hover:shadow-lg dark:group-hover:shadow-xl",
                         !isFlipped ? "opacity-0" : "opacity-100"
                     )}
                 >
                     <div className="flex flex-col gap-4">
-                            <h3 className="text-lg text-neutral-900 dark:text-white leading-snug tracking-tight transition-all duration-500 ease-out-expo group-hover:translate-y-[-2px]">
-                                {title}
-                            </h3>
+                        <h3 className="text-xl xl:text-3xl text-neutral-900 dark:text-white leading-snug tracking-tight transition-all duration-500 ease-out-expo group-hover:translate-y-[-2px]">
+                            {title}
+                        </h3>
 
                         <div className="space-y-2">
                             {features.map((feature, index) => (
                                 <div
                                     key={feature}
-                                    className="flex items-center gap-2 text-sm text-neutral-700 dark:text-neutral-300 transition-all duration-500"
+                                    className="flex items-center gap-2 text-base xl:text-xl text-neutral-700 dark:text-neutral-300 transition-all duration-500"
                                     style={{
                                         transform: isFlipped
                                             ? "translateX(0)"
@@ -143,7 +138,7 @@ export default function ScopeOfWork({
                                             }ms`,
                                     }}
                                 >
-                                    <ArrowRight className="w-3 h-3 text-orange-500" />
+                                    <ArrowRight className="w-3 h-3 xl:w-8 xl:h-8 text-orange-500" />
                                     <span>{feature}</span>
                                 </div>
                             ))}

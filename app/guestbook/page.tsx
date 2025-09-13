@@ -19,7 +19,7 @@ const Page = async () => {
     return (
         <main className="bg-neutral-950">
 
-            <section className="py-28 z-10 p-8 pb-20 gap-16 px-8 md:px-20 xl:px-28">
+            <section className="py-28 z-10 p-8 pb-20 gap-16 px-4 md:px-10 xl:px-14">
                 <TracingBeam>
                     <div
                         id="guestbook"

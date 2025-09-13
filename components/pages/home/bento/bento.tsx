@@ -10,12 +10,12 @@ export default function Bento() {
 
     return (
 
-        <div className="w-full gap-2 grid grid-cols-1 pb-20 px-4 md:px-20 xl:px-28 text-neutral-200">
+        <div className="w-full gap-2 grid grid-cols-1 pb-20 px-4 md:px-10 xl:px-14 text-neutral-200">
             <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: false, amount: 0.5 }}
                 className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-2"
             >
 
@@ -30,7 +30,7 @@ export default function Bento() {
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: false, amount: 0.5 }}
                 >
                     <Principles />
                 </motion.div>
@@ -39,7 +39,7 @@ export default function Bento() {
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2, duration: 0.6 }}
-                    viewport={{ once: true, amount: 0.5 }}
+                    viewport={{ once: false, amount: 0.5 }}
                 >
 
                     <ScopeOfWork />
@@ -50,7 +50,7 @@ export default function Bento() {
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: false, amount: 0.5 }}
                 className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-2"
             >
                 <div className="sm:hidden lg:block">

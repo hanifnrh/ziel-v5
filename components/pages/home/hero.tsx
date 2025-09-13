@@ -8,15 +8,8 @@ export default function Hero() {
 
     return (
         <div>
-            <section className="flex flex-col justify-center gap-6 lg:gap-14 pt-4 sm:pt-10 pb-20 lg:pt-14 lg:pb-28 z-10">
-                <Image
-                    src="/logo/zielviolet.png"
-                    alt="Ziel Logo"
-                    width={100}
-                    height={100}
-                    className="flex w-10 lg:w-14 h-auto align-middle mx-auto"
-                />
-                <div className="h-fit text-neutral-600 gap-x-6 grid grid-cols-1 sm:grid-cols-6 items-center justify-between gap-4 sm:gap-16 px-4 md:px-20 xl:px-28">
+            <section className="flex flex-col justify-center gap-6 lg:gap-14 h-screen z-10 px-4 md:px-10 xl:px-14">
+                <div className="h-fit text-neutral-600 gap-x-6 grid grid-cols-1 sm:grid-cols-6 items-center justify-between gap-4 sm:gap-16">
                     <div className="w-full flex flex-col items-center sm:items-start justify-center gap-4 md:px-0 sm:col-span-4 order-2 sm:order-1">
                         <h1 className="hidden sm:flex text-sm text-violet-700 dark:text-neutral-400 group sm:mr-auto px-5 py-2 bg-violet-100 dark:bg-gradient-to-tr from-neutral-300/5 via-neutral-400/5 to-transparent dark:border-[2px] dark:border-white/5 rounded-3xl w-fit items-center">
                             Creative Designer & Developer
@@ -42,7 +35,7 @@ export default function Hero() {
                             come alive.
                         </h2>
 
-                        <p className="body-light text-neutral-700 dark:text-neutral-500 text-left text-base lg:text-xl">
+                        <p className="body-light text-neutral-700 dark:text-neutral-500 text-left text-lg lg:text-2xl">
                             Digital should feel fun and engaging. I craft immersive experiences that blend creativity with technology, ensuring functionality meets aesthetics.
                         </p>
 

@@ -9,7 +9,7 @@ export default function NotFound() {
         <main>
 
             <section className="h-screen flex items-center z-10">
-                <div className="w-full h-fit text-neutral-600 gap-x-12 flex items-center justify-center p-8 pb-0 sm:py-20 gap-16 px-8 md:px-20 xl:px-28">
+                <div className="w-full h-fit text-neutral-600 gap-x-12 flex items-center justify-center p-8 pb-0 sm:py-20 gap-16 px-4 md:px-10 xl:px-14">
                     <div className="flex flex-col w-full justify-center items-center space-y-5 sm:max-w-lg md:px-0 lg:max-w-xl">
                         <h1 className="text-4xl sm:text-3xl lg:text-5xl">
                             ⛔

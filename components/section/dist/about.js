@@ -8,7 +8,7 @@ var flickering_grid_1 = require("../ui/flickering-grid");
 function AboutSection() {
     return (React.createElement("div", null,
         React.createElement("section", { className: "pt-28 z-10" },
-            React.createElement("div", { className: "h-fit text-neutral-600 gap-x-12 flex w-full flex-col sm:flex-row items-center justify-between pb-20 gap-16 px-8 md:px-20 xl:px-28" },
+            React.createElement("div", { className: "h-fit text-neutral-600 gap-x-12 flex w-full flex-col sm:flex-row items-center justify-between pb-20 gap-16 px-4 md:px-10 xl:px-14" },
                 React.createElement("div", { className: "flex-none space-y-5 w-full sm:w-7/12 md:px-0" },
                     React.createElement("h2", { className: "body text-4xl sm:text-3xl lg:text-5xl font-normal tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-400 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]" }, "I'm Ziel. UI Designer & Full Stack Developer."),
                     React.createElement("p", { className: "body-light text-neutral-500 text-sm lg:text-lg" }, "I'm Nurrahmat Hanif, I go by Ziel. A passionate UI/UX designer and full-stack web developer dedicated to crafting exceptional digital experiences. With a love for design and a knack for building visually stunning and functional creations. Based in Jakarta & Semarang, Indonesia."),

@@ -4,12 +4,12 @@
 import { toast } from "@/components/hooks/useToast";
 import { Button } from "@/components/ui/button";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -132,7 +132,7 @@ const ContactForm = () => {
         <div id="contact">
             <Form {...form}>
                 {/* What to do on submit/ the Form comp wraps the original form */}
-                <div className="p-8 pb-20 px-8 md:px-20 xl:px-28 w-full">
+                <div className="p-8 pb-20 px-4 md:px-10 xl:px-14 w-full">
                     <div className="grid grid-cols-1 gap-3 max-w-7xl mx-auto">
                         <div
                             className={cn(

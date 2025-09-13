@@ -4,55 +4,62 @@ import Image from 'next/image';
 
 
 function TechStack() {
-
-    const companies = [
+  const companies = [
         {
             name: "Next.js",
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/1280px-Nextjs-logo.svg.png",
+            url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
         },
         {
             name: "GitHub",
-            url: "https://res.cloudinary.com/eldoraui/image/upload/v1734066341/GitHub_honend.svg",
+            url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
         },
         {
             name: "Figma",
-            url: "https://1000logos.net/wp-content/uploads/2024/09/Figma-Logo.png",
+            url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
         },
         {
             name: "Tailwind",
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tailwind_CSS_logo.svg/2560px-Tailwind_CSS_logo.svg.png",
+            url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
         },
         {
             name: "React",
-            url: "https://logos-world.net/wp-content/uploads/2023/08/React-Symbol.png",
+            url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
         },
         {
             name: "Laravel",
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Logo.min.svg/2560px-Logo.min.svg.png",
+            url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
         },
         {
             name: "Vercel",
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vercel_logo_black.svg/640px-Vercel_logo_black.svg.png",
+            url: "https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png",
+        },
+        {
+            name: "TypeScript",
+            url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+        },
+        {
+            name: "JavaScript",
+            url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
         },
     ];
 
     return (
-        <div className='space-y-4 w-full h-full p-6 bg-gradient-to-b from-rose-50 to-white dark:from-rose-900 dark:to-black border border-rose-200 dark:border-rose-800 rounded-2xl shadow-xs dark:shadow-lg'>
+        <div className='flex flex-col justify-between gap-10 w-full h-full p-6 bg-gradient-to-b from-rose-50 to-white dark:from-rose-900 dark:to-black border-2 border-rose-200 dark:border-rose-800 rounded-2xl shadow-xs dark:shadow-lg'>
             <div className="flex items-center bg-rose-200 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400 px-3 py-3 rounded-full w-fit gap-2 animate-pulse">
                 <Layers />
             </div>
 
             <section id="logos">
                 <div className="mx-auto ">
-                    <div className="relative mt-6">
-                        <Marquee className="max-w-full [--duration:40s]">
+                    <div className="relative">
+                        <Marquee className="w-full [--duration:40s]">
                             {companies.map((company, idx) => (
                                 <Image
                                     key={idx}
                                     width={112}
                                     height={40}
                                     src={company.url}
-                                    className="h-10 w-28 object-contain dark:opacity-30 neutralscale brightness-0 dark:invert"
+                                    className="h-10 w-28 object-contain"
                                     alt={company.name}
                                 />
                             ))}
@@ -63,7 +70,7 @@ function TechStack() {
                 </div>
             </section>
 
-            <h3 className='text-rose-600 text-xl body'>
+            <h3 className='text-rose-600 text-xl xl:text-3xl body'>
                 Tech stack I mainly use
             </h3>
 

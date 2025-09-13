@@ -12,28 +12,28 @@ const data = [
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                     <Image
-                        src="/images/satosugu.png"
+                        src="/about/satosugu.png"
                         alt="Satosugu"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="/images/breeze.png"
+                        src="/about/breeze.png"
                         alt="Breeze"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="/images/howl.png"
+                        src="/about/howl.png"
                         alt="Howl"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="/images/neilperry.png"
+                        src="/about/neilperry.png"
                         alt="Neil Perry"
                         width={500}
                         height={500}
@@ -52,28 +52,28 @@ const data = [
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                     <Image
-                        src="/images/academiku.png"
+                        src="/about/academiku.png"
                         alt="Academiku"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="/images/jiwakita.png"
+                        src="/about/jiwakita.png"
                         alt="Jiwakita"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="/images/clothing.png"
+                        src="/about/clothing.png"
                         alt="Ziel Clothing"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="/images/dailyziel.png"
+                        src="/about/dailyziel.png"
                         alt="Dailyziel 1.0"
                         width={500}
                         height={500}
@@ -92,14 +92,14 @@ const data = [
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                     <Image
-                        src="/images/clipvision.png"
+                        src="/about/clipvision.png"
                         alt="Clipvision"
                         width={500}
                         height={500}
                         className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:shadow-none"
                     />
                     <Image
-                        src="/images/sigmadasbor.png"
+                        src="/about/sigmadasbor.png"
                         alt="Sigma Dashboard"
                         width={500}
                         height={500}
@@ -113,7 +113,7 @@ const data = [
 
 export default function Story() {
     return (
-        <section className="relative pb-20 gap-16 px-8 md:px-20 xl:px-28">
+        <section className="relative pb-20 gap-16 px-4 md:px-10 xl:px-14">
 
             <div className="py-5">
                 <h2 className="flex bg-purple-600/20 text-purple-600 px-4 py-2 rounded-full w-fit">

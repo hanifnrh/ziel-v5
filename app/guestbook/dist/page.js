@@ -58,7 +58,7 @@ var Page = function () { return __awaiter(void 0, void 0, void 0, function () {
             case 2:
                 _a = _b.sent(), user = _a.data, error = _a.error;
                 return [2 /*return*/, (React.createElement("main", { className: "bg-neutral-950" },
-                        React.createElement("section", { className: "py-28 z-10 p-8 pb-20 gap-16 px-8 md:px-20 xl:px-28" },
+                        React.createElement("section", { className: "py-28 z-10 p-8 pb-20 gap-16 px-4 md:px-10 xl:px-14" },
                             React.createElement(tracing_beam_1.TracingBeam, null,
                                 React.createElement("div", { id: "guestbook", className: "flex w-full grow flex-col gap-y-4" },
                                     React.createElement("div", { className: "flex h-full w-full flex-col justify-center items-start" },

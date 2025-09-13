@@ -1,8 +1,9 @@
 "use client"
+import {
+    AnimatedGridPattern
+} from "@/components/ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
 import { BriefcaseBusiness } from "lucide-react";
-import { AnimatedGridPattern } from "../../ui/animated-grid-pattern";
-
 const images = [
     "/svg/figma.svg",
     "/svg/laravel.svg",
@@ -33,7 +34,7 @@ const images = [
 export default function Experience() {
 
     return (
-        <div className="relative flex flex-col px-8 md:px-20 xl:px-28 pb-10 bg-background">
+        <div className="relative flex flex-col px-4 md:px-10 xl:px-14 pb-10">
             <AnimatedGridPattern
                 numSquares={30}
                 maxOpacity={0.1}

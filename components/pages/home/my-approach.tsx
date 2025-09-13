@@ -11,7 +11,7 @@ export default function MyApproach() {
     return (
         <div>
             <motion.div
-                className="px-8 md:px-20 xl:px-28 py-5"
+                className="px-4 md:px-10 xl:px-14 py-5"
                 initial={{ opacity: 0, y: -50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -21,7 +21,7 @@ export default function MyApproach() {
                     My Approach
                 </h2>
             </motion.div>
-            <div className="relative grid w-full grid-cols-1 gap-4 lg:gap-2 lg:grid-cols-3 pb-20 px-8 md:px-20 xl:px-28 text-neutral-200">
+            <div className="relative grid w-full grid-cols-1 gap-4 lg:gap-2 lg:grid-cols-3 pb-20 px-4 md:px-10 xl:px-14 text-neutral-200">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}

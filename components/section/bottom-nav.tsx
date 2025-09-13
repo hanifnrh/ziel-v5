@@ -69,7 +69,9 @@ const BottomNav = () => {
                 {/* Bottom bar with title and hamburger - always visible */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-between items-center bg-violet-600 rounded-2xl">
                     <div className='flex items-center gap-4'>
-                        <Image src={"/logo/zielviolet.png"} alt="logo" width={30} height={30} className="p-1 bg-white rounded-md w-12" />
+                        <Link href="/" rel='canonical'>
+                            <Image src={"/logo/zielviolet.png"} alt="logo" width={30} height={30} className="p-1 bg-white rounded-md w-12" />
+                        </Link>
                         <span className="text-xl">MENU</span>
                     </div>
 
