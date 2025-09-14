@@ -81,26 +81,26 @@ export default function Blog() {
 
     return (
         <div>
-            <section className="z-10 py-10">
-                <motion.div className="px-4 md:px-10 xl:px-14 py-5"
+            <section className="z-10 py-10 px-4 md:px-10 xl:px-14 ">
+                <motion.div className=""
                     initial={{ opacity: 0, y: -50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <h2 className="flex bg-indigo-600/20 text-indigo-600 px-4 py-2 rounded-full w-fit">
+                    <h2 className="flex items-center text-indigo-800 text-lg lg:text-xl uppercase body-bold rounded-full w-fit">
                         <BookOpenText className="mr-2" />
                         Blog
                     </h2>
                 </motion.div>
 
-                <div className="px-4 md:px-10 xl:px-14 pb-10 flex flex-col sm:flex-row gap-4 sm:gap-0 justify-between">
+                <div className="pb-10 flex flex-col lg:flex-row gap-4 sm:gap-0 justify-between">
                     <motion.div
-                        className="sm:w-2/3 flex flex-col gap-4"
+                        className="w-9/12 sm:w-2/3 flex flex-col gap-4"
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                          {/* Vertical Label */}
+                        {/* Vertical Label */}
                         <div className="hidden sm:block h-full w-12 bg-indigo-600"></div>
 
                         {/* Main Text */}
@@ -109,7 +109,7 @@ export default function Blog() {
                         </h3>
                     </motion.div>
                     <motion.div
-                        className="sm:w-1/3 text-neutral-200 flex justify-start items-start sm:justify-end"
+                        className="w-3/12 sm:w-1/3 text-neutral-200 flex justify-start items-start sm:justify-end"
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}
@@ -123,7 +123,7 @@ export default function Blog() {
                     </motion.div>
                 </div>
 
-                <div className="w-full relative flex flex-col items-start px-4 md:px-10 xl:px-14 pb-20 bg-background" id="projects">
+                <div className="w-full relative flex flex-col items-start pb-20 bg-background" id="projects">
                     <div className="w-full grid grid-cols-1 items-start mt-5">
                         {posts.length > 0 ? (
                             posts.map((post, index) => (
@@ -148,18 +148,18 @@ export default function Blog() {
                                                 {formatDate(post.publishDate)}
                                             </div>
                                             <h3 className="text-xl lg:text-3xl text-neutral-800 dark:text-neutral-100">{post.title}</h3>
-                                            <p className="text-sm sm:text-md text-neutral-700 dark:text-neutral-500 line-clamp-3">
+                                            <p className="text-base lg:text-lg body-light text-neutral-700 dark:text-neutral-500 line-clamp-3">
                                                 {post.description}
                                             </p>
                                         </div>
                                         <div className="flex flex-col sm:flex-row justify-between w-full">
-                                            <p className="mt-6 sm:mt-0 order-2 sm:order-1 link-hover-animation text-indigo-500 group-hover:link-hovered-animation w-fit text-sm">
+                                            <p className="mt-6 sm:mt-0 order-2 sm:order-1 link-hover-animation text-indigo-500 group-hover:link-hovered-animation w-fit text-lg lg:text-2xl">
                                                 Read more
                                                 <ArrowRight className="ml-1 inline-block transition-all duration-300 group-hover:ml-2" />
                                             </p>
-                                            <div className="order-1 sm:order-2 flex body-light text-indigo-700 dark:text-indigo-400 gap-2">
+                                            <div className="order-1 sm:order-2 flex body text-indigo-700 dark:text-indigo-400 gap-2">
                                                 {(Array.isArray(post.tag) ? post.tag : post.tag.split(",")).map((tag: string, index: number) => (
-                                                    <p key={index} className="bg-indigo-200 dark:bg-indigo-200/10 px-3 py-2 text-xs rounded-sm">
+                                                    <p key={index} className="bg-indigo-100 dark:bg-indigo-200/10 px-3 py-2 text-sm lg:text-base rounded-sm">
                                                         {tag.trim()}
                                                     </p>
                                                 ))}

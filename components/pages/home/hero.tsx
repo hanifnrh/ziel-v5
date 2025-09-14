@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import { Lightbulb } from "lucide-react";
 import Image from "next/image";
 import { useRef } from 'react';
@@ -10,8 +11,12 @@ export default function Hero() {
         <div>
             <section className="flex flex-col justify-center gap-6 lg:gap-14 h-screen z-10 px-4 md:px-10 xl:px-14">
                 <div className="h-fit text-neutral-600 gap-x-6 grid grid-cols-1 sm:grid-cols-6 items-center justify-between gap-4 sm:gap-16">
-                    <div className="w-full flex flex-col items-center sm:items-start justify-center gap-4 md:px-0 sm:col-span-4 order-2 sm:order-1">
-                        <h1 className="hidden sm:flex text-sm text-violet-700 dark:text-neutral-400 group sm:mr-auto px-5 py-2 bg-violet-100 dark:bg-gradient-to-tr from-neutral-300/5 via-neutral-400/5 to-transparent dark:border-[2px] dark:border-white/5 rounded-3xl w-fit items-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4, duration: 0.8 }}
+                        className="w-full flex flex-col items-center sm:items-start justify-center gap-4 md:px-0 sm:col-span-4 order-2 sm:order-1">
+                        <h1 className="hidden sm:flex text-sm body text-violet-700 dark:text-neutral-400 group sm:mr-auto px-5 py-2 bg-violet-100 dark:bg-gradient-to-tr from-neutral-300/5 via-neutral-400/5 to-transparent dark:border-[2px] dark:border-white/5 rounded-3xl w-fit items-center">
                             Creative Designer & Developer
                             <Lightbulb className="inline w-4 h-4 ml-2  duration-300" />
                         </h1>
@@ -39,9 +44,14 @@ export default function Hero() {
                             Digital should feel fun and engaging. I craft immersive experiences that blend creativity with technology, ensuring functionality meets aesthetics.
                         </p>
 
-                    </div>
-                    <div className="w-full h-full flex flex-col gap-4 sm:gap-8 items-center justify-center sm:justify-end sm:col-span-2 order-1 sm:order-2">
-                        <h1 className="text-sm text-violet-500 dark:text-neutral-400 group sm:mr-auto px-5 py-2 bg-violet-100 dark:bg-gradient-to-tr from-neutral-300/5 via-neutral-400/5 to-transparent dark:border-[2px] dark:border-white/5 rounded-3xl w-fit flex sm:hidden items-center">
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4, duration: 0.8 }}
+                        className="w-full h-full flex flex-col gap-4 sm:gap-8 items-center justify-center sm:justify-end sm:col-span-2 order-1 sm:order-2">
+                        <h1 className="body text-sm text-violet-500 dark:text-neutral-400 group sm:mr-auto px-5 py-2 bg-violet-100 dark:bg-gradient-to-tr from-neutral-300/5 via-neutral-400/5 to-transparent dark:border-[2px] dark:border-white/5 rounded-3xl w-fit flex sm:hidden items-center">
                             Creative Designer & Developer
                             <Lightbulb className="inline w-4 h-4 ml-2  duration-300" />
                         </h1>
@@ -57,7 +67,7 @@ export default function Hero() {
                             <source src="/videos/hero.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
         </div>

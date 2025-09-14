@@ -557,3 +557,15 @@ textarea:-webkit-autofill {
 .octagon {
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }
+
+#card-0 .card-inner {
+  @apply bg-[#f48484] text-[#7f1010];
+}
+
+#card-1 .card-inner {
+  @apply bg-[#BAD6DA] text-[#1A4A4A];
+}
+
+#card-2 .card-inner {
+  @apply bg-[#A5C572] text-[#3D7337];
+}

@@ -49,8 +49,13 @@ const GuestbookCard = async ({
     return (
         <div className="group relative z-10 gap-y-2">
             <MessageCard>
-                <div className="flex items-center gap-4 px-4 py-2">
-                    <div className="relative flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-secondary md:h-10 md:w-10">
+                <div className="flex items-center justify-start gap-1">
+                    <div className="bg-red-500 w-3 h-3 rounded-full"></div>
+                    <div className="bg-yellow-500 w-3 h-3 rounded-full"></div>
+                    <div className="bg-green-500 w-3 h-3 rounded-full"></div>
+                </div>
+                <div className="flex items-center gap-4 py-2">
+                    <div className="relative flex h-16 w-16 md:h-20 md:w-20 items-center justify-center overflow-hidden rounded-full bg-secondary">
                         <Image
                             src={user_avatar}
                             alt={full_name}
@@ -59,11 +64,11 @@ const GuestbookCard = async ({
                         />
                     </div>
                     <div className="flex flex-col">
-                        <p className="text-xs text-neutral-200 body md:text-sm">{full_name}</p>
-                        <p className="text-xs text-neutral-500 body-light">{formatTimestamp(createdAt)}</p>
+                        <p className="text-lg text-neutral-900 body md:text-2xl">{full_name}</p>
+                        <p className="text-lg md:text-2xl text-neutral-500 body-light">{formatTimestamp(createdAt)}</p>
                     </div>
                 </div>
-                <code className="h-auto text-neutral-200 body-light px-4 py-2">{content}</code>
+                <code className="h-auto text-neutral-800 text-lg sm:text-xl body-light py-2">{content}</code>
             </MessageCard>
         </div>
     );
@@ -78,7 +83,7 @@ const Guestbook = async () => {
     }
 
     return (
-        <div className="grid grid-cols-1 w-full sm:grid-cols-3 h-fit gap-4">
+        <div className="grid grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-fit gap-4">
             {/* Content */}
             {guestbook &&
                 guestbook

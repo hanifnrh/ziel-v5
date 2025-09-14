@@ -16,7 +16,7 @@ interface Project {
     featuredImage: {
         url: string;
     };
-    logo: {
+    video: {
         url: string;
     };
 }
@@ -48,7 +48,7 @@ export default function ProjectsAll() {
                                 featuredImage {
                                     url
                                 }
-                                logo {
+                                video {
                                     url
                                 }
                             }
@@ -64,7 +64,6 @@ export default function ProjectsAll() {
         fetchProjects();
     }, []);
 
-    // Define your color map
     const colorMap: Record<string, string> = {
         blue: "bg-blue-500 text-blue-500",
         sky: "bg-sky-500 text-sky-500",
@@ -78,8 +77,8 @@ export default function ProjectsAll() {
     };
 
     return (
-        <div className="z-10 relative h-screen px-4 md:px-10 xl:px-14 flex flex-col justify-center items-start w-full">
-            <div className="w-full relative flex flex-col gap-4 sm:gap-0 sm:flex-row justify-between items-center">
+        <div className="z-10 relative lg:h-screen px-4 md:px-10 xl:px-14 flex flex-col justify-center items-start w-full">
+            <div className="w-full relative flex gap-4 sm:gap-0 justify-between items-center">
                 <motion.div
                     className="flex gap-4 items-stretch justify-center"
                     initial={{ opacity: 0, x: -50 }}
@@ -141,7 +140,7 @@ export default function ProjectsAll() {
 
                                     {/* Video Overlay */}
                                     <AnimatePresence>
-                                        {hoveredProject === project.slug && project.logo?.url && (
+                                        {hoveredProject === project.slug && project.video?.url && (
                                             <motion.div
                                                 className="absolute inset-0 flex items-center justify-center pointer-events-none"
                                                 initial={{ opacity: 0, scale: 0.8 }}
@@ -150,7 +149,7 @@ export default function ProjectsAll() {
                                                 transition={{ duration: 0.3 }}
                                             >
                                                 <motion.video
-                                                    src={project.logo.url}
+                                                    src={project.video.url}
                                                     autoPlay
                                                     muted
                                                     loop

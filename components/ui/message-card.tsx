@@ -1,53 +1,62 @@
 "use client";
 import { useMouse } from "@/components/hooks/useMouse";
 import { cn } from "@/lib/utils";
-import { ArrowUpRightIcon } from "lucide-react";
 import type { ReactNode } from "react";
+import { useEffect, useState } from "react";
 
 export const MessageCard = ({
     withArrow = false,
     circleSize = 400,
     className,
     children,
+    borderColor,
 }: {
     withArrow?: boolean;
     circleSize?: number;
     children?: ReactNode;
     className?: string;
+    borderColor?: string;
 }) => {
     const [mouse, parentRef] = useMouse();
+    const [randomColor, setRandomColor] = useState("border-violet-400");
+
+    useEffect(() => {
+        // Generate random color if not provided
+        if (!borderColor) {
+            const colors = [
+                "border-red-400",
+                "border-orange-400",
+                "border-yellow-400",
+                "border-green-400",
+                "border-blue-400",
+                "border-indigo-400",
+                "border-purple-400",
+                "border-pink-400",
+                "border-rose-400",
+                "border-amber-400",
+                "border-lime-400",
+                "border-emerald-400",
+                "border-teal-400",
+                "border-cyan-400",
+                "border-sky-400",
+                "border-violet-400",
+                "border-fuchsia-400",
+            ];
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            setRandomColor(colors[randomIndex]);
+        }
+    }, [borderColor]);
 
     return (
         <div
-            className="h-full group relative transform-gpu overflow-hidden rounded-[20px] bg-white/10 p-2 transition-transform hover:scale-[1.01] active:scale-90"
+            className="h-full group relative transform-gpu overflow-hidden rounded-md bg-white/10 p-2 transition-transform hover:scale-[1.01] active:scale-90"
             ref={parentRef}
         >
-            {withArrow && (
-                <ArrowUpRightIcon className="absolute right-2 top-2 z-10 size-5 translate-y-4 opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 text-neutral-300 " />
-            )}
-            <div
-                className={cn(
-                    "absolute -translate-x-1/2 -translate-y-1/2 transform-gpu rounded-full transition-transform duration-500 group-hover:scale-[3]",
-                    mouse.elementX === null || mouse.elementY === null
-                        ? "opacity-0"
-                        : "opacity-100",
-                )}
-                style={{
-                    maskImage: `radial-gradient(${circleSize / 2
-                        }px circle at center, white, transparent)`,
-                    width: `${circleSize}px`,
-                    height: `${circleSize}px`,
-                    left: `${mouse.elementX}px`,
-                    top: `${mouse.elementY}px`,
-                    background:
-                        "linear-gradient(135deg, #9216AE, #7A69F9, #9A63F2, #8B3FF5)",
-                }}
-            />
-            <div className="absolute inset-px rounded-[19px] bg-neutral-950/80" />
+            <div className={`absolute inset-px rounded-[19px] bg-neutral-100 border ${borderColor || randomColor}`} />
             {children && (
                 <div
                     className={cn(
-                        "grid relative  border-neutral-950",
+                        "grid relative p-2",
                         className,
                     )}
                 >

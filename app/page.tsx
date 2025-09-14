@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="">
+      <main className="flex flex-col">
 
         <Hero />
 
@@ -32,10 +32,10 @@ export default function Home() {
 
         <ProjectsPreview />
 
-        <Slider images={sliderImages} />
 
         <BlogPreview />
 
+        <Slider images={sliderImages} />
       </main>
     </>
   );

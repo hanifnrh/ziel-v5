@@ -1,10 +1,8 @@
 "use client"
 import AboutSection from "@/components/pages/about/about";
-import Description from "@/components/pages/about/description";
 import Experience from "@/components/pages/about/experience";
 import Header from "@/components/pages/about/header";
-import Story from "@/components/pages/about/story";
-import MyApproach from "@/components/pages/home/my-approach";
+import Story from "@/components/pages/about/story/story";
 import Slider from "@/components/ui/slider-images";
 import Head from "next/head";
 
@@ -35,11 +33,7 @@ export default function About() {
 
                 <AboutSection />
 
-                <Description />
-
                 <Experience />
-
-                <MyApproach />
 
                 <Story />
 
