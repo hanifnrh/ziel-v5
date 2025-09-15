@@ -54,9 +54,9 @@ const BottomNav = () => {
                                     <Image
                                         src={item.src}
                                         alt="logo"
-                                        width={30}
-                                        height={30}
-                                        className="p-1 bg-white rounded-md w-12"
+                                        width={300}
+                                        height={300}
+                                        className="p-1 bg-white rounded-md w-12 h-auto"
                                     />
                                     <span className="uppercase">{item.name}</span>
                                 </Link>
