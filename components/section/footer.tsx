@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
+  { label: "Analytics", href: "https://cloud.umami.is/share/RX4yihtMS3ZY5OdK/www.ziel.works" },
   { label: "About", href: "/about" },
   {
     label: "Resume",
