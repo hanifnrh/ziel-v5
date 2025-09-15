@@ -48,19 +48,19 @@ const ContentForm = ({ user }: { user: User }) => {
 
     return (
         <form
-            className="mt-2 flex w-full flex-col"
+            className="mt-2 flex w-full max-w-3xl flex-col"
             onSubmit={handleSubmit}
             id="content-form"
         >
-            <p className="mb-2 text-balance body-light text-sm text-neutral-500">
-                Signed in as <span className="text-neutral-200">{user.email}</span>
+            <p className="mb-2 text-balance body text-md sm:text-lg text-neutral-800 ">
+                Signed in as <span className="text-blue-600">{user.email}</span>
             </p>
             <div className="flex items-center gap-x-2">
-                <Input placeholder="" name="content" id="content" type="text" />
+                <Input placeholder="" name="content" id="content" type="text" className="border-blue-200 border"/>
                 <Button
                     disabled={loading}
                     type="submit"
-                    className={`w-36 anim aspect-square border px-2 py-2 text-purple-600 bg-purple-600/20`}
+                    className={`w-36 anim aspect-square px-2 py-2 text-neutral-100 bg-blue-600`}
                 >
                     Send
                     {loading ? (
