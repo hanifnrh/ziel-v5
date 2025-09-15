@@ -1,6 +1,14 @@
 import { createAdminClient } from "@/utils/supabase/server";
 import Image from "next/image";
-import { MessageCard } from "../ui/message-card";
+import { MessageCard } from "../../ui/message-card";
+
+interface GuestbookEntry {
+    id: number;
+    content: string;
+    user_id: string;
+    created_at: string;
+}
+
 
 const GuestbookCard = async ({
     content,
@@ -94,10 +102,19 @@ const GuestbookCard = async ({
 
 const Guestbook = async () => {
     const supabase = await createAdminClient();
-    const { data: guestbook, error } = await supabase.from("guestbook").select("*");
+    const { data: guestbook, error } = await supabase
+        .from("guestbook")
+        .select("*")
+        .returns<GuestbookEntry[]>();
 
     if (error) {
         console.error("Error fetching guestbook:", error);
+        return <div>Error loading guestbook entries</div>;
+    }
+
+    // Handle case where guestbook might be null
+    if (!guestbook) {
+        return <div>No guestbook entries found</div>;
     }
 
     return (

@@ -1,6 +1,6 @@
 // Components
 import ContentForm from "@/components/form/content-form";
-import Guestbook from "@/components/macro/guestbook";
+import Guestbook from "@/components/pages/guestbook/guestbook";
 import { ButtonGithub } from "@/components/ui/button-github";
 import { ButtonGoogle } from "@/components/ui/button-google.tsx";
 import { ButtonSignOut } from "@/components/ui/button-signout";
