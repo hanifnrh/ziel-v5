@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpenText } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -82,20 +82,10 @@ export default function Blog() {
     return (
         <div>
             <section className="z-10 py-10 px-4 md:px-10 xl:px-14 ">
-                <motion.div className=""
-                    initial={{ opacity: 0, y: -50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <h2 className="flex items-center text-indigo-800 text-lg lg:text-xl uppercase body-bold rounded-full w-fit">
-                        <BookOpenText className="mr-2" />
-                        Blog
-                    </h2>
-                </motion.div>
 
                 <div className="pb-10 flex flex-col lg:flex-row gap-4 sm:gap-0 justify-between">
                     <motion.div
-                        className="w-9/12 sm:w-2/3 flex flex-col gap-4"
+                        className="w-full sm:w-2/3 flex flex-col gap-4"
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
@@ -109,7 +99,7 @@ export default function Blog() {
                         </h3>
                     </motion.div>
                     <motion.div
-                        className="w-3/12 sm:w-1/3 text-neutral-200 flex justify-start items-start sm:justify-end"
+                        className="w-full sm:w-1/3 text-neutral-200 flex justify-start items-start sm:justify-end"
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.2 }}

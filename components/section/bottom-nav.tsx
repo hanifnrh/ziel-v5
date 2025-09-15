@@ -23,7 +23,7 @@ const BottomNav = () => {
     };
 
     return (
-        <div className="body flex w-[90%] sm:w-[500px] mx-auto fixed bottom-4 z-50 left-1/2 -translate-x-1/2">
+        <div className="body flex w-[95%] sm:w-[500px] mx-auto fixed bottom-4 z-50 left-1/2 -translate-x-1/2">
             {/* Main container that expands */}
             <motion.div
                 className="flex w-full items-center justify-start bg-violet-600 text-white shadow-lg rounded-2xl overflow-hidden"
@@ -36,9 +36,9 @@ const BottomNav = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: isOpen ? 1 : 0 }}
                     transition={{ duration: 0.2 }}
-                    className="flex w-full p-4 pb-0 mb-20"
+                    className="flex w-full p-2 sm:p-4 pb-0 mb-20"
                 >
-                    <ul className="grid grid-cols-2 w-full border-b border-neutral-200/40 pb-4 gap-x-6 justify-between items-start">
+                    <ul className="grid grid-cols-2 w-full border-b border-neutral-200/40 pb-4 gap-x-2 sm:gap-x-6 justify-between items-start">
                         {menuItems.map((item) => (
                             <motion.li
                                 key={item.id}
@@ -49,16 +49,16 @@ const BottomNav = () => {
                                 <Link
                                     href={item.name === 'Home' ? '/' : `/${item.name.toLowerCase()}`}
                                     rel="canonical"
-                                    className='flex items-center p-2 gap-4 rounded-xl hover:bg-violet-700 cursor-pointer transition-colors'
+                                    className='flex items-center p-2 gap-2 sm:gap-4 rounded-xl hover:bg-violet-700 cursor-pointer transition-colors'
                                 >
                                     <Image
                                         src={item.src}
                                         alt="logo"
                                         width={300}
                                         height={300}
-                                        className="p-1 bg-white rounded-md w-12 h-auto"
+                                        className="p-1 bg-white rounded-md w-10 sm:w-12 h-auto"
                                     />
-                                    <span className="uppercase">{item.name}</span>
+                                    <span className="uppercase text-base sm:text-lg">{item.name}</span>
                                 </Link>
                             </motion.li>
                         ))}
@@ -70,7 +70,7 @@ const BottomNav = () => {
                 <div className="absolute bottom-0 left-0 right-0 p-4 flex justify-between items-center bg-violet-600 rounded-2xl">
                     <div className='flex items-center gap-4'>
                         <Link href="/" rel='canonical'>
-                            <Image src={"/logo/zielviolet.png"} alt="logo" width={30} height={30} className="p-1 bg-white rounded-md w-12" />
+                            <Image src={"/logo/zielviolet.png"} alt="logo" width={300} height={300} className="p-1 bg-white rounded-md w-12" />
                         </Link>
                         <span className="text-xl">MENU</span>
                     </div>
