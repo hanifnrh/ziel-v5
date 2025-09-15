@@ -42,11 +42,11 @@ const Page = async () => {
                                         <ContentForm user={user.user} />
                                     </>
                                 ) : (
-                                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                                        <form onSubmit={githubSignIn} className="group py-2">
+                                    <div className="flex flex-col sm:flex-row sm:gap-4">
+                                        <form onSubmit={githubSignIn} className="group">
                                             <ButtonGithub />
                                         </form>
-                                        <form onSubmit={googleSignIn} className="group py-2">
+                                        <form onSubmit={googleSignIn} className="group">
                                             <ButtonGoogle />
                                         </form>
                                     </div>
