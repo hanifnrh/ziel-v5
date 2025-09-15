@@ -56,11 +56,11 @@ const ContentForm = ({ user }: { user: User }) => {
                 Signed in as <span className="text-blue-600">{user.email}</span>
             </p>
             <div className="flex items-center gap-x-2">
-                <Input placeholder="" name="content" id="content" type="text" className="border-blue-200 border"/>
+                <Input placeholder="" name="content" id="content" type="text" className="border-blue-400 border text-neutral-900 body-light"/>
                 <Button
                     disabled={loading}
                     type="submit"
-                    className={`w-36 anim aspect-square px-2 py-2 text-neutral-100 bg-blue-600`}
+                    className={`w-36 aspect-square px-2 py-2 text-neutral-100 bg-blue-600 hover:bg-blue-700 body`}
                 >
                     Send
                     {loading ? (
