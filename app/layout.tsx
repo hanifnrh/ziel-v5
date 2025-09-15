@@ -18,7 +18,8 @@ import Navbar from "@/components/section/navbar";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 import Script from "next/script";
 import "./globals.css";
-import { baseUrl } from "./sitemap";
+
+const baseUrl = "https://www.ziel.works";
 
 export const metadata: Metadata = {
   metadataBase: baseUrl ? new URL(baseUrl) : undefined,
