@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `/thumbnail.png`,
+        url: `/images/thumbnail.png`,
         alt: "Ziel",
         width: 1200,
         height: 1100,
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ziel - Designer & Developer",
-    images: [`/thumbnail.png`],
+    images: [`/images/images/thumbnail.png`],
   },
 };
 

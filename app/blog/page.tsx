@@ -95,14 +95,14 @@ export default function Blog() {
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content="Ziel Blog" />
                 <meta property="og:description" content="Read my latest blog post." />
-                <meta property="og:image" content="/thumbnail.png" />
+                <meta property="og:image" content="/images/thumbnail.png" />
                 <meta property="og:url" content="https://www.ziel.works/blog" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Ziel Blog" />
                 <meta name="twitter:description" content="Read my latest blog post." />
-                <meta name="twitter:image" content="/thumbnail.png" />
+                <meta name="twitter:image" content="/images/images/thumbnail.png" />
             </Head>
 
             <section className="pt-24 sm:pt-28 lg:py-28 z-10 px-4 md:px-10 xl:px-14">

@@ -95,14 +95,14 @@ export default function ProjectsAll() {
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content="Ziel Projects" />
                 <meta property="og:description" content="View my latest projects." />
-                <meta property="og:image" content="/thumbnail.png" />
+                <meta property="og:image" content="/images/thumbnail.png" />
                 <meta property="og:url" content="https://ziel.works/projects" />
 
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Ziel Projects" />
                 <meta name="twitter:description" content="View my latest projects." />
-                <meta name="twitter:image" content="/thumbnail.png" />
+                <meta name="twitter:image" content="/images/thumbnail.png" />
             </Head>
 
             <div className="pt-24 sm:pt-28 lg:py-28 z-10 px-4 md:px-10 xl:px-14">

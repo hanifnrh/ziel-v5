@@ -108,7 +108,7 @@ export default function ProjectDetail() {
                     description: post?.description || "View my latest projects.",
                     images: [
                         {
-                            url: post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png",
+                            url: post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/images/thumbnail.png",
                             width: 1200,
                             height: 630,
                             alt: post?.title,
@@ -133,7 +133,7 @@ export default function ProjectDetail() {
 
                     <div className="">
                         <Image
-                            src={post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/thumbnail.png"}
+                            src={post?.featuredImage?.url || "https://zielbucket.s3.ap-southeast-2.amazonaws.com/public/images/images/thumbnail.png"}
                             width={1000}
                             height={600}
                             className="w-full aspect-[5/2] sm:aspect-[5/1] object-cover rounded-sm"
