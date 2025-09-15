@@ -11,15 +11,15 @@ async function fetchBlogSlugs() {
         },
         body: JSON.stringify({
             query: `
-                query {
-                    blogs {
-                        slug
-                    }
-                    projects {
-                        slug
-                    }
-                }
-            `,
+        query {
+          blogs {
+            slug
+          }
+          projects {
+            slug
+          }
+        }
+      `,
         }),
     });
 
@@ -34,21 +34,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const { blogSlugs, projectSlugs } = await fetchBlogSlugs();
 
     const staticRoutes = [
-        { url: `${baseUrl}/`, lastModified: new Date().toISOString() },
-        { url: `${baseUrl}/about`, lastModified: new Date().toISOString() },
-        { url: `${baseUrl}/guestbook`, lastModified: new Date().toISOString() },
-        { url: `${baseUrl}/blog`, lastModified: new Date().toISOString() },
-        { url: `${baseUrl}/projects`, lastModified: new Date().toISOString() },
+        { url: `${baseUrl}/`, lastModified: new Date() },
+        { url: `${baseUrl}/about`, lastModified: new Date() },
+        { url: `${baseUrl}/guestbook`, lastModified: new Date() },
+        { url: `${baseUrl}/blog`, lastModified: new Date() },
+        { url: `${baseUrl}/projects`, lastModified: new Date() },
     ];
 
     const dynamicBlogRoutes = blogSlugs.map((post: { slug: string }) => ({
         url: `${baseUrl}/blog/${post.slug}`,
-        lastModified: new Date().toISOString(),
+        lastModified: new Date(),
     }));
 
     const dynamicProjectRoutes = projectSlugs.map((project: { slug: string }) => ({
         url: `${baseUrl}/projects/${project.slug}`,
-        lastModified: new Date().toISOString(),
+        lastModified: new Date(),
     }));
 
     return [...staticRoutes, ...dynamicBlogRoutes, ...dynamicProjectRoutes];
