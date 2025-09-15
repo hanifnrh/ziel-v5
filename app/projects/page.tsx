@@ -105,7 +105,7 @@ export default function ProjectsAll() {
                 <meta name="twitter:image" content="/thumbnail.png" />
             </Head>
 
-            <div className="pt-24 sm:pt-28 lg:py-28 z-10 px-4 md:px-10 xl:px-14 ">
+            <div className="pt-24 sm:pt-28 lg:py-28 z-10 px-4 md:px-10 xl:px-14">
                 <div className="w-full relative flex gap-4 sm:gap-0 justify-between items-center">
                     <motion.div
                         className="flex gap-4 items-stretch justify-center"

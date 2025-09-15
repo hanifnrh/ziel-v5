@@ -14,10 +14,10 @@ export default function NotFound() {
                         <h1 className="text-4xl sm:text-3xl lg:text-5xl">
                             ⛔
                         </h1>
-                        <h2 className="body text-4xl sm:text-3xl font-normal tracking-tighter lg:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-400 dark:bg-[linear-gradient(180deg,_#FFF_0%,_rgba(255,_255,_255,_0.00)_202.08%)]">
+                        <h2 className="body text-center text-3xl sm:text-4xl lg:text-7xl font-normal tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-indigo-600 via-indigo-500 to indigo-400">
                             404 Page Not Found
                         </h2>
-                        <p className="body-light text-center text-neutral-700 dark:text-neutral-500 text-md lg:text-lg">
+                        <p className="body text-center text-neutral-800 text-md lg:text-lg">
                             Oh maybe you&apos;re lost? The page you&apos;re looking for doesn&apos;t exist.
                         </p>
                         <div className="flex gap-2">

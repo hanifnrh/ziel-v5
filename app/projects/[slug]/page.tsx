@@ -3,7 +3,7 @@
 import { Loader } from '@/components/ui/loader';
 import { RichText } from '@graphcms/rich-text-react-renderer';
 import { RichTextContent } from '@graphcms/rich-text-types';
-import { Dot, MoveLeft, Paperclip } from 'lucide-react';
+import { Component, MoveLeft } from 'lucide-react';
 import { NextSeo } from 'next-seo';
 import Image from "next/image";
 import Link from 'next/link';
@@ -120,20 +120,12 @@ export default function ProjectDetail() {
                 }}
             />
 
-            <Image
-                className="absolute top-0 z-0 -translate-y-1/2"
-                src="/bg-back.png"
-                width={1000}
-                height={1000}
-                alt="back bg"
-            />
-
-            <section className="mt-12 lg:mt-0 pt-12 lg:py-28 z-10">
-                <div className="flex flex-col px-4 md:px-10 xl:px-14 pb-10 gap-4 lg:gap-8">
+            <section className="flex flex-col items-center justify-center mt-12 lg:mt-0 pt-12 lg:py-28 z-10">
+                <div className="flex flex-col px-4 sm:px-12 xl:px-0 max-w-4xl pb-10 gap-4 lg:gap-8">
                     <Link
                         href="/projects"
                         rel="canonical"
-                        className="flex gap-2 text-neutral-300 body-light text-base link-hover-animation hover:link-hovered-animation transition-all w-fit"
+                        className="flex gap-2 text-neutral-900 body-light text-base link-hover-animation hover:link-hovered-animation transition-all w-fit"
                     >
                         <MoveLeft className="ml-1 inline-block transition-all duration-300 group-hover:ml-2" />
                         Back to all projects
@@ -151,14 +143,14 @@ export default function ProjectDetail() {
                     </div>
 
                     <div className="flex flex-col gap-2">
-                        <p className="body-light text-neutral-500">{formatDate(post.publishDate)}</p>
-                        <h1 className="text-2xl sm:text-4xl text-neutral-200 body">{post.title}</h1>
-                        <p className="body-light text-sm sm:text-base text-neutral-400">{post.description}</p>
+                        <p className="body-light text-neutral-700">{formatDate(post.publishDate)}</p>
+                        <h1 className="text-3xl sm:text-5xl text-neutral-900 body">{post.title}</h1>
+                        <p className="body-light text-base sm:text-lg text-neutral-800">{post.description}</p>
                     </div>
 
-                    <div className="mt-6 flex body-light text-neutral-500 gap-2">
+                    <div className="mt-6 flex body-light text-violet-700 gap-2">
                         {(Array.isArray(post.tag) ? post.tag : post.tag.split(",")).map((tag, index) => (
-                            <span key={index} className="bg-neutral-200/10 px-3 py-2 text-xs rounded-sm">
+                            <span key={index} className="bg-violet-500/10 px-3 py-2 text-xs rounded-sm">
                                 {tag.trim()}
                             </span>
                         ))}
@@ -169,22 +161,22 @@ export default function ProjectDetail() {
                         {post.content?.map((item: { json: RichTextContent }, index: number) => (
                             <RichText
                                 key={index}
-                                content={item.json}
+                                content={item.json} 
                                 renderers={{
-                                    h2: ({ children }) => <h2 className="inline-flex items-center text-2xl sm:text-4xl body-bold text-neutral-200 mt-6"><Paperclip className='mr-2' />{children}</h2>,
-                                    h3: ({ children }) => <h3 className="text-lg sm:text-2xl body text-neutral-200 mt-6">{children}</h3>,
-                                    h4: ({ children }) => <h4 className="text-base sm:text-xl body text-neutral-200 mt-6 !important">{children}</h4>,
-                                    ul: ({ children }) => <ul className="flex flex-col p-4 gap-3 bg-purple-600/20 border-l-4 border-purple-600">{children}</ul>,
-                                    li: ({ children }) => <li className="flex text-base sm:text-lg text-purple-600"><Dot className='shrink-0' />{children}</li>,
-                                    p: ({ children }) => <p className="text-sm sm:text-base text-neutral-400">{children}</p>,
+                                    h2: ({ children }) => <h2 className="inline-flex items-center text-2xl sm:text-4xl body-bold text-neutral-900 mt-6"><Component className='mr-2' />{children}</h2>,
+                                    h3: ({ children }) => <h3 className="text-lg sm:text-2xl body text-neutral-900 mt-6">{children}</h3>,
+                                    h4: ({ children }) => <h4 className="text-base sm:text-xl body text-neutral-800 mt-6 !important">{children}</h4>,
+                                    ul: ({ children }) => <ul className="flex flex-col p-4 gap-3 border-l-4 border-neutral-800">{children}</ul>,
+                                    li: ({ children }) => <li className="body-light text-base sm:text-lg text-justify">• {children}</li>,
+                                    p: ({ children }) => <p className="text-base sm:text-lg text-neutral-800 text-justify body-light">{children}</p>,
                                     code: ({ children }) => (
-                                        <code className="whitespace-pre-wrap block bg-neutral-600/20 p-4 rounded-lg overflow-x-auto text-sm sm:text-base font-mono text-neutral-200">
+                                        <code className="whitespace-pre-wrap block bg-neutral-500/20 p-4 rounded-lg overflow-x-auto text-sm sm:text-base font-mono text-neutral-800">
                                             {children}
                                         </code>
                                     ),
                                     img: ({ src, title }) => (
                                         <div className='w-full flex items-center justify-center'>
-                                            <Image src={src || "Source"} alt={title || "Image"} width={1000} height={1000} className="w-2/3 sm:w-1/2 object-cover rounded-xl my-6" priority />
+                                            <Image src={src || "Source"} alt={title || "Image"} width={1000} height={1000} className="w-full object-cover rounded-xl my-6" priority />
                                         </div>
                                     )
                                 }}
