@@ -24,20 +24,20 @@ export default function ScopeOfWork({
     title = "Scope of Work",
     features = ["UI/UX Design", "Web Design", "Full Stack Web Development", "Prototyping"],
 }: ScopeOfWorkProps) {
-    const [isFlipped, setIsFlipped] = useState(false);
+    const [isCardFlipped, setIsCardFlipped] = useState(false);
 
     return (
         <div
             className="body w-full h-56 lg:h-full group [perspective:2000px]"
-            onMouseEnter={() => setIsFlipped(true)}
-            onMouseLeave={() => setIsFlipped(false)}
+            onMouseEnter={() => setIsCardFlipped(true)}
+            onMouseLeave={() => setIsCardFlipped(false)}
         >
             <div
                 className={cn(
                     "relative w-full h-full",
                     "[transform-style:preserve-3d]",
                     "transition-all duration-700",
-                    isFlipped
+                    isCardFlipped
                         ? "[transform:rotateY(180deg)]"
                         : "[transform:rotateY(0deg)]"
                 )}
@@ -52,7 +52,7 @@ export default function ScopeOfWork({
                         "shadow-xs dark:shadow-lg",
                         "transition-all duration-700",
                         "group-hover:shadow-lg dark:group-hover:shadow-xl",
-                        isFlipped ? "opacity-0" : "opacity-100"
+                        isCardFlipped ? "opacity-0" : "opacity-100"
                     )}
                 >
                     <div className="relative w-full flex h-full overflow-hidden bg-gradient-to-b from-orange-50 to-white dark:from-neutral-900 dark:to-black">
@@ -116,7 +116,7 @@ export default function ScopeOfWork({
                         "flex flex-col justify-center",
                         "transition-all duration-700",
                         "group-hover:shadow-lg dark:group-hover:shadow-xl",
-                        !isFlipped ? "opacity-0" : "opacity-100"
+                        !isCardFlipped ? "opacity-0" : "opacity-100"
                     )}
                 >
                     <div className="flex flex-col gap-4">
@@ -130,10 +130,10 @@ export default function ScopeOfWork({
                                     key={feature}
                                     className="flex items-center gap-2 text-base xl:text-xl text-neutral-700 dark:text-neutral-300 transition-all duration-500"
                                     style={{
-                                        transform: isFlipped
+                                        transform: isCardFlipped
                                             ? "translateX(0)"
                                             : "translateX(-10px)",
-                                        opacity: isFlipped ? 1 : 0,
+                                        opacity: isCardFlipped ? 1 : 0,
                                         transitionDelay: `${index * 100 + 200
                                             }ms`,
                                     }}
