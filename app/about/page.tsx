@@ -2,8 +2,6 @@
 import AboutSection from "@/components/pages/about/about";
 import Experience from "@/components/pages/about/experience";
 import Header from "@/components/pages/about/header";
-import Story from "@/components/pages/about/story/story";
-import Slider from "@/components/ui/slider-images";
 import Head from "next/head";
 
 export default function About() {
@@ -29,13 +27,9 @@ export default function About() {
 
                 <Header />
 
-                <Slider images={sliderImages} />
-
                 <AboutSection />
 
                 <Experience />
-
-                <Story />
 
             </main>
         </>

@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { ArrowRight, Gem, Repeat2 } from "lucide-react";
+import { CircleDotDashed, Gem, Repeat2 } from "lucide-react";
 import { useState } from "react";
 
 export interface PrinciplesProps {
@@ -12,13 +12,13 @@ export interface PrinciplesProps {
 
 export default function Principles({
     title = "Principles",
-    features = ["Performance matters, fast and lightweight", "Iterate and improve", "Clarity over complexity", "It's not user, it's human"],
+    features = ["Performance matters", "Iterate and improve", "Clarity over complexity", "It's not user, it's human"],
 }: PrinciplesProps) {
     const [isFlipped, setIsFlipped] = useState(false);
 
     return (
         <div
-            className="body relative w-full h-56 lg:h-full group [perspective:2000px]"
+            className="body relative w-full h-56 lg:h-72 group [perspective:2000px]"
             onMouseEnter={() => setIsFlipped(true)}
             onMouseLeave={() => setIsFlipped(false)}
         >
@@ -71,7 +71,7 @@ export default function Principles({
                     <div className="absolute bottom-0 left-0 right-0 p-5">
                         <div className="flex items-center justify-between gap-3">
                             <div className="space-y-1.5">
-                                <h3 className="body-bold text-xl xl:text-3xl font-semibold text-blue-600 dark:text-white leading-snug tracking-tighter">
+                                <h3 className="body text-xl xl:text-3xl text-blue-600 dark:text-white leading-snug tracking-tighter">
                                     {title}
                                 </h3>
                             </div>
@@ -109,16 +109,16 @@ export default function Principles({
                         !isFlipped ? "opacity-0" : "opacity-100"
                     )}
                 >
-                    <div className="flex flex-col gap-4">
-                        <h3 className="text-xl xl:text-3xl body text-neutral-900 dark:text-white">
+                    <div className="flex flex-col gap-8 items-start justify-start">
+                        <h3 className="text-xl xl:text-2xl body text-blue-600 dark:text-white">
                             {title}
                         </h3>
 
-                        <div className="space-y-2">
+                        <div className="space-y-4">
                             {features.map((feature, index) => (
                                 <div
                                     key={feature}
-                                    className="flex items-center gap-2 text-base xl:text-xl text-neutral-700 dark:text-neutral-300"
+                                    className="flex items-center gap-4 text-base xl:text-lg text-neutral-700 dark:text-neutral-300"
                                     style={{
                                         transform: isFlipped ? "translateX(0)" : "translateX(-10px)",
                                         opacity: isFlipped ? 1 : 0,
@@ -126,7 +126,7 @@ export default function Principles({
                                         transition: "all 0.5s ease-out",
                                     }}
                                 >
-                                    <ArrowRight className="w-3 h-3 xl:w-8 xl:h-8 text-blue-500" />
+                                    <CircleDotDashed className="w-3 h-3 xl:w-6 xl:h-6 text-blue-500" />
                                     <span>{feature}</span>
                                 </div>
                             ))}

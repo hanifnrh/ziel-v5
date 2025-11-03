@@ -32,12 +32,12 @@ function Header() {
     return (
         <div className="h-fit flex items-center justify-center px-4 md:px-10 xl:px-14 pt-32 pb-20">
             <div className="flex flex-col sm:flex-row gap-12 items-center justify-center">
-                <div className="relative h-auto w-full sm:w-2/3 overflow-hidden rounded-lg border-blue-500 bg-background p-6 xl:p-12 order-2 sm:order-1">
+                <div className="relative h-auto w-full sm:w-2/3 overflow-hidden rounded-lg border-indigo-500 bg-background p-6 xl:p-12 order-2 sm:order-1">
                     <FlickeringGrid
                         className="absolute inset-0 z-0 size-full"
                         squareSize={8}
                         gridGap={6}
-                        color="#2563eb "
+                        color="#6366f1 "
                         maxOpacity={0.5}
                         flickerChance={0.7}
                         height={800}
@@ -56,14 +56,14 @@ function Header() {
                 <div className="flex flex-col justify-between gap-20 h-full ">
                     <h2
                         ref={textRef}
-                        className="body-bold sm:body text-3xl lg:text-5xl xl:text-6xl text-left tracking-tighter text-blue-500 flex flex-wrap gap-2"
+                        className="body-bold sm:body text-3xl lg:text-5xl xl:text-6xl text-left tracking-tighter text-neutral-800 flex flex-wrap gap-2"
                     >
                         {sentence.split(" ").map((word, index) => {
                             const isHighlight = word === "UI/UX" || word === "Developer";
                             return (
                                 <span
                                     key={index}
-                                    className={isHighlight ? "bg-blue-500 text-neutral-100 py-1 px-2 inline-block" : "inline-block"}
+                                    className={isHighlight ? "bg-indigo-500 text-neutral-100 py-1 px-2 inline-block" : "inline-block"}
                                 >
                                     {word}
                                 </span>

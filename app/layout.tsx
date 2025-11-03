@@ -6,6 +6,7 @@ import * as React from "react";
 import { Toaster } from "@/components/ui/toaster";
 import NextTopLoader from "nextjs-toploader";
 // Provider
+import { ReactLenis } from "lenis/react";
 
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
@@ -74,7 +75,6 @@ export const metadata: Metadata = {
     images: [`/images/images/thumbnail.png`],
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -83,31 +83,33 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-neutral-100 dark:bg-neutral-950">
       <body>
-        <Script
-          src="https://www.ziel.works/script.js"
-          data-website-id="b440f280-3189-40df-b827-f98ffb664eac"
-          strategy="afterInteractive" // loads after page is interactive
-        />
-        <div className="" >
-          <NextTopLoader
-            color="#9810fa"
-            initialPosition={0.08}
-            easing="ease"
-            speed={300}
-            showSpinner={false}
-            height={2}
-            shadow="0 0 20px #9810fa, 0 0 10px #9810fa"
-            zIndex={100}
+        <ReactLenis root>
+          <Script
+            src="https://www.ziel.works/script.js"
+            data-website-id="b440f280-3189-40df-b827-f98ffb664eac"
+            strategy="afterInteractive" // loads after page is interactive
           />
-          <ScrollProgress className="top-0" />
-          <Navbar />
-          {children}
-          <BottomNav />
-          <Footer />
-          <SpeedInsights />
-          <Analytics />
-        </div>
-        <Toaster></Toaster>
+          <div className="" >
+            <NextTopLoader
+              color="#9810fa"
+              initialPosition={0.08}
+              easing="ease"
+              speed={300}
+              showSpinner={false}
+              height={2}
+              shadow="0 0 20px #9810fa, 0 0 10px #9810fa"
+              zIndex={100}
+            />
+            <ScrollProgress className="top-0" />
+            <Navbar />
+            {children}
+            <BottomNav />
+            <Footer />
+            <SpeedInsights />
+            <Analytics />
+          </div>
+          <Toaster></Toaster>
+        </ReactLenis>
       </body>
     </html>
   );

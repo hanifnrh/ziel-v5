@@ -11,7 +11,7 @@
  */
 
 import { cn } from "@/lib/utils";
-import { ArrowRight, Pickaxe, Repeat2 } from "lucide-react";
+import { CircleDotDashed, Pickaxe, Repeat2 } from "lucide-react";
 import { useState } from "react";
 
 export interface ScopeOfWorkProps {
@@ -28,7 +28,7 @@ export default function ScopeOfWork({
 
     return (
         <div
-            className="body w-full h-56 lg:h-full group [perspective:2000px]"
+            className="body w-full h-56 lg:h-72 group [perspective:2000px]"
             onMouseEnter={() => setIsCardFlipped(true)}
             onMouseLeave={() => setIsCardFlipped(false)}
         >
@@ -119,26 +119,24 @@ export default function ScopeOfWork({
                         !isCardFlipped ? "opacity-0" : "opacity-100"
                     )}
                 >
-                    <div className="flex flex-col gap-4">
-                        <h3 className="text-xl xl:text-3xl text-neutral-900 dark:text-white leading-snug tracking-tight transition-all duration-500 ease-out-expo group-hover:translate-y-[-2px]">
+                    <div className="flex flex-col gap-8 items-start justify-start">
+                        <h3 className="text-xl xl:text-2xl body text-orange-600 dark:text-white">
                             {title}
                         </h3>
 
-                        <div className="space-y-2">
+                        <div className="space-y-4">
                             {features.map((feature, index) => (
                                 <div
                                     key={feature}
-                                    className="flex items-center gap-2 text-base xl:text-xl text-neutral-700 dark:text-neutral-300 transition-all duration-500"
+                                    className="flex items-center gap-4 text-base xl:text-lg text-neutral-700 dark:text-neutral-300"
                                     style={{
-                                        transform: isCardFlipped
-                                            ? "translateX(0)"
-                                            : "translateX(-10px)",
+                                        transform: isCardFlipped ? "translateX(0)" : "translateX(-10px)",
                                         opacity: isCardFlipped ? 1 : 0,
-                                        transitionDelay: `${index * 100 + 200
-                                            }ms`,
+                                        transitionDelay: `${index * 100 + 200}ms`,
+                                        transition: "all 0.5s ease-out",
                                     }}
                                 >
-                                    <ArrowRight className="w-3 h-3 xl:w-8 xl:h-8 text-orange-500" />
+                                    <CircleDotDashed className="w-3 h-3 xl:w-6 xl:h-6 text-orange-500" />
                                     <span>{feature}</span>
                                 </div>
                             ))}

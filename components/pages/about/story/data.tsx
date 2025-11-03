@@ -6,9 +6,9 @@ type Stories = {
 
 export const stories: Stories[] = [
   {
-    title: "Deep Passion in Art",
+    title: "Web Development",
     description:
-      "Growing up with a deep passion for art, I found immense joy in creating beautiful things on my sketchbook, letting my imagination shape each stroke and line. I was inspired by legendary artists like Van Gogh and Michelangelo, alongside modern illustrators like Kim Junghyun, Ha Ilkwon. I guess I have fondness in how beautiful the sophisticated anatomy of human being and this whole shape of universe. Somehow I love science as much as I love art, as Mr. Keating in Dead Poets Society says \"..medicine, law, business, engineering, these are noble pursuits and necessary to sustain life. But poetry, beauty, romance, love, these are what we stay alive for.\" ",
+      "Crafting products adjusting to your needs using the latest web technologies. I specialize in building responsive and user-friendly websites and web applications using modern frameworks and libraries.",
     imageUrl: "/about/stories/satosugu.png",
   },
   {

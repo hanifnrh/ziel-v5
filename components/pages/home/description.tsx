@@ -26,8 +26,7 @@ function Description() {
                 <div className="w-7 h-full bg-blue-500" />
                 <h3 className="flex-1 text-left flex items-center text-4xl lg:text-5xl xl:text-6xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-blue-600 via-blue-500 to-blue-300 py-10">
                     I build projects strategically, ensuring each piece is both visually
-                    appealing and purpose-driven. Because good design is enjoyable, good
-                    app is comfortable.
+                    appealing and purpose-driven. Because good design is enjoyable and comfortable.
                 </h3>
             </motion.div>
 

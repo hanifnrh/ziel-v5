@@ -94,7 +94,7 @@ function Spotify() {
                             href={track.spotifyUrl}
                             rel="canonical"
                             target="_blank"
-                            className="body-light text-base xl:text-3xl w-fit text-green-600 border-b border-green-600 flex"
+                            className="body-light text-base xl:text-xl w-fit text-green-600 border-b border-green-600 flex"
                         >
                             Play on Spotify
                             <MoveRight className="ml-2" />

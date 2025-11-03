@@ -12,22 +12,13 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
     {
-        date: "July 2023–August 2023",
+        date: "October 2025-Present",
         role: "UI/UX Designer Intern",
-        company: "Telkom Test House",
-        location: "Bandung, Indonesia",
+        company: "CIMB Niaga",
+        location: "Jakarta, Indonesia",
         description:
-            "Designed web and mobile UI for the Telkom Test House Whistleblowing System, focusing on user experience. Conducted data analysis for service quality and collaborated on improving organizational standards.",
-        image: "/about/experience/tth.png",
-    },
-    {
-        date: "September 2023–July 2024",
-        role: "Core Team Design Division",
-        company: "Google Developer Students Club Diponegoro University",
-        location: "Semarang, Indonesia",
-        description:
-            "Developed branding materials and design strategies to enhance engagement and event participation while ensuring a cohesive visual identity.",
-        image: "/about/experience/gdsc.png",
+            "Designed internal applications based on the established design system, collaborating in an agile environment with developers, a delivery manager, technical lead, and product owner.",
+        image: "/about/experience/cimb.png",
     },
     {
         date: "December 2024–February 2025",
@@ -38,6 +29,16 @@ const experiences: ExperienceItem[] = [
             "Built SEO-optimized websites, developed internal tools for social media analysis, and collaborated on internal applications. Improved SEO performance and user experience through research, design, and best practices.",
         image: "/about/experience/ptgas.png",
     },
+    {
+        date: "July 2023–August 2023",
+        role: "UI/UX Designer Intern",
+        company: "Telkom Test House",
+        location: "Bandung, Indonesia",
+        description:
+            "Designed web and mobile UI for the Telkom Test House Whistleblowing System, focusing on user experience. Conducted data analysis for service quality and collaborated on improving organizational standards.",
+        image: "/about/experience/tth.png",
+    },
+
 ];
 
 export default function Experience() {
@@ -52,9 +53,7 @@ export default function Experience() {
                             EXPERIENCE & ORGANIZATION
                         </p>
                         <h3 className="flex text-2xl sm:text-3xl font-normal lg:text-5xl body tracking-tighter text-neutral-100">
-                            Evolving with every brief and built for impact, my process spans
-                            design, development, and brand strategy—aligning vision with
-                            execution to bring clarity and edge to every project.
+                            Evolving with every challenges and encounter with people in the field, I gather valuable experiences that shape my professional journey.
                         </h3>
                     </div>
                 </div>
