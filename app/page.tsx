@@ -27,8 +27,8 @@ export default function Home() {
         <Hero />
 
         <Bento />
-
-        <Description/>
+        
+        <Description />
 
         <ProjectsPreview />
 
