@@ -60,7 +60,7 @@ const ContentForm = ({ user }: { user: User }) => {
                 <Button
                     disabled={loading}
                     type="submit"
-                    className={`w-36 aspect-square px-2 py-2 text-neutral-100 bg-blue-600 hover:bg-blue-700 body`}
+                    className={`w-36 aspect-square px-2 py-2 text-white bg-blue-600 hover:bg-blue-700 body`}
                 >
                     Send
                     {loading ? (

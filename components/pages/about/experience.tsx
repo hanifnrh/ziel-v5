@@ -52,7 +52,7 @@ export default function Experience() {
                         <p className="text-base uppercase body text-indigo-200">
                             EXPERIENCE & ORGANIZATION
                         </p>
-                        <h3 className="flex text-2xl sm:text-3xl font-normal lg:text-5xl body tracking-tighter text-neutral-100">
+                        <h3 className="flex text-2xl sm:text-3xl font-normal lg:text-5xl body tracking-tighter text-white">
                             Evolving with every challenges and encounter with people in the field, I gather valuable experiences that shape my professional journey.
                         </h3>
                     </div>
@@ -72,14 +72,14 @@ export default function Experience() {
                                 <h3 className="body text-indigo-200 text-base sm:text-lg col-span-1">{exp.date}</h3>
 
                                 <div className="col-span-1">
-                                    <p className="body-bold text-neutral-100 text-3xl sm:text-4xl">{exp.role}</p>
+                                    <p className="body-bold text-white text-3xl sm:text-4xl">{exp.role}</p>
                                     <p className="body-light text-indigo-200 text-lg sm:text-xl">
                                         {exp.company} <br />
                                         {exp.location}
                                     </p>
                                 </div>
 
-                                <p className="body tracking-tighter text-neutral-100 text-lg sm:text-xl col-span-1">
+                                <p className="body tracking-tighter text-white text-lg sm:text-xl col-span-1">
                                     {exp.description}
                                 </p>
 

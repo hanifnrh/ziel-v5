@@ -89,7 +89,7 @@ function CardLight({ items = itemsSample }: BentoGridProps) {
                         </div>
 
                         <div className="space-y-2">
-                            <h3 className="font-medium text-neutral-100 tracking-tight text-[15px]">
+                            <h3 className="font-medium text-white tracking-tight text-[15px]">
                                 {item.title}
                                 <span className="ml-2 text-xs text-neutral-400 font-normal">
                                     {item.meta}

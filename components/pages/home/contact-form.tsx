@@ -152,7 +152,7 @@ const ContactForm = () => {
 
                             <div className="relative flex flex-col space-y-3">
                                 <div className="space-y-2">
-                                    <div className="body flex justify-start items-center gap-4 text-neutral-800 dark:text-neutral-100 tracking-tight text-2xl">
+                                    <div className="body flex justify-start items-center gap-4 text-neutral-800 dark:text-white tracking-tight text-2xl">
                                         <div className="w-8 h-8 rounded-lg flex items-center justify-center bg-purple-600/20 text-purple-600 group-hover:bg-gradient-to-br transition-all duration-300">
                                             <PencilLine />
                                         </div>

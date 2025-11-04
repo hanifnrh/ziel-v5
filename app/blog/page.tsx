@@ -145,7 +145,7 @@ export default function Blog() {
                                             <div className="body-light text-xs sm:text-sm text-neutral-600 dark:text-neutral-200">
                                                 {formatDate(post.publishDate)}
                                             </div>
-                                            <h3 className="text-xl lg:text-3xl text-neutral-800 dark:text-neutral-100">{post.title}</h3>
+                                            <h3 className="text-xl lg:text-3xl text-neutral-800 dark:text-white">{post.title}</h3>
                                             <p className="text-base lg:text-lg body-light text-neutral-700 dark:text-neutral-500 line-clamp-3">
                                                 {post.description}
                                             </p>

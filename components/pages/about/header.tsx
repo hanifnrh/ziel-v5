@@ -63,7 +63,7 @@ function Header() {
                             return (
                                 <span
                                     key={index}
-                                    className={isHighlight ? "bg-indigo-500 text-neutral-100 py-1 px-2 inline-block" : "inline-block"}
+                                    className={isHighlight ? "bg-indigo-500 text-white py-1 px-2 inline-block" : "inline-block"}
                                 >
                                     {word}
                                 </span>

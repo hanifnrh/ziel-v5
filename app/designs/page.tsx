@@ -239,7 +239,7 @@ const ImageModal = ({ isOpen, onClose, image }: ModalProps) => {
                     <div className="relative w-full max-w-xs">
                         <button
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                            className="flex items-center justify-between w-full px-4 py-3 text-sm rounded-md bg-indigo-600 body text-neutral-100 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="flex items-center justify-between w-full px-4 py-3 text-sm rounded-md bg-indigo-600 body text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                             <span>{selectedCategoryName}</span>
                             <svg
@@ -257,12 +257,12 @@ const ImageModal = ({ isOpen, onClose, image }: ModalProps) => {
                         </button>
 
                         {isDropdownOpen && (
-                            <div className="absolute z-50 w-full mt-1 bg-indigo-600 text-neutral-100 body rounded-md shadow-lg overflow-hidden">
+                            <div className="absolute z-50 w-full mt-1 bg-indigo-600 text-white body rounded-md shadow-lg overflow-hidden">
                                 {categories.map((category) => (
                                     <button
                                         key={category.id}
                                         onClick={() => handleDropdownSelect(category.id)}
-                                        className={`body block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${selectedCategory === category.id ? 'bg-indigo-50 text-indigo-700' : 'text-neutral-100'}`}
+                                        className={`body block w-full text-left px-4 py-2 text-sm hover:bg-gray-100 focus:bg-gray-100 focus:outline-none ${selectedCategory === category.id ? 'bg-indigo-50 text-indigo-700' : 'text-white'}`}
                                     >
                                         {category.name}
                                     </button>
@@ -318,7 +318,7 @@ const ImageModal = ({ isOpen, onClose, image }: ModalProps) => {
                                         <h3 className="body text-lg">{image.title}</h3>
                                         <p className="text-sm body-light">{image.description}</p>
                                         <button
-                                            className="mt-2 px-4 py-1 bg-indigo-600 text-neutral-100 body text-sm rounded-full hover:bg-indigo-500 transition-colors"
+                                            className="mt-2 px-4 py-1 bg-indigo-600 text-white body text-sm rounded-full hover:bg-indigo-500 transition-colors"
                                             onClick={() => handleViewDetails(image)}
                                         >
                                             View Details

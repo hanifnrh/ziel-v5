@@ -192,14 +192,14 @@ export default function ProjectsAll() {
                                         </AnimatePresence>
                                     </div>
 
-                                    <div className={`h-fit flex items-center justify-between text-2xl sm:text-3xl text-neutral-100 uppercase bg-none`}>
+                                    <div className={`h-fit flex items-center justify-between text-2xl sm:text-3xl text-white uppercase bg-none`}>
                                         <div className="flex items-center gap-2">
                                             <h3 className="body-bold">
                                                 {project.title}
                                             </h3>
                                             <ArrowUpRight />
                                         </div>
-                                        <p className="text-neutral-100 text-base">
+                                        <p className="text-white text-base">
                                             PROJECT
                                         </p>
                                     </div>
@@ -212,7 +212,7 @@ export default function ProjectsAll() {
                                                     ? project.tag.split(",")
                                                     : []
                                             ).map((tag: string, index: number) => (
-                                                <p key={index} className="bg-white/20 text-neutral-100 px-3 py-2 text-xs rounded-sm">
+                                                <p key={index} className="bg-white/20 text-white px-3 py-2 text-xs rounded-sm">
                                                     {tag.trim()}
                                                 </p>
                                             ))}
