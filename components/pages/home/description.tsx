@@ -9,7 +9,7 @@ const images = [
     { src: "/home/4.png", hidden: true },
     { src: "/home/5.png", hidden: false },
     { src: "/home/6.png", hidden: false },
-    { src: "/home/4.png", hidden: false },
+    { src: "/home/2.png", hidden: false },
     { src: "/home/8.png", hidden: false },
 ];
 
