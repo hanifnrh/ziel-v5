@@ -30,7 +30,7 @@ function Description() {
                         I build projects strategically, ensuring each piece is both visually
                         appealing and purpose-driven. Because good design is enjoyable and comfortable.
                     </h3>
-                    <div className="flex items-center justify-center group gap-4 text-blue-700 text-2xl">
+                    <div className="hidden sm:flex items-center justify-center group gap-4 text-blue-700 text-2xl">
                         <div className="body bg-gradient-to-b from-white via-white to-blue-50 border border-blue-300 rounded-md px-4 py-2">
                             Discover
                         </div>
@@ -43,6 +43,25 @@ function Description() {
                             Deliver
                         </div>
                     </div>
+                </div>
+            </motion.div>
+
+            <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                viewport={{ once: false, amount: 0.5 }}
+                className="flex sm:hidden items-center justify-center group gap-4 text-blue-700 text-lg">
+                <div className="body bg-gradient-to-b from-white via-white to-blue-50 border border-blue-300 rounded-md px-4 py-2">
+                    Discover
+                </div>
+                <MoveRight size={24} />
+                <div className="body bg-gradient-to-b from-white via-white to-blue-50 border border-blue-300 rounded-md px-4 py-2">
+                    Design
+                </div>
+                <MoveRight size={24} />
+                <div className="body bg-gradient-to-b from-white via-white to-blue-50 border border-blue-300 rounded-md px-4 py-2">
+                    Deliver
                 </div>
             </motion.div>
 

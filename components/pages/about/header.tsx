@@ -30,7 +30,7 @@ function Header() {
     }, []);
 
     return (
-        <div className="h-fit flex items-center justify-center px-4 md:px-10 xl:px-14 pt-32 pb-20">
+        <div className="h-fit flex items-center justify-center px-4 md:px-10 xl:px-14 pt-32">
             <div className="flex flex-col sm:flex-row gap-12 items-center justify-center">
                 <div className="relative h-auto w-full sm:w-2/3 overflow-hidden rounded-lg border-indigo-500 bg-background p-6 xl:p-12 order-2 sm:order-1">
                     <FlickeringGrid
