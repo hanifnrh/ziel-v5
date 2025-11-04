@@ -57,7 +57,7 @@ function Key({
             className={clsx(
                 className,
                 "flex flex-col items-center justify-center gap-0.5 px-1 py-px",
-                "rounded  bg-neutral-100 dark:bg-neutral-950 bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-violet-400 dark:ring-white/15",
+                "rounded  bg-white dark:bg-neutral-950 bg-gradient-to-t from-black/[3%] shadow-[0_1px_rgb(0_0_0_/_0.05)] ring-1 ring-violet-400 dark:ring-white/15",
                 "[:where(&_svg)]:h-3.5 [:where(&_svg)]:fill-neutral-600",
             )}
         >

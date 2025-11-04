@@ -81,7 +81,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-neutral-100 dark:bg-neutral-950">
+    <html lang="en" className="bg-white dark:bg-neutral-950">
       <body>
         <ReactLenis root>
           <Script

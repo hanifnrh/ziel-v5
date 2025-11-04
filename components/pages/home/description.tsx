@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { MoveRight } from "lucide-react";
 import Image from "next/image";
 
 const images = [
@@ -24,10 +25,25 @@ function Description() {
                 viewport={{ once: false, amount: 0.5 }}
             >
                 <div className="w-7 h-full bg-blue-500" />
-                <h3 className="flex-1 text-left flex items-center text-4xl lg:text-5xl xl:text-6xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-blue-600 via-blue-500 to-blue-300 py-10">
-                    I build projects strategically, ensuring each piece is both visually
-                    appealing and purpose-driven. Because good design is enjoyable and comfortable.
-                </h3>
+                <div className="flex-1 flex items-start flex-col">
+                    <h3 className="text-left flex items-center text-3xl lg:text-4xl xl:text-5xl body tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-neutral-900 via-neutral-700 to-neutral-600 py-10">
+                        I build projects strategically, ensuring each piece is both visually
+                        appealing and purpose-driven. Because good design is enjoyable and comfortable.
+                    </h3>
+                    <div className="flex items-center justify-center group gap-4 text-blue-700 text-2xl">
+                        <div className="body bg-gradient-to-b from-white via-white to-blue-50 border border-blue-300 rounded-md px-4 py-2">
+                            Discover
+                        </div>
+                        <MoveRight size={40} />
+                        <div className="body bg-gradient-to-b from-white via-white to-blue-50 border border-blue-300 rounded-md px-4 py-2">
+                            Design
+                        </div>
+                        <MoveRight size={40} />
+                        <div className="body bg-gradient-to-b from-white via-white to-blue-50 border border-blue-300 rounded-md px-4 py-2">
+                            Deliver
+                        </div>
+                    </div>
+                </div>
             </motion.div>
 
             {/* Right Section */}

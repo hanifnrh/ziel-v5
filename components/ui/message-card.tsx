@@ -25,7 +25,7 @@ export const MessageCard = ({
             className="h-full group relative transform-gpu overflow-hidden rounded-md bg-white/10 px-4 pb-4 transition-transform hover:scale-[1.01] active:scale-90"
             ref={parentRef}
         >
-            <div className={`absolute inset-px rounded-xl bg-neutral-100 border border-neutral-300`} />
+            <div className={`absolute inset-px rounded-xl bg-white border border-neutral-300`} />
             {children && (
                 <div
                     className={cn(

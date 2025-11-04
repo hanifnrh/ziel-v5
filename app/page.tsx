@@ -35,6 +35,7 @@ export default function Home() {
         <BlogPreview />
 
         <Slider images={sliderImages} />
+        
       </main>
     </>
   );

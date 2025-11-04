@@ -137,7 +137,7 @@ const ContactForm = () => {
                         <div
                             className={cn(
                                 "group relative p-8 rounded-xl overflow-hidden transition-all duration-300",
-                                "border border-neutral-300 dark:border-white/10 dark:bg-black/10 bg-neutral-100",
+                                "border border-neutral-300 dark:border-white/10 dark:bg-black/10 bg-white",
                                 "hover:-translate-y-0.5 will-change-transform",
                                 "col-span-1",
                                 "md:col-span-2",
